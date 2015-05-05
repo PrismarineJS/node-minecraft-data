@@ -1,0 +1,26 @@
+{
+  "name": "node-minecraft-data",
+  "version": "0.0.0",
+  "description": "Provide easy access to minecraft-data in node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:PrismarineJS/node-minecraft-data.git"
+  },
+  "keywords": [
+    "minecraft",
+    "data",
+    "node.js"
+  ],
+  "author": "Romain Beaumont <romain.rom1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PrismarineJS/node-minecraft-data/issues"
+  },
+  "dependencies": {
+    "minecraft-data":"~0.2.1"
+  }
+}

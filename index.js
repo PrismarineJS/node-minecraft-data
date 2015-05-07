@@ -14,15 +14,15 @@ module.exports = {
   entitiesByName:indexes.entitiesByName,
   findItemOrBlockById:function(id)
   {
-    var item=indexes.itemsById(id);
+    var item=indexes.itemsById[id];
     if(item !== undefined) return item;
-    return indexes.blocksById(id);
+    return indexes.blocksById[id];
   },
   findItemOrBlockByName:function(name)
   {
-    var item=indexes.itemsByName(name);
+    var item=indexes.itemsByName[name];
     if(item !== undefined) return item;
-    return indexes.blocksByName(name);
+    return indexes.blocksByName[name];
   }
 };
 

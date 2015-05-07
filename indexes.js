@@ -2,16 +2,16 @@ var mcData=require("minecraft-data");
 var indexer=require("./indexer.js");
 
 module.exports= {
-  biomesById:indexer.buildIndexFromObject(mcData.biomes,"id"),
+  biomesById:indexer.buildIndexFromArray(mcData.biomes,"id"),
 
-  blocksById:indexer.buildIndexFromObject(mcData.blocks,"id"),
-  blocksByName:indexer.buildIndexFromObject(mcData.blocks,"name"),
+  blocksById:indexer.buildIndexFromArray(mcData.blocks,"id"),
+  blocksByName:indexer.buildIndexFromArray(mcData.blocks,"name"),
 
-  entitiesById:indexer.buildIndexFromObject(mcData.entities,"id"),
-  entitiesByName:indexer.buildIndexFromObject(mcData.entities,"name"),
+  entitiesById:indexer.buildIndexFromArray(mcData.entities,"id"),
+  entitiesByName:indexer.buildIndexFromArray(mcData.entities,"name"),
 
-  instrumentsById:indexer.buildIndexFromObject(mcData.instruments,"id"),
+  instrumentsById:indexer.buildIndexFromArray(mcData.instruments,"id"),
 
-  itemsById:indexer.buildIndexFromObject(mcData.items,"id"),
-  itemsByName:indexer.buildIndexFromObject(mcData.items,"name")
+  itemsById:indexer.buildIndexFromArray(mcData.items,"id"),
+  itemsByName:indexer.buildIndexFromArray(mcData.items,"name")
 };

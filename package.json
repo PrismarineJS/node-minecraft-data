@@ -21,6 +21,6 @@
     "url": "https://github.com/PrismarineJS/node-minecraft-data/issues"
   },
   "dependencies": {
-    "minecraft-data":"~0.2.1"
+    "minecraft-data":"~0.3.0"
   }
 }

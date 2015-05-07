@@ -1,3 +1,6 @@
+## 0.2.0
+ * add unindexed version of blocks, items, biomes, instruments and entities
+
 ## 0.1.2
  * fix bug in indexes
 

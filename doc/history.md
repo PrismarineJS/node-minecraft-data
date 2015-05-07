@@ -1,3 +1,6 @@
+## 0.1.2
+ * fix bug in indexes
+
 ## 0.1.1
  * fix bug in find functions
 

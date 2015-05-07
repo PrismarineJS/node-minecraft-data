@@ -7,10 +7,10 @@ module.exports= {
   blocksById:indexer.buildIndexFromObject(mcData.blocks,"id"),
   blocksByName:indexer.buildIndexFromObject(mcData.blocks,"name"),
 
-  entitiesById:indexer.buildIndexFromObject(mcData.blocks,"id"),
-  entitiesByName:indexer.buildIndexFromObject(mcData.blocks,"name"),
+  entitiesById:indexer.buildIndexFromObject(mcData.entities,"id"),
+  entitiesByName:indexer.buildIndexFromObject(mcData.entities,"name"),
 
-  instrumentsById:indexer.buildIndexFromObject(mcData.blocks,"id"),
+  instrumentsById:indexer.buildIndexFromObject(mcData.instruments,"id"),
 
   itemsById:indexer.buildIndexFromObject(mcData.items,"id"),
   itemsByName:indexer.buildIndexFromObject(mcData.items,"name")

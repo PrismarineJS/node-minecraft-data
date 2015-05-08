@@ -1,4 +1,5 @@
 # node-minecraft-data
+[![NPM version](https://badge.fury.io/js/node-minecraft-data.svg)](http://badge.fury.io/js/node-minecraft-data)
 
 node-minecraft-data provides easy access to minecraft-data in node.js.
 

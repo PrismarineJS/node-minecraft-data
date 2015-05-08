@@ -2,7 +2,7 @@
 
 node-minecraft-data provides easy access to minecraft-data in node.js.
 
-The objective of this package is to make looking for information into minecraft-data in node projects.
+The objective of this module is to make easier to look for information in minecraft-data in node.
 
 ## Features
 

@@ -1,17 +1,18 @@
-var mcData=require("minecraft-data");
 var indexer=require("./indexer.js");
 
-module.exports= {
-  biomesById:indexer.buildIndexFromArray(mcData.biomes,"id"),
+module.exports= function(mcData){
+  return {
+    biomesById:indexer.buildIndexFromArray(mcData.biomes,"id"),
 
-  blocksById:indexer.buildIndexFromArray(mcData.blocks,"id"),
-  blocksByName:indexer.buildIndexFromArray(mcData.blocks,"name"),
+    blocksById:indexer.buildIndexFromArray(mcData.blocks,"id"),
+    blocksByName:indexer.buildIndexFromArray(mcData.blocks,"name"),
 
-  entitiesById:indexer.buildIndexFromArray(mcData.entities,"id"),
-  entitiesByName:indexer.buildIndexFromArray(mcData.entities,"name"),
+    entitiesById:indexer.buildIndexFromArray(mcData.entities,"id"),
+    entitiesByName:indexer.buildIndexFromArray(mcData.entities,"name"),
 
-  instrumentsById:indexer.buildIndexFromArray(mcData.instruments,"id"),
+    instrumentsById:indexer.buildIndexFromArray(mcData.instruments,"id"),
 
-  itemsById:indexer.buildIndexFromArray(mcData.items,"id"),
-  itemsByName:indexer.buildIndexFromArray(mcData.items,"name")
+    itemsById:indexer.buildIndexFromArray(mcData.items,"id"),
+    itemsByName:indexer.buildIndexFromArray(mcData.items,"name")
+  };
 };

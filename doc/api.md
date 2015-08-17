@@ -74,6 +74,12 @@ entities indexed by name
 
 unindexed entities
 
+## Protocol
+
+### node-minecraft-data.protocol
+
+the minecraft protocol
+
 ## Functions
 
 ### node-minecraft-data.findItemOrBlockById

@@ -69,6 +69,7 @@ function mcDataToNode(mcData) {
     entitiesByName: indexes.entitiesByName,
     entitiesArray: mcData.entities,
 
+    protocol: mcData.protocol,
 
     findItemOrBlockById: function (id) {
       var item = indexes.itemsById[id];

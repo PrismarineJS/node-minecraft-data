@@ -1,3 +1,8 @@
+## 0.5.0
+ * bumping a few versions because package now published as minecraft-data
+ * add multi-version support
+ * add protocol.json access
+
 ## 0.2.0
  * add unindexed version of blocks, items, biomes, instruments and entities
 

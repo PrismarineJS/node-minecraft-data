@@ -1,7 +1,7 @@
 # node-minecraft-data
 [![NPM version](https://badge.fury.io/js/node-minecraft-data.svg)](http://badge.fury.io/js/node-minecraft-data)
 
-node-minecraft-data provides easy access to minecraft-data in node.js.
+node-minecraft-data provides easy access to [minecraft-data](https://github.com/PrismarineJS/minecraft-data) in node.js.
 
 The objective of this module is to make easier to look for information in minecraft-data in node.
 

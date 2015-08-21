@@ -1,6 +1,3 @@
-var fs = require("fs");
-
-
 var cache={}; // prevent reindexing when requiring multiple time the same version
 
 module.exports = function(mcVersion)
@@ -30,8 +27,6 @@ function toMajor(mcVersion)
 function mcVersionToMcData(mcVersion)
 {
   var dir="./minecraft-data/"+mcVersion;
-  if(!fs.existsSync(dir))
-    return null;
   return {
     blocks: require(dir+'/enums/blocks'),
     biomes: require(dir+'/enums/biomes'),

@@ -1,3 +1,7 @@
+## 0.5.1
+ * fix bug with fs.existsSync
+ * fix npm badge in readme
+
 ## 0.5.0
  * bumping a few versions because package now published as minecraft-data
  * add multi-version support

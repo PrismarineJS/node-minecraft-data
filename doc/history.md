@@ -1,3 +1,6 @@
+## 0.5.2
+ * update README and example : the package is now called minecraft-data in npm
+
 ## 0.5.1
  * fix bug with fs.existsSync
  * fix npm badge in readme

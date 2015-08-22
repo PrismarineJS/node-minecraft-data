@@ -19,9 +19,9 @@ For example it's often useful to :
 Simple example of usage of node-minecraft-data : 
 
 ```js
-var nmcData=require("node-minecraft-data")("1.8.8");
+var mcData=require("minecraft-data")("1.8.8");
 
-console.log(nmcData.blocksByName["stone"]);
+console.log(mcData.blocksByName["stone"]);
 ```
 
 ## Documentation

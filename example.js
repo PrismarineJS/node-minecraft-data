@@ -1,3 +1,3 @@
-var nmcData=require("./")("1.8.8");
+var mcData=require("./")("1.8.8");
 
-console.log(nmcData.blocksByName["stone"]);
+console.log(mcData.blocksByName["stone"]);

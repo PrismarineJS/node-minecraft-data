@@ -1,3 +1,6 @@
+## 0.6.0
+ * update protocol.json in 1.8 and 1.9 : the schema is now better for types (see minecraft-data for more details)
+
 ## 0.5.2
  * update README and example : the package is now called minecraft-data in npm
 

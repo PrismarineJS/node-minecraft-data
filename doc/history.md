@@ -1,3 +1,6 @@
+## 0.7.0
+ * update protocol.json : condition becomes switch
+
 ## 0.6.0
  * update protocol.json in 1.8 and 1.9 : the schema is now better for types (see minecraft-data for more details)
 

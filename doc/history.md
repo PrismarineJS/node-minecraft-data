@@ -1,3 +1,7 @@
+## 0.8.0
+ * update protocol.json
+ * add windows
+
 ## 0.7.0
  * update protocol.json : condition becomes switch
 

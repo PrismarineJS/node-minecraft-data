@@ -89,3 +89,17 @@ find a block or an item by its id
 ### node-minecraft-data.findItemOrBlockByName
 
 find a block or an item by its name
+
+## Windows
+
+### node-minecraft-data.windows
+
+windows indexed by id
+
+### node-minecraft-data.windowsByName
+
+windows indexed by name
+
+### node-minecraft-data.windowsArray
+
+unindexed windows

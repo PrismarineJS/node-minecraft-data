@@ -13,6 +13,9 @@ module.exports= function(mcData){
     instrumentsById:indexer.buildIndexFromArray(mcData.instruments,"id"),
 
     itemsById:indexer.buildIndexFromArray(mcData.items,"id"),
-    itemsByName:indexer.buildIndexFromArray(mcData.items,"name")
+    itemsByName:indexer.buildIndexFromArray(mcData.items,"name"),
+
+    windowsById:indexer.buildIndexFromArray(mcData.windows,"id"),
+    windowsByName:indexer.buildIndexFromArray(mcData.windows,"name")
   };
 };

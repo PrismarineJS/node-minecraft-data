@@ -35,7 +35,8 @@ function mcVersionToMcData(mcVersion)
     instruments: require(dir+'/enums/instruments'),
     materials: require(dir+'/enums/materials'),
     entities: require(dir+'/enums/entities'),
-    protocol: require(dir+'/enums/protocol')
+    protocol: require(dir+'/enums/protocol'),
+    windows: require(dir+'/enums/windows')
   };
 }
 
@@ -63,6 +64,10 @@ function mcDataToNode(mcData) {
     entities: indexes.entitiesById,
     entitiesByName: indexes.entitiesByName,
     entitiesArray: mcData.entities,
+
+    windows: indexes.windowsById,
+    windowsByName: indexes.windowsByName,
+    windowsArray: mcData.windows,
 
     protocol: mcData.protocol,
 

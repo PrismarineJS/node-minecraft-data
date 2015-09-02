@@ -1,3 +1,6 @@
+## 0.8.1
+ * actually update protocol.json
+
 ## 0.8.0
  * update protocol.json
  * add windows

@@ -1,3 +1,6 @@
+## 0.9.0
+ * update minecraft-data : windows and protocol updates
+
 ## 0.8.1
  * actually update protocol.json
 

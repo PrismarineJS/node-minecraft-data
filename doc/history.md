@@ -1,3 +1,6 @@
+## 0.10.0
+ * add version to the API
+
 ## 0.9.0
  * update minecraft-data : windows and protocol updates
 

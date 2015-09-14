@@ -2,104 +2,119 @@
 
 ## Blocks
 
-### node-minecraft-data.blocks
+### minecraft-data.blocks
 
 blocks indexed by id
 
-### node-minecraft-data.blocksByName
+### minecraft-data.blocksByName
 
 blocks indexed by name
 
-### node-minecraft-data.blocksArray
+### minecraft-data.blocksArray
 
 unindexed blocks
 
 ## Items
 
-### node-minecraft-data.items
+### minecraft-data.items
 
 items indexed by id
 
-### node-minecraft-data.itemsByName
+### minecraft-data.itemsByName
 
 items indexed by name
 
-### node-minecraft-data.itemsArray
+### minecraft-data.itemsArray
 
 unindexed items
 
 ## Biomes
 
-### node-minecraft-data.biomes
+### minecraft-data.biomes
 
 biomes indexed by id
 
-### node-minecraft-data.biomesArray
+### minecraft-data.biomesArray
 
 unindexed biomes
 
 ## Recipes
 
-### node-minecraft-data.recipes
+### minecraft-data.recipes
 
 recipes indexed by id
 
 ## Instruments
 
-### node-minecraft-data.instruments
+### minecraft-data.instruments
 
 instruments indexed by id
 
-### node-minecraft-data.instrumentsArray
+### minecraft-data.instrumentsArray
 
 unindexed instruments
 
 ## Materials
 
-### node-minecraft-data.materials
+### minecraft-data.materials
 
 materials indexed by name
 
 ## Entities
 
-### node-minecraft-data.entities
+### minecraft-data.entities
 
 entities indexed by id
 
-### node-minecraft-data.entitiesByName
+### minecraft-data.entitiesByName
 
 entities indexed by name
 
-### node-minecraft-data.entitiesArray
+### minecraft-data.entitiesArray
 
 unindexed entities
 
 ## Protocol
 
-### node-minecraft-data.protocol
+### minecraft-data.protocol
 
 the minecraft protocol
 
 ## Functions
 
-### node-minecraft-data.findItemOrBlockById
+### minecraft-data.findItemOrBlockById
 
 find a block or an item by its id
 
-### node-minecraft-data.findItemOrBlockByName
+### minecraft-data.findItemOrBlockByName
 
 find a block or an item by its name
 
 ## Windows
 
-### node-minecraft-data.windows
+### minecraft-data.windows
 
 windows indexed by id
 
-### node-minecraft-data.windowsByName
+### minecraft-data.windowsByName
 
 windows indexed by name
 
-### node-minecraft-data.windowsArray
+### minecraft-data.windowsArray
 
 unindexed windows
+
+
+## Version
+
+### minecraft-data.version.version
+
+the version number (example : 47)
+
+### minecraft-data.version.minecraftVersion
+
+the minecraft number (example : 1.8.3)
+
+### minecraft-data.version.majorVersion
+
+the major version (example : 1.8), also the name of the minecraft-data version

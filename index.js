@@ -36,7 +36,8 @@ function mcVersionToMcData(mcVersion)
     materials: require(dir+'/enums/materials'),
     entities: require(dir+'/enums/entities'),
     protocol: require(dir+'/enums/protocol'),
-    windows: require(dir+'/enums/windows')
+    windows: require(dir+'/enums/windows'),
+    version: require(dir+'/enums/version')
   };
 }
 
@@ -70,6 +71,8 @@ function mcDataToNode(mcData) {
     windowsArray: mcData.windows,
 
     protocol: mcData.protocol,
+
+    version: mcData.version,
 
     findItemOrBlockById: function (id) {
       var item = indexes.itemsById[id];

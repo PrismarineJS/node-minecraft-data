@@ -1,3 +1,6 @@
+## 0.11.0
+ * update minecraft-data : in protocol.json the context is now implemented with ../ instead of this.
+
 ## 0.10.0
  * add version to the API
 

@@ -1,3 +1,6 @@
+## 0.12.0
+ * update minecraft-data : update 1.8 version to 1.8.8, update 1.9 version to 15w39c
+ 
 ## 0.11.0
  * update minecraft-data : in protocol.json the context is now implemented with ../ instead of this.
 

@@ -1,3 +1,6 @@
+## 0.13.0
+ * minecraft-data 1.9 to 15w40b + 76
+
 ## 0.12.0
  * update minecraft-data : update 1.8 version to 1.8.8, update 1.9 version to 15w39c
  

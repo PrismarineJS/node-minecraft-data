@@ -26,18 +26,18 @@ function toMajor(mcVersion)
 
 function mcVersionToMcData(mcVersion)
 {
-  var dir="./minecraft-data/"+mcVersion;
+  var dir="./minecraft-data/data/"+mcVersion;
   return {
-    blocks: require(dir+'/enums/blocks'),
-    biomes: require(dir+'/enums/biomes'),
-    items: require(dir+'/enums/items'),
-    recipes: require(dir+'/enums/recipes'),
-    instruments: require(dir+'/enums/instruments'),
-    materials: require(dir+'/enums/materials'),
-    entities: require(dir+'/enums/entities'),
-    protocol: require(dir+'/enums/protocol'),
-    windows: require(dir+'/enums/windows'),
-    version: require(dir+'/enums/version')
+    blocks: require(dir+'/blocks'),
+    biomes: require(dir+'/biomes'),
+    items: require(dir+'/items'),
+    recipes: require(dir+'/recipes'),
+    instruments: require(dir+'/instruments'),
+    materials: require(dir+'/materials'),
+    entities: require(dir+'/entities'),
+    protocol: require(dir+'/protocol'),
+    windows: require(dir+'/windows'),
+    version: require(dir+'/version')
   };
 }
 

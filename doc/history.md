@@ -1,3 +1,6 @@
+## 0.14.0
+ * move to new minecraft-data organization: master branch containing all the versions instead of one branch per version
+
 ## 0.13.0
  * minecraft-data 1.9 to 15w40b + 76
 

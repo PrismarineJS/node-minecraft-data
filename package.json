@@ -1,6 +1,6 @@
 {
   "name": "minecraft-data",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Provide easy access to minecraft data in node.js",
   "main": "index.js",
   "scripts": {

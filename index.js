@@ -74,6 +74,10 @@ function mcDataToNode(mcData) {
 
     version: mcData.version,
 
+    pitchesArray: mcData.pitches,
+    pitchesByNote: indexes.pitchesByNote,
+    pitchesByNum: indexes.pitchesByNum,
+
     findItemOrBlockById: function (id) {
       var item = indexes.itemsById[id];
       if (item !== undefined) return item;

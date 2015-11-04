@@ -104,6 +104,20 @@ windows indexed by name
 
 unindexed windows
 
+## Pitches
+
+### minecraft-data.pitchesArray
+
+Unindexed pitches
+
+### minecraft-data.pitchesByNote
+
+pitches indexed by note. Enharmonic notes (e.g. eb and d#) point to the same object
+
+### minecraft-data.pitchesByNum
+
+pitches indexed by pitch number (0-24)
+
 
 ## Version
 

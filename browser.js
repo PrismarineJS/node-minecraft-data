@@ -14,6 +14,7 @@ var data={
   "1.8":{
     blocks:require('./minecraft-data/data/1.8/blocks'),
     biomes: require('./minecraft-data/data/1.8/biomes'),
+    effects: require('./minecraft-data/data/1.8/effects'),
     items: require('./minecraft-data/data/1.8/items'),
     recipes: require('./minecraft-data/data/1.8/recipes'),
     instruments: require('./minecraft-data/data/1.8/instruments'),
@@ -26,6 +27,7 @@ var data={
   "1.9":{
     blocks:require('./minecraft-data/data/1.9/blocks'),
     biomes: require('./minecraft-data/data/1.9/biomes'),
+    effects: require('./minecraft-data/data/1.9/effects'),
     items: require('./minecraft-data/data/1.9/items'),
     recipes: require('./minecraft-data/data/1.9/recipes'),
     instruments: require('./minecraft-data/data/1.9/instruments'),

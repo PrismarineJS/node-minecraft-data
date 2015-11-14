@@ -118,3 +118,17 @@ the minecraft number (example : 1.8.3)
 ### minecraft-data.version.majorVersion
 
 the major version (example : 1.8), also the name of the minecraft-data version
+
+## Effects
+
+### minecraft-data.effects
+
+effects indexed by id
+
+### minecraft-data.effectsByName
+
+effects indexed by name
+
+### minecraft-data.effectsArray
+
+unindexed effects

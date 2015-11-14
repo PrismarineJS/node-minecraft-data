@@ -11,6 +11,7 @@ function mcVersionToMcData(mcVersion)
   return {
     blocks: require(dir+'/blocks'),
     biomes: require(dir+'/biomes'),
+    effects: require(dir+'/effects'),
     items: require(dir+'/items'),
     recipes: require(dir+'/recipes'),
     instruments: require(dir+'/instruments'),

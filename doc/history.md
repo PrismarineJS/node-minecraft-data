@@ -1,3 +1,6 @@
+## 0.15.0
+ * make node-minecraft-data browserify compatible
+
 ## 0.14.0
  * move to new minecraft-data organization: master branch containing all the versions instead of one branch per version
 

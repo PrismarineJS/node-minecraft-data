@@ -1,3 +1,6 @@
+## 0.16.0
+ * add effects
+
 ## 0.15.0
  * make node-minecraft-data browserify compatible
 

@@ -1,4 +1,4 @@
-var loader=require("./loader");
+var loader=require("./lib/loader");
 
 module.exports = function(version)
 {

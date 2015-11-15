@@ -1,3 +1,6 @@
+## 0.16.1
+ * update mcData : improvement in the protocol for slot, optionalNbt and nbt
+
 ## 0.16.0
  * add effects
 

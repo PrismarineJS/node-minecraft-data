@@ -14,9 +14,7 @@ For example it's often useful to :
 * find block or item by name
 * find block or item by id
 
-## Usage
-
-Simple example of usage of node-minecraft-data : 
+## Example
 
 ```js
 var mcData=require("minecraft-data")("1.8.8");

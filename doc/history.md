@@ -1,3 +1,6 @@
+## 0.16.3
+* use require-self to use require('minecraft-data') in example and make tonicdev actually work
+
 ## 0.16.2
 * Usage -> Example, for tonicdev integration
 

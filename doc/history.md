@@ -1,3 +1,6 @@
+## 0.16.2
+* Usage -> Example, for tonicdev integration
+
 ## 0.16.1
  * update mcData : improvement in the protocol for slot, optionalNbt and nbt
 

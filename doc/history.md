@@ -1,3 +1,7 @@
+## 0.17.0
+* some windows fixing
+* update entities : now mobs and objects
+
 ## 0.16.3
 * use require-self to use require('minecraft-data') in example and make tonicdev actually work
 

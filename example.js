@@ -4,3 +4,7 @@ console.log(mcData.blocksByName["stone"]);
 console.log(mcData.windows["minecraft:brewing_stand"]);
 console.log(mcData.version);
 console.log(mcData.effectsByName["Haste"]);
+
+
+console.log(mcData.mobs[62]);
+console.log(mcData.objects[62]);

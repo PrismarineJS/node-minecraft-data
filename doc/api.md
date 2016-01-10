@@ -62,9 +62,13 @@ materials indexed by name
 
 ## Entities
 
-### minecraft-data.entities
+### minecraft-data.mobs
 
-entities indexed by id
+mobs indexed by id
+
+### minecraft-data.objects
+
+objects indexed by id
 
 ### minecraft-data.entitiesByName
 

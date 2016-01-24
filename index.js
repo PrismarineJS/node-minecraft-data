@@ -7,18 +7,34 @@ module.exports = function(version)
 
 function mcVersionToMcData(mcVersion)
 {
-  var dir="./minecraft-data/data/"+mcVersion;
-  return {
-    blocks: require(dir+'/blocks'),
-    biomes: require(dir+'/biomes'),
-    effects: require(dir+'/effects'),
-    items: require(dir+'/items'),
-    recipes: require(dir+'/recipes'),
-    instruments: require(dir+'/instruments'),
-    materials: require(dir+'/materials'),
-    entities: require(dir+'/entities'),
-    protocol: require(dir+'/protocol'),
-    windows: require(dir+'/windows'),
-    version: require(dir+'/version')
-  };
+  return data[mcVersion];
 }
+
+var data={
+  "1.8":{
+    blocks:require('./minecraft-data/data/1.8/blocks'),
+    biomes: require('./minecraft-data/data/1.8/biomes'),
+    effects: require('./minecraft-data/data/1.8/effects'),
+    items: require('./minecraft-data/data/1.8/items'),
+    recipes: require('./minecraft-data/data/1.8/recipes'),
+    instruments: require('./minecraft-data/data/1.8/instruments'),
+    materials: require('./minecraft-data/data/1.8/materials'),
+    entities: require('./minecraft-data/data/1.8/entities'),
+    protocol: require('./minecraft-data/data/1.8/protocol'),
+    windows: require('./minecraft-data/data/1.8/windows'),
+    version: require('./minecraft-data/data/1.8/version')
+  },
+  "1.9":{
+    blocks:require('./minecraft-data/data/1.9/blocks'),
+    biomes: require('./minecraft-data/data/1.9/biomes'),
+    effects: require('./minecraft-data/data/1.9/effects'),
+    items: require('./minecraft-data/data/1.9/items'),
+    recipes: require('./minecraft-data/data/1.9/recipes'),
+    instruments: require('./minecraft-data/data/1.9/instruments'),
+    materials: require('./minecraft-data/data/1.9/materials'),
+    entities: require('./minecraft-data/data/1.9/entities'),
+    protocol: require('./minecraft-data/data/1.9/protocol'),
+    windows: require('./minecraft-data/data/1.9/windows'),
+    version: require('./minecraft-data/data/1.9/version')
+  }
+};

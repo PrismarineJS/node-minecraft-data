@@ -1,3 +1,6 @@
+## 0.18.0
+* add protocol versions
+
 ## 0.17.0
 * some windows fixing
 * update entities : now mobs and objects

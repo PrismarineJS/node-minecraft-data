@@ -22,7 +22,8 @@ var data={
     entities: require('./minecraft-data/data/1.8/entities'),
     protocol: require('./minecraft-data/data/1.8/protocol'),
     windows: require('./minecraft-data/data/1.8/windows'),
-    version: require('./minecraft-data/data/1.8/version')
+    version: require('./minecraft-data/data/1.8/version'),
+    protocolVersions: require('./minecraft-data/data/common/protocolVersions')
   },
   "1.9":{
     blocks:require('./minecraft-data/data/1.9/blocks'),
@@ -35,6 +36,7 @@ var data={
     entities: require('./minecraft-data/data/1.9/entities'),
     protocol: require('./minecraft-data/data/1.9/protocol'),
     windows: require('./minecraft-data/data/1.9/windows'),
-    version: require('./minecraft-data/data/1.9/version')
+    version: require('./minecraft-data/data/1.9/version'),
+    protocolVersions: require('./minecraft-data/data/common/protocolVersions')
   }
 };

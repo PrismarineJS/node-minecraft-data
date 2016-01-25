@@ -136,3 +136,14 @@ effects indexed by name
 ### minecraft-data.effectsArray
 
 unindexed effects
+
+## Protocol versions
+
+### minecraft-data.versions
+
+unindexed minecraft versions
+
+### minecraft-data.versionsByMinecraftVersion
+
+minecraft versions indexed by minecraft version (example : 1.8.8)
+

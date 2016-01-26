@@ -5,6 +5,10 @@ module.exports = function(version)
   return loader(version,mcVersionToMcData);
 };
 
+var indexer=require("./lib/indexer.js");
+module.exports.versions=require('./minecraft-data/data/common/protocolVersions');
+module.exports.versionsByMinecraftVersion=indexer.buildIndexFromArray(module.exports.versions,"minecraftVersion");
+
 function mcVersionToMcData(mcVersion)
 {
   return data[mcVersion];

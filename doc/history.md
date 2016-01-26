@@ -1,3 +1,8 @@
+## 0.19.0
+* move protocol data to top level
+* expose preNettyVersionsByProtocolVersion and postNettyVersionsByProtocolVersion
+* use it for a better resolution of the "major" version
+
 ## 0.18.0
 * add protocol versions
 

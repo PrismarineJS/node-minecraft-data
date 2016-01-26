@@ -1,18 +1,44 @@
-var loader=require("./lib/loader");
+var mcDataToNode=require("./lib/loader");
+var indexer=require("./lib/indexer.js");
+var protocolVersions=require('./minecraft-data/data/common/protocolVersions');
+var versionsByMinecraftVersion=indexer.buildIndexFromArray(protocolVersions,"minecraftVersion");
+var preNettyVersionsByProtocolVersion=indexer.buildIndexFromArrayNonUnique(protocolVersions.filter(function(e){return !e.usesNetty}),"version");
+var postNettyVersionsByProtocolVersion=indexer.buildIndexFromArrayNonUnique(protocolVersions.filter(function(e){return e.usesNetty}),"version");
 
-module.exports = function(version)
+var cache={}; // prevent reindexing when requiring multiple time the same version
+
+module.exports = function(mcVersion,preNetty)
 {
-  return loader(version,mcVersionToMcData);
+  preNetty=preNetty || false;
+  var majorVersion=toMajor(mcVersion,preNetty);
+  if(majorVersion==null)
+    return null;
+  if(cache[majorVersion])
+    return cache[majorVersion];
+  var mcData=data[majorVersion];
+  if(mcData==null)
+    return null;
+  var nmcData=mcDataToNode(mcData);
+  cache[majorVersion]=nmcData;
+  return nmcData;
 };
 
-var indexer=require("./lib/indexer.js");
-module.exports.versions=require('./minecraft-data/data/common/protocolVersions');
-module.exports.versionsByMinecraftVersion=indexer.buildIndexFromArray(module.exports.versions,"minecraftVersion");
-
-function mcVersionToMcData(mcVersion)
+function toMajor(mcVersion,preNetty)
 {
-  return data[mcVersion];
+  if(data[mcVersion])
+    return mcVersion;
+  if(versionsByMinecraftVersion[mcVersion])
+    return versionsByMinecraftVersion[mcVersion].majorVersion;
+  if(preNetty && preNettyVersionsByProtocolVersion[mcVersion])
+    return preNettyVersionsByProtocolVersion[mcVersion][0].majorVersion;
+  if(!preNetty && postNettyVersionsByProtocolVersion[mcVersion])
+    return postNettyVersionsByProtocolVersion[mcVersion][0].majorVersion;
 }
+
+module.exports.versions=protocolVersions;
+module.exports.versionsByMinecraftVersion=versionsByMinecraftVersion;
+module.exports.preNettyVersionsByProtocolVersion=preNettyVersionsByProtocolVersion;
+module.exports.postNettyVersionsByProtocolVersion=postNettyVersionsByProtocolVersion;
 
 var data={
   "1.8":{
@@ -26,8 +52,7 @@ var data={
     entities: require('./minecraft-data/data/1.8/entities'),
     protocol: require('./minecraft-data/data/1.8/protocol'),
     windows: require('./minecraft-data/data/1.8/windows'),
-    version: require('./minecraft-data/data/1.8/version'),
-    protocolVersions: require('./minecraft-data/data/common/protocolVersions')
+    version: require('./minecraft-data/data/1.8/version')
   },
   "1.9":{
     blocks:require('./minecraft-data/data/1.9/blocks'),
@@ -40,7 +65,6 @@ var data={
     entities: require('./minecraft-data/data/1.9/entities'),
     protocol: require('./minecraft-data/data/1.9/protocol'),
     windows: require('./minecraft-data/data/1.9/windows'),
-    version: require('./minecraft-data/data/1.9/version'),
-    protocolVersions: require('./minecraft-data/data/common/protocolVersions')
+    version: require('./minecraft-data/data/1.9/version')
   }
 };

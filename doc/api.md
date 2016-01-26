@@ -150,3 +150,11 @@ unindexed minecraft versions
 
 minecraft versions indexed by minecraft version (example : 1.8.8)
 
+### minecraft-data.preNettyVersionsByProtocolVersion
+
+pre netty minecraft versions indexed by protocol version (example : 47)
+
+### minecraft-data.postNettyVersionsByProtocolVersion
+
+post netty minecraft versions indexed by protocol version (example : 47)
+

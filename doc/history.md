@@ -1,3 +1,6 @@
+## 0.19.1
+* fix release (missing submodule)
+
 ## 0.19.0
 * move protocol data to top level
 * expose preNettyVersionsByProtocolVersion and postNettyVersionsByProtocolVersion

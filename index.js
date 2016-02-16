@@ -30,9 +30,9 @@ function toMajor(mcVersion,preNetty)
   if(versionsByMinecraftVersion[mcVersion])
     return versionsByMinecraftVersion[mcVersion].majorVersion;
   if(preNetty && preNettyVersionsByProtocolVersion[mcVersion])
-    return preNettyVersionsByProtocolVersion[mcVersion][0].majorVersion;
+    return toMajor(preNettyVersionsByProtocolVersion[mcVersion][0].minecraftVersion);
   if(!preNetty && postNettyVersionsByProtocolVersion[mcVersion])
-    return postNettyVersionsByProtocolVersion[mcVersion][0].majorVersion;
+    return toMajor(postNettyVersionsByProtocolVersion[mcVersion][0].minecraftVersion);
 }
 
 module.exports.versions=protocolVersions;

@@ -1,3 +1,6 @@
+## 0.20.1
+* fix release
+
 ## 0.20.0
 * 1.9 updated to 16w05b
 * 15w40b support kept

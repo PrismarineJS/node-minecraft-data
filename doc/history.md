@@ -1,3 +1,9 @@
+## 0.20.0
+* 1.9 updated to 16w05b
+* 15w40b support kept
+* 1.7 support added
+* add transparency and light data in blocks
+
 ## 0.19.1
 * fix release (missing submodule)
 

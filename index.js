@@ -41,6 +41,19 @@ module.exports.preNettyVersionsByProtocolVersion=preNettyVersionsByProtocolVersi
 module.exports.postNettyVersionsByProtocolVersion=postNettyVersionsByProtocolVersion;
 
 var data={
+  "1.7":{
+    blocks:require('./minecraft-data/data/1.7/blocks'),
+    biomes: require('./minecraft-data/data/1.7/biomes'),
+    effects: require('./minecraft-data/data/1.7/effects'),
+    items: require('./minecraft-data/data/1.7/items'),
+    recipes: require('./minecraft-data/data/1.8/recipes'), // TODO: 1.7 recipes
+    instruments: require('./minecraft-data/data/1.7/instruments'),
+    materials: require('./minecraft-data/data/1.7/materials'),
+    entities: require('./minecraft-data/data/1.7/entities'),
+    protocol: require('./minecraft-data/data/1.7/protocol'),
+    windows: require('./minecraft-data/data/1.7/windows'),
+    version: require('./minecraft-data/data/1.7/version')
+  },
   "1.8":{
     blocks:require('./minecraft-data/data/1.8/blocks'),
     biomes: require('./minecraft-data/data/1.8/biomes'),

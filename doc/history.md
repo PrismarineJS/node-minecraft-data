@@ -1,3 +1,6 @@
+## 0.20.2
+* update minecraft-data : a fix in the key of 1.7 protocol
+
 ## 0.20.1
 * fix release
 

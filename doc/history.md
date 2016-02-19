@@ -1,3 +1,6 @@
+## 1.0.1
+* update mcdata : fix short in 1.7 protocol
+
 ## 1.0.0
 * update minecraft data, protocol.json has new numerical type names
 

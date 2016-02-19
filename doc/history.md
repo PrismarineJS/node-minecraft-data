@@ -1,3 +1,6 @@
+## 1.0.0
+* update minecraft data, protocol.json has new numerical type names
+
 ## 0.20.4
 * update minecraft-data : 1.7 plugin channel data buffers are length-prefixed
 

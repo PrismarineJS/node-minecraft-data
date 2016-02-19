@@ -1,3 +1,6 @@
+## 0.20.4
+* update minecraft-data : 1.7 plugin channel data buffers are length-prefixed
+
 ## 0.20.3
 * update mcdata : fix in 1.7 protocol
 

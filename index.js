@@ -41,6 +41,10 @@ module.exports.preNettyVersionsByProtocolVersion=preNettyVersionsByProtocolVersi
 module.exports.postNettyVersionsByProtocolVersion=postNettyVersionsByProtocolVersion;
 
 var data={
+  "0.30c":{
+    protocol: require('./minecraft-data/data/0.30c/protocol'),
+    version: require('./minecraft-data/data/0.30c/version')
+  },
   "1.7":{
     blocks:require('./minecraft-data/data/1.7/blocks'),
     biomes: require('./minecraft-data/data/1.7/biomes'),

@@ -25,3 +25,5 @@ console.log(require("minecraft-data")("1.8").version);
 
 
 console.log(require("minecraft-data")("15w40b").version);
+
+console.log(require("minecraft-data")("0.30c").version);

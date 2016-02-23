@@ -1,3 +1,6 @@
+## 1.1.0
+* update mcdata : protocol schema change, add classic
+
 ## 1.0.3
 * update mcdata : 1.9 protocol fix
 

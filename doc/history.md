@@ -1,3 +1,6 @@
+## 1.2.2
+* update mcdata : 1.9 release
+
 ## 1.2.1
 * update minecraft-data : update blocks, items and recipes in 1.9, and fix a small error in 1.9 protocol
 

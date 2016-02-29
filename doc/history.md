@@ -1,3 +1,6 @@
+## 1.2.1
+* update minecraft-data : update blocks, items and recipes in 1.9, and fix a small error in 1.9 protocol
+
 ## 1.2.0
 * update 1.9 protocol to 1.9-pre4
 

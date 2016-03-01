@@ -1,3 +1,6 @@
+## 1.2.4
+* i8 not byte
+
 ## 1.2.3
 * a few fixes in 1.9 protocol
 

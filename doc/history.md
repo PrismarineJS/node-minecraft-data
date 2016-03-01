@@ -1,3 +1,6 @@
+## 1.2.3
+* a few fixes in 1.9 protocol
+
 ## 1.2.2
 * update mcdata : 1.9 release
 

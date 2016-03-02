@@ -1,3 +1,6 @@
+## 1.2.5
+* update mcdata : fix in 1.9 protocol
+
 ## 1.2.4
 * i8 not byte
 

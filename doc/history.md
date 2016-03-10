@@ -1,3 +1,6 @@
+## 1.2.6
+* update mcdata : add 1.9.1-pre2
+
 ## 1.2.5
 * update mcdata : fix in 1.9 protocol
 

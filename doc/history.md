@@ -1,3 +1,6 @@
+## 1.3.1
+* fix release (submodule)
+
 ## 1.3.0
 * export schemas
 

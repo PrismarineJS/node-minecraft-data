@@ -1,3 +1,6 @@
+## 1.3.0
+* export schemas
+
 ## 1.2.6
 * update mcdata : add 1.9.1-pre2
 

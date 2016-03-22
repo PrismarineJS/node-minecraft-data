@@ -158,3 +158,29 @@ pre netty minecraft versions indexed by protocol version (example : 47)
 
 post netty minecraft versions indexed by protocol version (example : 47)
 
+## Schemas
+
+### minecraft-data.schema.biomes
+
+### minecraft-data.schema.blocks
+
+### minecraft-data.schema.effects
+
+### minecraft-data.schema.entities
+
+### minecraft-data.schema.instruments
+
+### minecraft-data.schema.items
+
+### minecraft-data.schema.materials
+
+### minecraft-data.schema.protocol
+
+### minecraft-data.schema.protocolVersions
+
+### minecraft-data.schema.recipes
+
+### minecraft-data.schema.version
+
+### minecraft-data.schema.windows
+

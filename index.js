@@ -40,6 +40,22 @@ module.exports.versionsByMinecraftVersion=versionsByMinecraftVersion;
 module.exports.preNettyVersionsByProtocolVersion=preNettyVersionsByProtocolVersion;
 module.exports.postNettyVersionsByProtocolVersion=postNettyVersionsByProtocolVersion;
 
+var schemas={
+  biomes: require('./minecraft-data/schemas/biomes_schema'),
+  blocks:require('./minecraft-data/schemas/blocks_schema'),
+  effects: require('./minecraft-data/schemas/effects_schema'),
+  entities: require('./minecraft-data/schemas/entities_schema'),
+  instruments: require('./minecraft-data/schemas/instruments_schema'),
+  items: require('./minecraft-data/schemas/items_schema'),
+  materials: require('./minecraft-data/schemas/materials_schema'),
+  protocol: require('./minecraft-data/schemas/protocol_schema'),
+  protocolVersions: require('./minecraft-data/schemas/protocolVersions_schema'),
+  recipes: require('./minecraft-data/schemas/recipes_schema'),
+  version: require('./minecraft-data/schemas/version_schema'),
+  windows: require('./minecraft-data/schemas/windows_schema')
+};
+module.exports.schemas=schemas;
+
 var data={
   "0.30c":{
     protocol: require('./minecraft-data/data/0.30c/protocol'),

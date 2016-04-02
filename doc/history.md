@@ -1,3 +1,6 @@
+## 1.4.1
+* actually add 1.9.2 support
+
 ## 1.4.0
 * update mcdata : 1.9.2 support
 

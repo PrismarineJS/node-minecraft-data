@@ -1,3 +1,6 @@
+## 1.5.0
+* update minecraft-data to 1.0.0, add 1.9.4 support
+
 ## 1.4.1
 * actually add 1.9.2 support
 

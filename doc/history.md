@@ -1,3 +1,6 @@
+## 1.6.0
+* update minecraft-data to 1.1.0, add 16w20a support (1.1.0)
+
 ## 1.5.0
 * update minecraft-data to 1.0.0, add 1.9.4 support
 

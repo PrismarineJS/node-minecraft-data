@@ -1,3 +1,7 @@
+## 2.0.0
+* update to minecraft-data to 2.0.0, adapt to handle both pc and pe
+* the api of versionsByMinecraftVersion changed : now indexed by pc and pe : BREAKING CHANGE
+
 ## 1.6.0
 * update minecraft-data to 1.1.0, add 16w20a support (1.1.0)
 

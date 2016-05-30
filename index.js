@@ -189,6 +189,7 @@ var data={
   "pe":{
     "0.14":{
       blocks: require('./minecraft-data/data/pe/0.14/blocks'),
+      biomes: require('./minecraft-data/data/pc/1.8/biomes'),
       items: require('./minecraft-data/data/pe/0.14/items'),
       version: require('./minecraft-data/data/pe/0.14/version')
     }

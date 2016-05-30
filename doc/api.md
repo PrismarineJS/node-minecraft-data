@@ -140,7 +140,7 @@ unindexed effects
 ## Protocol versions
 
 Those are common data and directly available in the `require('minecraft-data')` object.
-No need to specify a version before accessing them.
+No need to specify a version before accessing them. They are indexed by pc and pe.
 
 ### minecraft-data.versions
 

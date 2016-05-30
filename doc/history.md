@@ -1,3 +1,6 @@
+## 2.2.0
+* add type (pe or pc) to API
+
 ## 2.1.0
 * use blocks of pc 1.8 for pe 0.14
 

@@ -30,6 +30,7 @@ module.exports = function(mcVersion,preNetty)
   if(mcData==null)
     return null;
   var nmcData=mcDataToNode(mcData);
+  nmcData.type=majorVersion.type;
   cache[majorVersion.type+"_"+majorVersion.majorVersion]=nmcData;
   return nmcData;
 };

@@ -137,6 +137,10 @@ effects indexed by name
 
 unindexed effects
 
+## type
+
+pe or pc
+
 ## Protocol versions
 
 Those are common data and directly available in the `require('minecraft-data')` object.

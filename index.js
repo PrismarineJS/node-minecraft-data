@@ -185,6 +185,19 @@ var data={
       protocol: require('./minecraft-data/data/pc/16w20a/protocol'),
       windows: require('./minecraft-data/data/pc/1.9/windows'),
       version: require('./minecraft-data/data/pc/16w20a/version')
+    },
+    "1.10-pre1": {
+      blocks: require('./minecraft-data/data/pc/1.9/blocks'),
+      biomes: require('./minecraft-data/data/pc/1.9/biomes'),
+      effects: require('./minecraft-data/data/pc/1.9/effects'),
+      items: require('./minecraft-data/data/pc/1.9/items'),
+      recipes: require('./minecraft-data/data/pc/1.9/recipes'),
+      instruments: require('./minecraft-data/data/pc/1.9/instruments'),
+      materials: require('./minecraft-data/data/pc/1.9/materials'),
+      entities: require('./minecraft-data/data/pc/1.9/entities'),
+      protocol: require('./minecraft-data/data/pc/1.10-pre1/protocol'),
+      windows: require('./minecraft-data/data/pc/1.9/windows'),
+      version: require('./minecraft-data/data/pc/1.10-pre1/version')
     }
   },
   "pe":{

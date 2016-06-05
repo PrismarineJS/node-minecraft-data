@@ -1,3 +1,6 @@
+## 2.3.0
+* update minecraft-data to 2.1.0, add pc 1.10-pre1 support
+
 ## 2.2.0
 * add type (pe or pc) to API
 

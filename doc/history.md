@@ -1,3 +1,6 @@
+## 2.5.0
+* update mcdata to 2.3.0, add 1.10 support
+
 ## 2.4.0
 * update to mcdata 2.2.0, add pe protocol
 

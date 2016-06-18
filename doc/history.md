@@ -1,3 +1,6 @@
+## 2.5.1
+* update mcdata, fix 1.10 version
+
 ## 2.5.0
 * update mcdata to 2.3.0, add 1.10 support
 

@@ -1,3 +1,6 @@
+## 2.6.0
+* update mcdata to 2.4.0, add mcpc 1.10.1 and 1.10.2 support, add mcpe 0.15 support
+
 ## 2.5.1
 * update mcdata, fix 1.10 version
 

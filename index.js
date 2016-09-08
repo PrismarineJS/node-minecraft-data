@@ -211,6 +211,32 @@ var data={
       protocol: require('./minecraft-data/data/pc/1.10/protocol'),
       windows: require('./minecraft-data/data/pc/1.10/windows'),
       version: require('./minecraft-data/data/pc/1.10/version')
+    },
+    "1.10.1": {
+      blocks: require('./minecraft-data/data/pc/1.10/blocks'),
+      biomes: require('./minecraft-data/data/pc/1.10/biomes'),
+      effects: require('./minecraft-data/data/pc/1.10/effects'),
+      items: require('./minecraft-data/data/pc/1.10/items'),
+      recipes: require('./minecraft-data/data/pc/1.10/recipes'),
+      instruments: require('./minecraft-data/data/pc/1.10/instruments'),
+      materials: require('./minecraft-data/data/pc/1.10/materials'),
+      entities: require('./minecraft-data/data/pc/1.10/entities'),
+      protocol: require('./minecraft-data/data/pc/1.10/protocol'),
+      windows: require('./minecraft-data/data/pc/1.10/windows'),
+      version: require('./minecraft-data/data/pc/1.10.1/version')
+    },
+    "1.10.2": {
+      blocks: require('./minecraft-data/data/pc/1.10/blocks'),
+      biomes: require('./minecraft-data/data/pc/1.10/biomes'),
+      effects: require('./minecraft-data/data/pc/1.10/effects'),
+      items: require('./minecraft-data/data/pc/1.10/items'),
+      recipes: require('./minecraft-data/data/pc/1.10/recipes'),
+      instruments: require('./minecraft-data/data/pc/1.10/instruments'),
+      materials: require('./minecraft-data/data/pc/1.10/materials'),
+      entities: require('./minecraft-data/data/pc/1.10/entities'),
+      protocol: require('./minecraft-data/data/pc/1.10/protocol'),
+      windows: require('./minecraft-data/data/pc/1.10/windows'),
+      version: require('./minecraft-data/data/pc/1.10.2/version')
     }
   },
   "pe":{
@@ -220,6 +246,13 @@ var data={
       items: require('./minecraft-data/data/pe/0.14/items'),
       protocol: require('./minecraft-data/data/pe/0.14/protocol'),
       version: require('./minecraft-data/data/pe/0.14/version')
+    },
+    "0.15":{
+      blocks: require('./minecraft-data/data/pe/0.15/blocks'),
+      biomes: require('./minecraft-data/data/pc/1.8/biomes'),
+      items: require('./minecraft-data/data/pe/0.15/items'),
+      protocol: require('./minecraft-data/data/pe/0.15/protocol'),
+      version: require('./minecraft-data/data/pe/0.15/version')
     }
   }
 };

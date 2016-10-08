@@ -33,3 +33,5 @@ console.log(require("minecraft-data")("pe_0.14").version);
 console.log(require("minecraft-data")("pc_1.9").blocksByName["dirt"]);
 console.log(require("minecraft-data")("pe_0.14").blocksByName["podzol"]);
 console.log(require("minecraft-data")("pe_0.14").type);
+
+console.log(require("minecraft-data")("1.8").enchantments[5]);

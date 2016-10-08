@@ -78,6 +78,20 @@ entities indexed by name
 
 unindexed entities
 
+## Enchantments
+
+### minecraft-data.enchantments
+
+enchantments indexed by id
+
+### minecraft-data.enchantmentsByName
+
+enchantments indexed by name
+
+### minecraft-data.enchantmentsArray
+
+unindexed enchantments
+
 ## Protocol
 
 ### minecraft-data.protocol

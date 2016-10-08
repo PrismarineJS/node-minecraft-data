@@ -1,3 +1,6 @@
+## 2.7.0
+* update mcdata to 2.5.0, add enchantments to api, add 16w35a (first 1.11 snapshot)
+
 ## 2.6.0
 * update mcdata to 2.4.0, add mcpc 1.10.1 and 1.10.2 support, add mcpe 0.15 support
 

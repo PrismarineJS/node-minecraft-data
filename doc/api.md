@@ -176,6 +176,14 @@ pre netty minecraft versions indexed by protocol version (example : 47)
 
 post netty minecraft versions indexed by protocol version (example : 47)
 
+### minecraft-data.supportedVersions.pc
+
+Array of pc supported versions
+
+### minecraft-data.supportedVersions.pe
+
+Array of pe supported versions
+
 ## Schemas
 
 ### minecraft-data.schema.biomes

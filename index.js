@@ -55,6 +55,10 @@ function toMajor(mcVersion,preNetty,typeArg)
   }
 }
 
+module.exports.supportedVersions={
+  pc:require('./minecraft-data/data/pc/common/versions'),
+  pe:require('./minecraft-data/data/pe/common/versions')
+};
 module.exports.versions=protocolVersions;
 module.exports.versionsByMinecraftVersion=versionsByMinecraftVersion;
 module.exports.preNettyVersionsByProtocolVersion=preNettyVersionsByProtocolVersion;

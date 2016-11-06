@@ -84,6 +84,7 @@ module.exports.schemas=schemas;
 var data={
   "pc": {
     "0.30c": {
+      blocks: require('./minecraft-data/data/pc/0.30c/blocks'),
       protocol: require('./minecraft-data/data/pc/0.30c/protocol'),
       version: require('./minecraft-data/data/pc/0.30c/version')
     },

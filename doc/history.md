@@ -1,3 +1,6 @@
+## 2.9.0
+* update mcdata to 2.7.0 : add 1.11 support (only the protocol)
+
 ## 2.8.0
 * classic blocks
 * update to mcdata 2.6.0

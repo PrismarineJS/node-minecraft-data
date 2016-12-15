@@ -1,3 +1,6 @@
+## 2.10.0
+* update mcdata to 2.8.0, add mcpe 1.0
+
 ## 2.9.0
 * update mcdata to 2.7.0 : add 1.11 support (only the protocol)
 

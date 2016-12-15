@@ -299,6 +299,12 @@ var data={
       items: require('./minecraft-data/data/pe/0.15/items'),
       protocol: require('./minecraft-data/data/pe/0.15/protocol'),
       version: require('./minecraft-data/data/pe/0.15/version')
+    },
+    "1.0":{
+      blocks: require('./minecraft-data/data/pe/1.0/blocks'),
+      biomes: require('./minecraft-data/data/pc/1.8/biomes'),
+      items: require('./minecraft-data/data/pe/1.0/items'),
+      version: require('./minecraft-data/data/pe/1.0/version')
     }
   }
 };

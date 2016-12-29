@@ -1,3 +1,6 @@
+## 2.11.0
+* update to mcdate 2.9.0, bring mcpc 1.11.2 support
+
 ## 2.10.0
 * update mcdata to 2.8.0, add mcpe 1.0
 

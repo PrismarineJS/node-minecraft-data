@@ -283,6 +283,20 @@ var data={
       protocol: require('./minecraft-data/data/pc/1.11/protocol'),
       windows: require('./minecraft-data/data/pc/1.10/windows'),
       version: require('./minecraft-data/data/pc/1.11/version')
+    },
+    "1.11.2": {
+      blocks: require('./minecraft-data/data/pc/1.10/blocks'),
+      biomes: require('./minecraft-data/data/pc/1.10/biomes'),
+      effects: require('./minecraft-data/data/pc/1.10/effects'),
+      enchantments: require('./minecraft-data/data/pc/1.10/enchantments'),
+      items: require('./minecraft-data/data/pc/1.10/items'),
+      recipes: require('./minecraft-data/data/pc/1.10/recipes'),
+      instruments: require('./minecraft-data/data/pc/1.10/instruments'),
+      materials: require('./minecraft-data/data/pc/1.10/materials'),
+      entities: require('./minecraft-data/data/pc/1.10/entities'),
+      protocol: require('./minecraft-data/data/pc/1.11/protocol'),
+      windows: require('./minecraft-data/data/pc/1.10/windows'),
+      version: require('./minecraft-data/data/pc/1.11.2/version')
     }
   },
   "pe":{

@@ -1,3 +1,6 @@
+## 2.12.1
+* remove protocol schema (moved to protodef)
+
 ## 2.12.0
 * use minecraft data 2.10.0, complete 1.11 data
 

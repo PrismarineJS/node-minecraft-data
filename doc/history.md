@@ -1,3 +1,6 @@
+## 2.12.0
+* use minecraft data 2.10.0, complete 1.11 data
+
 ## 2.11.0
 * update to mcdate 2.9.0, bring mcpc 1.11.2 support
 

@@ -73,7 +73,6 @@ var schemas={
   instruments: require('./minecraft-data/schemas/instruments_schema'),
   items: require('./minecraft-data/schemas/items_schema'),
   materials: require('./minecraft-data/schemas/materials_schema'),
-  protocol: require('./minecraft-data/schemas/protocol_schema'),
   protocolVersions: require('./minecraft-data/schemas/protocolVersions_schema'),
   recipes: require('./minecraft-data/schemas/recipes_schema'),
   version: require('./minecraft-data/schemas/version_schema'),

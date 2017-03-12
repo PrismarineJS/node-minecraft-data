@@ -1,3 +1,6 @@
+## 2.13.2
+* add npmignore (for data.js)
+
 ## 2.13.1
 * update mcdata
 

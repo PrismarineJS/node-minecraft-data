@@ -98,6 +98,11 @@ unindexed enchantments
 
 the minecraft protocol
 
+
+### minecraft-data.protocolComments
+
+the minecraft protocol comments
+
 ## Functions
 
 ### minecraft-data.findItemOrBlockById

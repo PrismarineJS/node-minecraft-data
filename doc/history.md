@@ -1,3 +1,6 @@
+## 2.13.0
+* add protocol comments
+
 ## 2.12.1
 * remove protocol schema (moved to protodef)
 

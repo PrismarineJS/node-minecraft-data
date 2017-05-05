@@ -1,3 +1,6 @@
+## 2.15.0
+* update to mcdata 2.15.0, supports pc 17w18b
+
 ## 2.14.0
 * update to mcdata 2.14.0
 * supports mc 17w15a

@@ -1,3 +1,6 @@
+## 2.16.0
+* update mcdata to 2.16.0 ,supports 1.12-pre4
+
 ## 2.15.0
 * update to mcdata 2.15.0, supports pc 17w18b
 

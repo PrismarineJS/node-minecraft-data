@@ -1,3 +1,6 @@
+## 2.17.0
+* update to mcdata 2.17.0, supports mcpc 1.12
+
 ## 2.16.0
 * update mcdata to 2.16.0 ,supports 1.12-pre4
 
@@ -22,7 +25,7 @@
 
 ## 2.13.0
 * add protocol comments
-
+q
 ## 2.12.1
 * remove protocol schema (moved to protodef)
 

@@ -1,3 +1,6 @@
+## 2.18.0
+* update to mcdata 2.18.0, better supports mcpc 1.12
+
 ## 2.17.0
 * update to mcdata 2.17.0, supports mcpc 1.12
 

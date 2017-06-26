@@ -37,3 +37,5 @@ console.log(require("minecraft-data")("pe_0.14").type);
 console.log(require("minecraft-data")("1.8").enchantments[5]);
 
 console.log(require("minecraft-data").supportedVersions.pc);
+
+console.log(require("minecraft-data")("1.12").language["options.sensitivity.max"]);

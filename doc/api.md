@@ -160,6 +160,10 @@ unindexed effects
 
 pe or pc
 
+## minecraft-data.language
+
+object from language key to string
+
 ## Protocol versions
 
 Those are common data and directly available in the `require('minecraft-data')` object.

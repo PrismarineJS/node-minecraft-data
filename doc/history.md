@@ -1,3 +1,6 @@
+## 2.19.0
+* add language to api, update mcdata to 2.19.0
+
 ## 2.18.0
 * update to mcdata 2.18.0, better supports mcpc 1.12
 

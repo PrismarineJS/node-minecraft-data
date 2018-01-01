@@ -5,12 +5,14 @@ var protocolVersions={
   pe:require('./minecraft-data/data/pe/common/protocolVersions')
 };
 var versionsByMinecraftVersion={};
+var versionsByMajorVersion={};
 var preNettyVersionsByProtocolVersion={};
 var postNettyVersionsByProtocolVersion={};
 
 var types=["pc","pe"];
 types.forEach(function(type){
   versionsByMinecraftVersion[type]=indexer.buildIndexFromArray(protocolVersions[type],"minecraftVersion");
+  versionsByMajorVersion[type]=indexer.buildIndexFromArray(protocolVersions[type].slice().reverse(),"majorVersion");
   preNettyVersionsByProtocolVersion[type]=indexer.buildIndexFromArrayNonUnique(protocolVersions[type].filter(function(e){return !e.usesNetty}),"version");
   postNettyVersionsByProtocolVersion[type]=indexer.buildIndexFromArrayNonUnique(protocolVersions[type].filter(function(e){return e.usesNetty}),"version");
 });
@@ -35,6 +37,7 @@ module.exports = function(mcVersion,preNetty)
   return nmcData;
 };
 
+// adapt the version, most often doesn't convert to major version, can even convert to minor version when possible
 function toMajor(mcVersion,preNetty,typeArg)
 {
   var parts=(mcVersion+"").split("_");
@@ -49,6 +52,8 @@ function toMajor(mcVersion,preNetty,typeArg)
     return toMajor(preNettyVersionsByProtocolVersion[type][version][0].minecraftVersion,preNetty,type);
   else if(!preNetty && postNettyVersionsByProtocolVersion[type][version])
     return toMajor(postNettyVersionsByProtocolVersion[type][version][0].minecraftVersion,preNetty,type);
+  else if(versionsByMajorVersion[type][version])
+    majorVersion=versionsByMajorVersion[type][version].minecraftVersion;
   return {
     majorVersion:majorVersion,
     type:type

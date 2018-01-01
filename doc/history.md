@@ -1,3 +1,6 @@
+## 2.22.0
+* bump mcdata to 2.22.0, mcpc 17w50a support
+
 ## 2.21.0
 * bump mcdata to 2.21.0, mcpc 1.12.2 support
 

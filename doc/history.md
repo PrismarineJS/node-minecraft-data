@@ -1,3 +1,6 @@
+## 2.23.0
+* find the most recent minor version from major version when needed
+
 ## 2.22.0
 * bump mcdata to 2.22.0, mcpc 17w50a support
 

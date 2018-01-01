@@ -1,3 +1,6 @@
+## 2.24.0
+* update mcdata to 2.23.0, some fixes for 17w50a protocol
+
 ## 2.23.0
 * find the most recent minor version from major version when needed
 

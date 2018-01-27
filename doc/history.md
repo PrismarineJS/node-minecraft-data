@@ -1,3 +1,6 @@
+## 2.26.0
+* update mcdata to 2.25.0 : fix packet_title
+
 ## 2.25.0
 * fix brigadier:string parser properties
 

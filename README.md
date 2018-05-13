@@ -18,7 +18,7 @@ For example it's often useful to :
 ## Example
 
 ```js
-var mcData=require("minecraft-data")("1.8.8");
+const mcData=require("minecraft-data")("1.8.8");
 
 console.log(mcData.blocksByName["stone"]);
 console.log(mcData.windows["minecraft:brewing_stand"]);

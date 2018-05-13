@@ -1,3 +1,7 @@
 machine:
   node:
     version: 8
+checkout:
+  post:
+    - git submodule sync --recursive
+    - git submodule update --recursive --init

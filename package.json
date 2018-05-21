@@ -24,6 +24,7 @@
     "url": "https://github.com/PrismarineJS/node-minecraft-data/issues"
   },
   "devDependencies": {
+    "json-schema-to-typescript": "^5.5.0",
     "require-self": "^0.1.0"
   },
   "dependencies": {

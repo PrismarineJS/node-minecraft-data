@@ -1,3 +1,4 @@
 node_modules/
 data.js
 package-lock.json
+index.d.ts

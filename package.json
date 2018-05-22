@@ -7,7 +7,7 @@
   "scripts": {
     "test": "npm run lint",
     "lint": "standard",
-    "prepublish": "require-self && ./bin/generate_data.js"
+    "prepublish": "require-self && ./bin/generate_data.js && node typings/generate-typings.js"
   },
   "repository": {
     "type": "git",

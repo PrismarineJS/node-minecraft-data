@@ -195,27 +195,27 @@ Array of pe supported versions
 
 ## Schemas
 
-### minecraft-data.schema.biomes
+### minecraft-data.schemas.biomes
 
-### minecraft-data.schema.blocks
+### minecraft-data.schemas.blocks
 
-### minecraft-data.schema.effects
+### minecraft-data.schemas.effects
 
-### minecraft-data.schema.entities
+### minecraft-data.schemas.entities
 
-### minecraft-data.schema.instruments
+### minecraft-data.schemas.instruments
 
-### minecraft-data.schema.items
+### minecraft-data.schemas.items
 
-### minecraft-data.schema.materials
+### minecraft-data.schemas.materials
 
-### minecraft-data.schema.protocol
+### minecraft-data.schemas.protocol
 
-### minecraft-data.schema.protocolVersions
+### minecraft-data.schemas.protocolVersions
 
-### minecraft-data.schema.recipes
+### minecraft-data.schemas.recipes
 
-### minecraft-data.schema.version
+### minecraft-data.schemas.version
 
-### minecraft-data.schema.windows
+### minecraft-data.schemas.windows
 

@@ -1,10 +1,30 @@
 
+interface VersionSet {
+  pc: { [version: string]: Version };
+  pe: { [version: string]: Version };
+}
+
 interface SupportedVersions {
   pc: string[];
   pe: string[];
 }
 
-declare interface MinecraftData {
+interface Schemas {
+  biomes: any;
+  blocks: any;
+  effects: any;
+  entities: any;
+  instruments: any;
+  items: any;
+  materials: any;
+  protocol: any;
+  protocolVersions: any;
+  recipes: any;
+  version: any;
+  windows: any;
+}
+
+interface IndexedData {
   blocks: { [id: number]: Block; };
   blocksByName: { [name: string]: Block; };
   blocksArray: Block[];
@@ -47,17 +67,18 @@ declare interface MinecraftData {
   effectsArray: Effect[];
 
   version: Version;
-  versions: string[];
-  versionsByMinecraftVersion: any;
-  postNettyVersionByProtocolVersion: any;
-  supportedVersion: SupportedVersions;
 
   type: string;
 
   language: { [key: string]: string };
-  schema: any;
 }
 
-declare function GetMinecraftData(version: string): MinecraftData;
-
-export = GetMinecraftData
+const GetMinecraftData: {
+  (version: string | number): IndexedData;
+  versions: Version[];
+  versionsByMinecraftVersion: VersionSet;
+  preNettyVersionsByProtocolVersion: VersionSet;
+  postNettyVersionsByProtocolVersion: VersionSet;
+  supportedVersions: SupportedVersions;
+  schemas: Schemas;
+}

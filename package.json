@@ -5,7 +5,7 @@
   "main": "index.js",
   "tonicExampleFilename": "example.js",
   "scripts": {
-    "test": "npm run lint",
+    "test": "npm run lint && tsc typings/test-typings.ts && node typings/test-typings.js",
     "lint": "standard",
     "prepublish": "require-self && ./bin/generate_data.js && node typings/generate-typings.js"
   },

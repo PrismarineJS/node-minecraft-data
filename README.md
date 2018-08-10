@@ -19,12 +19,12 @@ For example it's often useful to :
 ## Example
 
 ```js
-const mcData=require("minecraft-data")("1.8.8");
+const mcData=require("minecraft-data")("1.8.8")
 
-console.log(mcData.blocksByName["stone"]);
-console.log(mcData.windows["minecraft:brewing_stand"]);
-console.log(mcData.version);
-console.log(mcData.effectsByName["Haste"]);
+console.log(mcData.blocksByName["stone"])
+console.log(mcData.windows["minecraft:brewing_stand"])
+console.log(mcData.version)
+console.log(mcData.effectsByName["Haste"])
 ```
 
 ## Documentation

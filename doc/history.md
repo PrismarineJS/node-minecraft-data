@@ -1,3 +1,6 @@
+## 2.27.0
+* update mcdata to 2.27.0 : bring minecraft 1.13 protocol support
+
 ## 2.26.0
 * update mcdata to 2.25.0 : fix packet_title
 

@@ -1,3 +1,6 @@
+## 2.28.0
+* update mcdata to 2.28.0 : support mc protocol 1.13.1
+
 ## 2.27.0
 * update mcdata to 2.27.0 : bring minecraft 1.13 protocol support
 

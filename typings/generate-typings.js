@@ -25,11 +25,11 @@ async function generate () {
       bannerComment: ''
       // declareExternallyReferenced: false
     })).replace(/export /g, '')
-  }))).join('\n\n').split('\n').map(line => '  '+line).join('\n')
+  }))).join('\n\n').split('\n').map(line => '  ' + line).join('\n')
 
-  typingString += templateTypings.split('\n').map(line => '  '+line).join('\n')
+  typingString += templateTypings.split('\n').map(line => '  ' + line).join('\n')
   typingString += '\n}\n\n' // Close namespace
-  typingString += 'export = MinecraftData.GetMinecraftData';
+  typingString += 'export = MinecraftData.GetMinecraftData'
 
   fs.writeFileSync(path.resolve(__dirname, '../index.d.ts'), typingString)
 }

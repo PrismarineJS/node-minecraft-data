@@ -13,6 +13,7 @@
   },
   "files": [
     "index.d.ts",
-    "tests/minecraft-data.ts"
+    "tests/minecraft-data.ts",
+    "typings/test-typings.ts"
   ]
 }

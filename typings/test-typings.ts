@@ -1,3 +1,4 @@
+///<reference path="../node_modules/@types/node/index.d.ts"/>
 import getMcData = require('../');
 const mcData = getMcData('1.8.8');
 

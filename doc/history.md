@@ -1,3 +1,6 @@
+## 2.29.0
+* Update to mcdata 2.29.0 : bring full 1.13 support
+
 ## 2.28.0
 * update mcdata to 2.28.0 : support mc protocol 1.13.1
 

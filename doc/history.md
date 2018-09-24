@@ -1,3 +1,6 @@
+## 2.30.0
+* Update to mcdata 2.30.0 + bring typescript support
+
 ## 2.29.0
 * Update to mcdata 2.29.0 : bring full 1.13 support
 

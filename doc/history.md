@@ -1,3 +1,6 @@
+## 2.31.0
+* update mcdata to 2.31.0 : fix 1.13.1 datapath
+
 ## 2.30.0
 * Update to mcdata 2.30.0 + bring typescript support
 

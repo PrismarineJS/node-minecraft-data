@@ -1,3 +1,6 @@
+## 2.33.0
+* update to mcdata 2.33.0 : fix version definition for 1.13.2-pre1
+
 ## 2.32.0
 * update mcdata to 2.32.0 : bring 1.13.2-pre1 support
 

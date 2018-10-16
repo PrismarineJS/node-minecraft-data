@@ -1,3 +1,6 @@
+## 2.32.0
+* update mcdata to 2.32.0 : bring 1.13.2-pre1 support
+
 ## 2.31.0
 * update mcdata to 2.31.0 : fix 1.13.1 datapath
 

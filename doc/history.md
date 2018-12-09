@@ -1,3 +1,6 @@
+## 2.35.0
+* update mcdata to 2.35.0 and add blocksByStateId to API
+
 ## 2.34.0
 * update mcdata to 2.34.0 : bring 1.13.2 support
 

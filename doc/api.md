@@ -14,6 +14,10 @@ blocks indexed by name
 
 unindexed blocks
 
+### minecraft-data.blocksByStateId
+
+blocks indexed by state id
+
 ## Items
 
 ### minecraft-data.items

@@ -1,3 +1,6 @@
+## 2.35.1
+* make standard a devDependencies
+
 ## 2.35.0
 * update mcdata to 2.35.0 and add blocksByStateId to API
 

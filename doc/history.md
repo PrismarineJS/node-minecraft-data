@@ -1,3 +1,6 @@
+## 2.36.0
+* fix teams in 1.13
+
 ## 2.35.1
 * make standard a devDependencies
 

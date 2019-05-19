@@ -1,3 +1,6 @@
+## 2.37.1
+* mcdata 2.37.1 : add missing version file for 1.14.1 and 1.14
+
 ## 2.37.0
 * mc data 2.37.0 : minecraft 1.14 support
 

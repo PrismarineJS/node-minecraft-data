@@ -1,3 +1,6 @@
+## 2.37.4
+* mcdata 2.37.4 : 1.14 protocol
+
 ## 2.37.3
 * mcdata 2.37.3 : fix stonecutting in declare_recipes 1.14.1 : only one ingredient
 

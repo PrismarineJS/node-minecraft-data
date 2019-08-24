@@ -7,7 +7,8 @@
   "scripts": {
     "test": "npm run lint && tsc typings/test-typings.ts && node typings/test-typings.js",
     "lint": "standard",
-    "prepublish": "require-self && ./bin/generate_data.js && node typings/generate-typings.js"
+    "prepublish": "require-self && ./bin/generate_data.js && node typings/generate-typings.js",
+    "fix": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,10 @@
     "url": "https://github.com/PrismarineJS/node-minecraft-data/issues"
   },
   "devDependencies": {
-    "@types/node": "^10.11.0",
+    "@types/node": "^12.7.2",
     "json-schema-to-typescript": "^5.5.0",
     "require-self": "^0.1.0",
-    "typescript": "^3.0.3",
-    "standard": "^12.0.1"
+    "standard": "^14.0.0",
+    "typescript": "^3.5.3"
   }
 }

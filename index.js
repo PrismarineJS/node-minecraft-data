@@ -1,8 +1,8 @@
 const mcDataToNode = require('./lib/loader')
 const indexer = require('./lib/indexer.js')
 const protocolVersions = {
-  pc: require('./minecraft-data/data/pc/common/protocolVersions'),
-  pe: require('./minecraft-data/data/pe/common/protocolVersions')
+  pc: require('./minecraft-data/data/pc/common/protocolVersions.json'),
+  pe: require('./minecraft-data/data/pe/common/protocolVersions.json')
 }
 const versionsByMinecraftVersion = {}
 const versionsByMajorVersion = {}
@@ -46,8 +46,8 @@ function toMajor (mcVersion, preNetty, typeArg) {
 }
 
 module.exports.supportedVersions = {
-  pc: require('./minecraft-data/data/pc/common/versions'),
-  pe: require('./minecraft-data/data/pe/common/versions')
+  pc: require('./minecraft-data/data/pc/common/versions.json'),
+  pe: require('./minecraft-data/data/pe/common/versions.json')
 }
 module.exports.versions = protocolVersions
 module.exports.versionsByMinecraftVersion = versionsByMinecraftVersion
@@ -55,18 +55,18 @@ module.exports.preNettyVersionsByProtocolVersion = preNettyVersionsByProtocolVer
 module.exports.postNettyVersionsByProtocolVersion = postNettyVersionsByProtocolVersion
 
 const schemas = {
-  biomes: require('./minecraft-data/schemas/biomes_schema'),
-  blocks: require('./minecraft-data/schemas/blocks_schema'),
-  effects: require('./minecraft-data/schemas/effects_schema'),
-  entities: require('./minecraft-data/schemas/entities_schema'),
-  enchantments: require('./minecraft-data/schemas/enchantments_schema'),
-  instruments: require('./minecraft-data/schemas/instruments_schema'),
-  items: require('./minecraft-data/schemas/items_schema'),
-  materials: require('./minecraft-data/schemas/materials_schema'),
-  protocolVersions: require('./minecraft-data/schemas/protocolVersions_schema'),
-  recipes: require('./minecraft-data/schemas/recipes_schema'),
-  version: require('./minecraft-data/schemas/version_schema'),
-  windows: require('./minecraft-data/schemas/windows_schema')
+  biomes: require('./minecraft-data/schemas/biomes_schema.json'),
+  blocks: require('./minecraft-data/schemas/blocks_schema.json'),
+  effects: require('./minecraft-data/schemas/effects_schema.json'),
+  entities: require('./minecraft-data/schemas/entities_schema.json'),
+  enchantments: require('./minecraft-data/schemas/enchantments_schema.json'),
+  instruments: require('./minecraft-data/schemas/instruments_schema.json'),
+  items: require('./minecraft-data/schemas/items_schema.json'),
+  materials: require('./minecraft-data/schemas/materials_schema.json'),
+  protocolVersions: require('./minecraft-data/schemas/protocolVersions_schema.json'),
+  recipes: require('./minecraft-data/schemas/recipes_schema.json'),
+  version: require('./minecraft-data/schemas/version_schema.json'),
+  windows: require('./minecraft-data/schemas/windows_schema.json')
 }
 module.exports.schemas = schemas
 

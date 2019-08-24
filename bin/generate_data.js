@@ -12,7 +12,7 @@ const data = 'module.exports =\n{\n' + Object
       .map(k2 =>
         "    '" + k2 + "': {" + '\n' + Object
           .keys(dataSource[k1][k2])
-          .map(k3 => "      '" + k3 + "': require('./minecraft-data/data/" + dataSource[k1][k2][k3] + '/' + k3 + "')")
+          .map(k3 => "      '" + k3 + "': require('./minecraft-data/data/" + dataSource[k1][k2][k3] + '/' + k3 + ".json')")
           .join(',\n') +
       '\n    }'
       )

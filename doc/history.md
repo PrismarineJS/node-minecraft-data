@@ -1,3 +1,6 @@
+## 2.39.1
+* import files with .json suffix
+
 ## 2.39.0
 * mcdata 2.39.0 : 1.14.4 support
 

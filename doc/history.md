@@ -1,5 +1,8 @@
+## 2.41.0
+* mcdata 2.41.0 : 1.15 protocol support
+
 ## 2.40.0
-* mcdata 2.40 : 1.15.1 protocol support
+* mcdata 2.40.0 : 1.15.1 protocol support
 
 ## 2.39.0
 * mcdata 2.39.0 : 1.14.4 support

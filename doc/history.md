@@ -1,3 +1,6 @@
+## 2.44.0
+* mcdata 2.44.0 : small fix to success packet for 20w13b
+
 ## 2.43.0
 * mcdata 2.43.0 : 20w13b snapshot support (1.16 major)
 

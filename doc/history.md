@@ -1,3 +1,6 @@
+## 2.43.0
+* mcdata 2.43.0 : 20w13b snapshot support (1.16 major)
+
 ## 2.42.0
 * mcdata 2.42.0 : 1.15.2 protocol support
 

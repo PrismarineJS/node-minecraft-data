@@ -1,3 +1,6 @@
+## 2.45.0
+* mcdata 2.45.0 : last 1.16 snapshot support + fix for glass for 1.13
+
 ## 2.44.0
 * mcdata 2.44.0 : small fix to success packet for 20w13b
 

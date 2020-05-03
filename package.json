@@ -5,7 +5,7 @@
   "main": "index.js",
   "tonicExampleFilename": "example.js",
   "scripts": {
-    "test": "npm run lint && tsc typings/test-typings.ts && node typings/test-typings.js",
+    "test": "require-self && ./bin/generate_data.js && npm run lint && tsc typings/test-typings.ts && node typings/test-typings.js && mocha",
     "lint": "standard",
     "prepublish": "require-self && ./bin/generate_data.js && node typings/generate-typings.js",
     "fix": "standard --fix"
@@ -27,8 +27,10 @@
   "devDependencies": {
     "@types/node": "^12.7.2",
     "json-schema-to-typescript": "^5.5.0",
+    "mocha": "^7.1.2",
     "require-self": "^0.1.0",
     "standard": "^14.0.0",
     "typescript": "^3.5.3"
-  }
+  },
+  "dependencies": {}
 }

@@ -1,3 +1,6 @@
+## 2.48.0
+* update mcdata to 2.48.0 : fix for bounding boxes and entity categories
+
 ## 2.47.0
 * mcdata 2.47.0 : add biomes, blocks, entities, items and recipes for 1.14.4
 

@@ -1,3 +1,6 @@
+## 2.49.0
+* update mcdata to 2.49.0 : 1.14.4 block fix + loading test in nmd
+
 ## 2.48.0
 * update mcdata to 2.48.0 : fix for bounding boxes and entity categories
 

@@ -1,3 +1,6 @@
+## 2.50.0
+* update mcdata to 2.50.0 : protocol fix + more 1.14.4 data
+
 ## 2.49.0
 * update mcdata to 2.49.0 : 1.14.4 block fix + loading test in nmd
 

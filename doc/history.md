@@ -1,3 +1,6 @@
+## 2.51.0
+* update mcdata to 2.51.0 : more 1.15.2 data
+
 ## 2.50.0
 * update mcdata to 2.50.0 : protocol fix + more 1.14.4 data
 

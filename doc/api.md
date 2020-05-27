@@ -18,6 +18,10 @@ unindexed blocks
 
 blocks indexed by state id
 
+### minecraft-data.blockCollisionShapes
+
+block collision shapes
+
 ## Items
 
 ### minecraft-data.items

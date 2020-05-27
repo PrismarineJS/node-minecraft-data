@@ -10,6 +10,11 @@
     "prepublish": "require-self && ./bin/generate_data.js && node typings/generate-typings.js",
     "fix": "standard --fix"
   },
+  "standard": {
+    "ignore": [
+        "minecraft-data/**/*.js"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:PrismarineJS/node-minecraft-data.git"

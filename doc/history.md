@@ -1,3 +1,7 @@
+## 2.52.0
+* update mcdata to 2.52.0 : better block shapes
+* expose block shapes
+
 ## 2.51.0
 * update mcdata to 2.51.0 : more 1.15.2 data
 

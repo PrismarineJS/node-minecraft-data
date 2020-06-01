@@ -1,3 +1,6 @@
+## 2.53.0
+* update mcdata to 2.53.0 : better support for 1.14 and 1.15
+
 ## 2.52.0
 * update mcdata to 2.52.0 : better block shapes
 * expose block shapes

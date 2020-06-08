@@ -12,7 +12,7 @@
   },
   "standard": {
     "ignore": [
-        "minecraft-data/**/*.js"
+      "minecraft-data/**/*.js"
     ]
   },
   "repository": {

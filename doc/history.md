@@ -1,3 +1,6 @@
+## 2.55.0
+* entity metadata type is a varint since 1.13
+
 ## 2.54.0
 * update mcdata to 2.54.0 : better items
 

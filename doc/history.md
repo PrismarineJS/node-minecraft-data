@@ -1,3 +1,6 @@
+## 2.57.0
+* fix abilities and recipes packets for 1.16-rc1
+
 ## 2.56.0
 * 1.16-rc1 protocol support
 

@@ -1,3 +1,6 @@
+## 2.56.0
+* 1.16-rc1 protocol support
+
 ## 2.55.0
 * entity metadata type is a varint since 1.13
 

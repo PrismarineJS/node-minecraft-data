@@ -1,15 +1,15 @@
 
-interface VersionSet {
+export interface VersionSet {
   pc: { [version: string]: Version };
   pe: { [version: string]: Version };
 }
 
-interface SupportedVersions {
+export interface SupportedVersions {
   pc: string[];
   pe: string[];
 }
 
-interface Schemas {
+export interface Schemas {
   biomes: any;
   blocks: any;
   effects: any;
@@ -24,7 +24,7 @@ interface Schemas {
   windows: any;
 }
 
-interface IndexedData {
+export interface IndexedData {
   blocks: { [id: number]: Block; };
   blocksByName: { [name: string]: Block; };
   blocksArray: Block[];
@@ -73,12 +73,9 @@ interface IndexedData {
   language: { [key: string]: string };
 }
 
-const GetMinecraftData: {
-  (version: string | number): IndexedData;
-  versions: Version[];
-  versionsByMinecraftVersion: VersionSet;
-  preNettyVersionsByProtocolVersion: VersionSet;
-  postNettyVersionsByProtocolVersion: VersionSet;
-  supportedVersions: SupportedVersions;
-  schemas: Schemas;
-}
+const versions: Version[];
+const versionsByMinecraftVersion: VersionSet;
+const preNettyVersionsByProtocolVersion: VersionSet;
+const postNettyVersionsByProtocolVersion: VersionSet;
+const supportedVersions: SupportedVersions;
+const schemas: Schemas;

@@ -29,7 +29,8 @@ async function generate () {
 
   typingString += templateTypings.split('\n').map(line => '  ' + line).join('\n')
   typingString += '\n}\n\n' // Close namespace
-  typingString += 'export = MinecraftData.GetMinecraftData'
+  typingString += 'declare function MinecraftData(version: string | number): MinecraftData.IndexedData;\n'
+  typingString += 'export = MinecraftData'
 
   fs.writeFileSync(path.resolve(__dirname, '../index.d.ts'), typingString)
 }

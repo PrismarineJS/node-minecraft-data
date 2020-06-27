@@ -5,9 +5,12 @@
   "main": "index.js",
   "tonicExampleFilename": "example.js",
   "scripts": {
-    "test": "require-self && ./bin/generate_data.js && npm run lint && tsc typings/test-typings.ts && node typings/test-typings.js && mocha",
+    "generate:types": "node typings/generate-typings.js",
+    "generate:data": "./bin/generate_data.js",
+    "test:types": "tsc typings/test-typings && node typings/test-typings.js",
+    "test": "require-self && npm run generate:data && npm run lint && npm run test:types && mocha",
     "lint": "standard",
-    "prepublish": "require-self && ./bin/generate_data.js && node typings/generate-typings.js",
+    "prepublish": "require-self && npm run generate:data && npm run generate:types",
     "fix": "standard --fix"
   },
   "standard": {
@@ -30,7 +33,7 @@
     "url": "https://github.com/PrismarineJS/node-minecraft-data/issues"
   },
   "devDependencies": {
-    "@types/node": "^14.0.1",
+    "@types/node": "^14.0.14",
     "json-schema-to-typescript": "^9.1.0",
     "mocha": "^8.0.1",
     "require-self": "^0.2.3",

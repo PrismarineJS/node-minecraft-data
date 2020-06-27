@@ -9,11 +9,10 @@
     "strictNullChecks": false,
     "strictFunctionTypes": true,
     "forceConsistentCasingInFileNames": true,
-    "types": []
+    "types": ["node"]
   },
   "files": [
     "index.d.ts",
-    "tests/minecraft-data.ts",
     "typings/test-typings.ts"
   ]
 }

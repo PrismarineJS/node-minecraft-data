@@ -1,3 +1,6 @@
+## 2.61.0
+* correct block states + default state
+
 ## 2.60.0
 * full 1.16 support
 

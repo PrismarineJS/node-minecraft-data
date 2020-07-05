@@ -1,3 +1,6 @@
+## 2.62.1
+* food data (thanks @AppDevMichael)
+
 ## 2.61.0
 * correct block states + default state
 

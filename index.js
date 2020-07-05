@@ -66,7 +66,8 @@ const schemas = {
   protocolVersions: require('./minecraft-data/schemas/protocolVersions_schema.json'),
   recipes: require('./minecraft-data/schemas/recipes_schema.json'),
   version: require('./minecraft-data/schemas/version_schema.json'),
-  windows: require('./minecraft-data/schemas/windows_schema.json')
+  windows: require('./minecraft-data/schemas/windows_schema.json'),
+  foods: require('./minecraft-data/schemas/foods_schema.json')
 }
 module.exports.schemas = schemas
 

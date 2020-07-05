@@ -36,6 +36,28 @@ items indexed by name
 
 unindexed items
 
+## Foods
+
+### minecraft-data.foods
+
+foods indexed by id
+
+### minecraft-data.foodsByName
+
+foods indexed by name
+
+### minecraft-data.foodsByFoodPoints
+
+foods indexed by food points
+
+### minecraft-data.foodsBySaturation
+
+foods indexed by saturation
+
+### minecraft-data.foodsArray
+
+unindexed foods
+
 ## Biomes
 
 ### minecraft-data.biomes

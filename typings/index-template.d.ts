@@ -1,76 +1,83 @@
 
 export interface VersionSet {
-  pc: { [version: string]: Version };
-  pe: { [version: string]: Version };
+    pc: { [version: string]: Version };
+    pe: { [version: string]: Version };
 }
 
 export interface SupportedVersions {
-  pc: string[];
-  pe: string[];
+    pc: string[];
+    pe: string[];
 }
 
 export interface Schemas {
-  biomes: any;
-  blocks: any;
-  effects: any;
-  entities: any;
-  instruments: any;
-  items: any;
-  materials: any;
-  protocol: any;
-  protocolVersions: any;
-  recipes: any;
-  version: any;
-  windows: any;
+    biomes: any;
+    blocks: any;
+    effects: any;
+    entities: any;
+    instruments: any;
+    items: any;
+    materials: any;
+    protocol: any;
+    protocolVersions: any;
+    recipes: any;
+    version: any;
+    windows: any;
+    foods: any;
 }
 
 export interface IndexedData {
-  blocks: { [id: number]: Block; };
-  blocksByName: { [name: string]: Block; };
-  blocksArray: Block[];
+    blocks: { [id: number]: Block; };
+    blocksByName: { [name: string]: Block; };
+    blocksArray: Block[];
 
-  items: { [id: number]: Item; };
-  itemsByName: { [name: string]: Item; };
-  itemsArray: Item[];
+    items: { [id: number]: Item; };
+    itemsByName: { [name: string]: Item; };
+    itemsArray: Item[];
 
-  biomes: { [id: number]: Biome; };
-  biomesArray: Biome[];
+    foods: { [id: number]: Food; };
+    foodsByName: { [name: string]: Food; };
+    foodsArray: Food[];
+    foodsByFoodPoints: { [foodPoints: number]: Food; };
+    foodsBySaturation: { [saturation: number]: Food; };
 
-  recipes: { [id: number]: Recipe; };
+    biomes: { [id: number]: Biome; };
+    biomesArray: Biome[];
 
-  instruments: { [id: number]: Instrument; };
-  instrumentsArray: Instrument[];
+    recipes: { [id: number]: Recipe; };
 
-  materials: { [name: string]: Material };
+    instruments: { [id: number]: Instrument; };
+    instrumentsArray: Instrument[];
 
-  mobs: { [id: number]: Entity; };
-  objects: { [id: number]: Entity; };
-  entitiesByName: { [name: string]: Entity; };
-  entitiesArray: Entity[];
+    materials: { [name: string]: Material };
 
-  enchantments: { [id: number]: Enchantment; };
-  enchantmentsByName: { [name: string]: Enchantment; };
-  enchantmentsArray: Enchantment[];
+    mobs: { [id: number]: Entity; };
+    objects: { [id: number]: Entity; };
+    entitiesByName: { [name: string]: Entity; };
+    entitiesArray: Entity[];
 
-  protocol: any;
-  protocolComments: any;
+    enchantments: { [id: number]: Enchantment; };
+    enchantmentsByName: { [name: string]: Enchantment; };
+    enchantmentsArray: Enchantment[];
 
-  findItemOrBlockById(id: number): Block | Item;
-  findItemOrBlockByName(name: string): Block | Item;
+    protocol: any;
+    protocolComments: any;
 
-  windows: { [id: number]: Window; };
-  windowsByName: { [name: string]: Window; };
-  windowsArray: Window[];
+    findItemOrBlockById(id: number): Block | Item;
+    findItemOrBlockByName(name: string): Block | Item;
 
-  effects: { [id: number]: Effect; };
-  effectsByName: { [name: string]: Effect; };
-  effectsArray: Effect[];
+    windows: { [id: number]: Window; };
+    windowsByName: { [name: string]: Window; };
+    windowsArray: Window[];
 
-  version: Version;
+    effects: { [id: number]: Effect; };
+    effectsByName: { [name: string]: Effect; };
+    effectsArray: Effect[];
 
-  type: string;
+    version: Version;
 
-  language: { [key: string]: string };
+    type: string;
+
+    language: { [key: string]: string };
 }
 
 const versions: Version[];

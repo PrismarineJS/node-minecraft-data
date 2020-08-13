@@ -243,9 +243,13 @@ Array of pe supported versions
 
 ### minecraft-data.schemas.blocks
 
+### minecraft-data.schemas.blockLoot
+
 ### minecraft-data.schemas.effects
 
 ### minecraft-data.schemas.entities
+
+### minecraft-data.schemas.entityLoot
 
 ### minecraft-data.schemas.instruments
 
@@ -264,4 +268,3 @@ Array of pe supported versions
 ### minecraft-data.schemas.version
 
 ### minecraft-data.schemas.windows
-

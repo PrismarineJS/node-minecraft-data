@@ -1,3 +1,7 @@
+## 2.65.0
+* update to mcdata 2.65.0 : 1.16.2 protocol support
+* add particle support
+
 ## 2.63.0
 * update to mcdata 2.63.0
 

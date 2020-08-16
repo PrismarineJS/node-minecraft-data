@@ -37,3 +37,5 @@ console.log(require('minecraft-data').supportedVersions.pc)
 console.log(require('minecraft-data')('1.12').language['options.sensitivity.max'])
 
 console.log(require('minecraft-data')('1.13.2').blocksByStateId[3381])
+
+console.log(require('minecraft-data')('1.13.2').particles[2])

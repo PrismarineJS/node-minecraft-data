@@ -186,6 +186,20 @@ effects indexed by name
 
 unindexed effects
 
+## Particles
+
+### minecraft-data.particles
+
+particles indexed by id
+
+### minecraft-data.particlesByName
+
+particles indexed by name
+
+### minecraft-data.particlesArray
+
+unindexed particles
+
 ## type
 
 pe or pc
@@ -238,6 +252,8 @@ Array of pe supported versions
 ### minecraft-data.schemas.items
 
 ### minecraft-data.schemas.materials
+
+### minecraft-data.schemas.particles
 
 ### minecraft-data.schemas.protocol
 

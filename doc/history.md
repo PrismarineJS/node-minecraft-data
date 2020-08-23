@@ -1,3 +1,6 @@
+## 2.67.0
+* update to mcdata 2.67.0 : loottable + enchantments fix
+
 ## 2.65.0
 * update to mcdata 2.65.0 : 1.16.2 protocol support
 * add particle support

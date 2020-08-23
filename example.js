@@ -39,3 +39,5 @@ console.log(require('minecraft-data')('1.12').language['options.sensitivity.max'
 console.log(require('minecraft-data')('1.13.2').blocksByStateId[3381])
 
 console.log(require('minecraft-data')('1.13.2').particles[2])
+
+console.log(require('minecraft-data')('1.16.1').blockLoot.stone)

@@ -200,6 +200,24 @@ particles indexed by name
 
 unindexed particles
 
+## Loot
+
+### minecraft-data.entityLoot
+
+entity loot indexed by name
+
+### minecraft-data.entityLootArray
+
+unindexed entity loot
+
+### minecraft-data.blockLoot
+
+block loot indexed by name
+
+### minecraft-data.blockLootArray
+
+unindexed block loot
+
 ## type
 
 pe or pc

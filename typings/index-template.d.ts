@@ -23,6 +23,8 @@ export interface Schemas {
     version: any;
     windows: any;
     foods: any;
+    blockLoot: any;
+    entityLoot: any;
 }
 
 export interface IndexedData {
@@ -78,6 +80,12 @@ export interface IndexedData {
     type: string;
 
     language: { [key: string]: string };
+
+    blockLoot: { [id: number]: BlockLoot; };
+    blockLootByName: { [name: string]: BlockLoot; };
+
+    entityLoot: { [id: number]: EntityLoot; };
+    entityLootByName: { [name: string]: EntityLoot; };
 }
 
 const versions: Version[];

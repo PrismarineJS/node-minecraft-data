@@ -17,6 +17,24 @@ types.forEach(function (type) {
   postNettyVersionsByProtocolVersion[type] = indexer.buildIndexFromArrayNonUnique(protocolVersions[type].filter(function (e) { return e.usesNetty }), 'version')
 })
 
+function loadData (versionType, majorVersion) {
+  const dataSource = require('./minecraft-data/data/dataPaths')
+
+  if (dataSource[versionType]) {
+    if (dataSource[versionType][majorVersion]) {
+      const data = {}
+
+      for (const dataFile of dataSource[versionType][majorVersion]) {
+        data[dataFile] = require('./minecraft-data/data/' + dataSource[versionType][majorVersion][dataFile] + '/' + dataFile + '.json')
+      }
+
+      return data
+    }
+  }
+
+  return null
+}
+
 const cache = {} // prevent reindexing when requiring multiple time the same version
 
 module.exports = function (mcVersion, preNetty) {
@@ -24,7 +42,7 @@ module.exports = function (mcVersion, preNetty) {
   const majorVersion = toMajor(mcVersion, preNetty)
   if (majorVersion == null) { return null }
   if (cache[majorVersion.type + '_' + majorVersion.majorVersion]) { return cache[majorVersion.type + '_' + majorVersion.majorVersion] }
-  const mcData = data[majorVersion.type][majorVersion.majorVersion]
+  const mcData = loadData(majorVersion.type, majorVersion.majorVersion)
   if (mcData == null) { return null }
   const nmcData = mcDataToNode(mcData)
   nmcData.type = majorVersion.type
@@ -38,7 +56,7 @@ function toMajor (mcVersion, preNetty, typeArg) {
   const type = typeArg || (parts.length === 2 ? parts[0] : 'pc')
   const version = parts.length === 2 ? parts[1] : mcVersion
   let majorVersion
-  if (data[type][version]) { majorVersion = version } else if (versionsByMinecraftVersion[type][version]) { majorVersion = versionsByMinecraftVersion[type][version].majorVersion } else if (preNetty && preNettyVersionsByProtocolVersion[type][version]) { return toMajor(preNettyVersionsByProtocolVersion[type][version][0].minecraftVersion, preNetty, type) } else if (!preNetty && postNettyVersionsByProtocolVersion[type][version]) { return toMajor(postNettyVersionsByProtocolVersion[type][version][0].minecraftVersion, preNetty, type) } else if (versionsByMajorVersion[type][version]) { majorVersion = versionsByMajorVersion[type][version].minecraftVersion }
+  if (loadData(type, version)) { majorVersion = version } else if (versionsByMinecraftVersion[type][version]) { majorVersion = versionsByMinecraftVersion[type][version].majorVersion } else if (preNetty && preNettyVersionsByProtocolVersion[type][version]) { return toMajor(preNettyVersionsByProtocolVersion[type][version][0].minecraftVersion, preNetty, type) } else if (!preNetty && postNettyVersionsByProtocolVersion[type][version]) { return toMajor(postNettyVersionsByProtocolVersion[type][version][0].minecraftVersion, preNetty, type) } else if (versionsByMajorVersion[type][version]) { majorVersion = versionsByMajorVersion[type][version].minecraftVersion }
   return {
     majorVersion: majorVersion,
     type: type
@@ -71,5 +89,3 @@ const schemas = {
   particles: require('./minecraft-data/schemas/particles_schema.json')
 }
 module.exports.schemas = schemas
-
-const data = require('./data.js')

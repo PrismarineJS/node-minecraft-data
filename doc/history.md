@@ -1,3 +1,8 @@
+## 2.68.1
+* load only necessary data (thanks @TheDudeFromCI)
+* update mcdata: 1.16.3
+* add commands
+
 ## 2.67.0
 * update to mcdata 2.67.0 : loottable + enchantments fix
 

@@ -200,6 +200,12 @@ particles indexed by name
 
 unindexed particles
 
+## Commands
+
+### minecraft-data.commands 
+
+Command tree
+
 ## Loot
 
 ### minecraft-data.entityLoot

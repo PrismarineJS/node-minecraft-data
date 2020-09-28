@@ -88,6 +88,7 @@ const schemas = {
   biomes: require('./minecraft-data/schemas/biomes_schema.json'),
   blocks: require('./minecraft-data/schemas/blocks_schema.json'),
   effects: require('./minecraft-data/schemas/effects_schema.json'),
+  commands: require('./minecraft-data/schemas/commands_schema.json'),
   entities: require('./minecraft-data/schemas/entities_schema.json'),
   enchantments: require('./minecraft-data/schemas/enchantments_schema.json'),
   instruments: require('./minecraft-data/schemas/instruments_schema.json'),

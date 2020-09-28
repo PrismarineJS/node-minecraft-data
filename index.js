@@ -24,7 +24,7 @@ function loadData (versionType, majorVersion) {
     if (dataSource[versionType][majorVersion]) {
       const data = {}
 
-      for (const dataFile of dataSource[versionType][majorVersion]) {
+      for (const dataFile in dataSource[versionType][majorVersion]) {
         data[dataFile] = require('./minecraft-data/data/' + dataSource[versionType][majorVersion][dataFile] + '/' + dataFile + '.json')
       }
 

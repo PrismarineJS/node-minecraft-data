@@ -68,7 +68,7 @@ function toMajor (mcVersion, preNetty, typeArg) {
   } else if (versionsByMajorVersion[type][version]) {
     majorVersion = versionsByMajorVersion[type][version].minecraftVersion
   }
-  
+
   return {
     majorVersion: majorVersion,
     type: type

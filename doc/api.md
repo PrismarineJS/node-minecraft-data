@@ -232,6 +232,10 @@ pe or pc
 
 object from language key to string
 
+## minecraft-data.loginPacket
+
+example of login packet
+
 ## Protocol versions
 
 Those are common data and directly available in the `require('minecraft-data')` object.

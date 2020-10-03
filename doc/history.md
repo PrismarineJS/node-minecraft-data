@@ -1,3 +1,6 @@
+## 2.69.0
+* expose login packet
+
 ## 2.68.1
 * load only necessary data (thanks @TheDudeFromCI)
 * update mcdata: 1.16.3

@@ -1,3 +1,6 @@
+## 2.69.1
+* revert load only necessary data (for now)
+
 ## 2.69.0
 * expose login packet
 

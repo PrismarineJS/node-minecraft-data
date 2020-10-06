@@ -6,10 +6,11 @@
   "tonicExampleFilename": "example.js",
   "scripts": {
     "generate:types": "node typings/generate-typings.js",
+    "generate:data": "./bin/generate_data.js",
     "test:types": "tsc typings/test-typings && node typings/test-typings.js",
-    "test": "require-self && npm run lint && npm run test:types && mocha",
+    "test": "require-self && npm run generate:data && npm run lint && npm run test:types && mocha",
     "lint": "standard",
-    "prepublish": "require-self && npm run generate:types",
+    "prepublish": "require-self && npm run generate:data && npm run generate:types",
     "fix": "standard --fix"
   },
   "standard": {

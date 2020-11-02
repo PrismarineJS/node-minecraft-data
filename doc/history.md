@@ -1,3 +1,6 @@
+## 2.70.0
+* mcdata to 2.70.0 1.16.4 support
+
 ## 2.69.1
 * revert load only necessary data (for now)
 

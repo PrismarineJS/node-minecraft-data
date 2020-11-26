@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
+    "outDir": "./build",
     "module": "commonjs",
     "lib": [
       "es6"
     ],
+    "declaration": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": false,
@@ -11,8 +13,7 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["node"]
   },
-  "files": [
-    "index.d.ts",
-    "typings/test-typings.ts"
+  "include": [
+    "lib"
   ]
 }

@@ -1,7 +1,5 @@
-module.exports = mcDataToNode
-
-function mcDataToNode (mcData) {
-  const indexes = require('./indexes.js')(mcData)
+export function mcDataToNode(mcData: type_mcData) {
+  const indexes = require("./indexes")(mcData);
   return {
     blocks: indexes.blocksById,
     blocksByName: indexes.blocksByName,
@@ -68,15 +66,15 @@ function mcDataToNode (mcData) {
 
     loginPacket: mcData.loginPacket,
 
-    findItemOrBlockById: function (id) {
-      const item = indexes.itemsById[id]
-      if (item !== undefined) return item
-      return indexes.blocksById[id]
+    findItemOrBlockById: function (id: string | number) {
+      const item = indexes.itemsById[id];
+      if (item !== undefined) return item;
+      return indexes.blocksById[id];
     },
-    findItemOrBlockByName: function (name) {
-      const item = indexes.itemsByName[name]
-      if (item !== undefined) return item
-      return indexes.blocksByName[name]
-    }
-  }
+    findItemOrBlockByName: function (name: string | number) {
+      const item = indexes.itemsByName[name];
+      if (item !== undefined) return item;
+      return indexes.blocksByName[name];
+    },
+  };
 }

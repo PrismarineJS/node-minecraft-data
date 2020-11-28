@@ -1,3 +1,9 @@
+## 2.70.2
+* fix release
+
+## 2.70.1
+* update mcdata, fix states in block.json
+
 ## 2.70.0
 * mcdata to 2.70.0 1.16.4 support
 

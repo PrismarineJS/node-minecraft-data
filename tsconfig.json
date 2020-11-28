@@ -1,18 +1,14 @@
 {
   "compilerOptions": {
+    "outDir": "./build",
     "module": "commonjs",
-    "lib": [
-      "es6"
-    ],
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": false,
-    "strictFunctionTypes": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": ["node"]
+    "sourceMap": true,
+    "target": "es6",
+    "declaration": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "lib": ["es2018", "es2019", "es2020"]
   },
-  "files": [
-    "index.d.ts",
-    "typings/test-typings.ts"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "minecraft-data"]
 }

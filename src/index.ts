@@ -6,10 +6,10 @@ const protocolVersions: { [key: string]: any } = {
   pc: require('../minecraft-data/data/pc/common/protocolVersions.json'),
   pe: require('../minecraft-data/data/pe/common/protocolVersions.json')
 }
-export const versionsByMinecraftVersion: { [key: string]: any } = {}
-export const versionsByMajorVersion: { [key: string]: any } = {}
-export const preNettyVersionsByProtocolVersion: { [key: string]: any } = {}
-export const postNettyVersionsByProtocolVersion: { [key: string]: any } = {}
+const versionsByMinecraftVersion: { [key: string]: any } = {}
+const versionsByMajorVersion: { [key: string]: any } = {}
+const preNettyVersionsByProtocolVersion: { [key: string]: any } = {}
+const postNettyVersionsByProtocolVersion: { [key: string]: any } = {}
 
 const types = ['pc', 'pe']
 types.forEach(function (type) {
@@ -70,7 +70,7 @@ function toMajor (
 }
 const cache: { [key: string]: any } = {} // prevent reindexing when requiring multiple time the same version
 
-export default function (mcVersion: string, preNetty?: boolean) {
+module.exports = function (mcVersion: string, preNetty?: boolean) {
   preNetty = preNetty || false
   const majorVersion = toMajor(mcVersion, preNetty)
   if (majorVersion == null) {
@@ -88,12 +88,15 @@ export default function (mcVersion: string, preNetty?: boolean) {
   cache[majorVersion.type + '_' + majorVersion.majorVersion] = nmcData
   return nmcData
 }
-export const supportedVersions = {
+module.exports.supportedVersions = {
   pc: require('../minecraft-data/data/pc/common/versions.json'),
   pe: require('../minecraft-data/data/pe/common/versions.json')
 }
-export const versions = protocolVersions
-export const schemas = {
+module.exports.versions = protocolVersions
+module.exports.versionsByMinecraftVersion = versionsByMinecraftVersion
+module.exports.preNettyVersionsByProtocolVersion = preNettyVersionsByProtocolVersion
+module.exports.postNettyVersionsByProtocolVersion = postNettyVersionsByProtocolVersion
+const schemas = {
   biomes: require('../minecraft-data/schemas/biomes_schema.json'),
   blocks: require('../minecraft-data/schemas/blocks_schema.json'),
   effects: require('../minecraft-data/schemas/effects_schema.json'),
@@ -110,3 +113,4 @@ export const schemas = {
   foods: require('../minecraft-data/schemas/foods_schema.json'),
   particles: require('../minecraft-data/schemas/particles_schema.json')
 }
+module.exports.schemas = schemas

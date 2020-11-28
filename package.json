@@ -7,7 +7,7 @@
   "tonicExampleFilename": "example.js",
   "scripts": {
     "generate:data": "./bin/generate_data.js",
-    "test": "require-self && npm run generate:data && npm run lint && && mocha",
+    "test": "require-self && npm run generate:data && npm run lint && mocha",
     "lint": "ts-standard",
     "prepublish": "require-self && npm run generate:data",
     "fix": "ts-standard --fix",
@@ -33,7 +33,7 @@
     "url": "https://github.com/PrismarineJS/node-minecraft-data/issues"
   },
   "devDependencies": {
-    "@types/node": "^14.0.14",
+    "@types/node": "^14.14.10",
     "json-schema-to-typescript": "^9.1.0",
     "mocha": "^8.0.1",
     "require-self": "^0.2.3",

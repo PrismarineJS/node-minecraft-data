@@ -1,25 +1,25 @@
 // mcData
 
 interface type_mcData {
-  blocks: blocks
+  blocks: blocks[]
   blockCollisionShapes: blockCollisionShapes
   biomes: biomes[]
-  items: items
-  foods: foods
+  items: items[]
+  foods: foods[]
   recipes: recipes
-  instruments: instruments
+  instruments: instruments[]
   materials: materials
-  enchantments: enchantments
-  entities: entities
-  windows: windows
+  enchantments: enchantments[]
+  entities: entities[]
+  windows: windows[]
   protocol: protocol
   protocolComments: protocolComments
   version: version
-  effects: effects
-  particles: particles
+  effects: effects[]
+  particles: particles[]
   language: language
-  blockLoot: blockLoot
-  entityLoot: entityLoot
+  blockLoot: blockLoot[]
+  entityLoot: entityLoot[]
   commands: commands
   loginPacket: loginPacket
 }

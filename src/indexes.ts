@@ -1,6 +1,6 @@
-import {buildIndexFromArray, buildIndexFromArrayWithRanges} from './indexer'
+import { buildIndexFromArray, buildIndexFromArrayWithRanges } from './indexer'
 
-export function (mcData: type_mcData) {
+export function indexes (mcData: type_mcData) {
   return {
     biomesById: buildIndexFromArray(mcData.biomes, 'id'),
 
@@ -13,10 +13,7 @@ export function (mcData: type_mcData) {
     ),
 
     enchantmentsById: buildIndexFromArray(mcData.enchantments, 'id'),
-    enchantmentsByName: buildIndexFromArray(
-      mcData.enchantments,
-      'name'
-    ),
+    enchantmentsByName: buildIndexFromArray(mcData.enchantments, 'name'),
 
     entitiesByName: buildIndexFromArray(mcData.entities, 'name'),
     mobsById:

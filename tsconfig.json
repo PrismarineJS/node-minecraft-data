@@ -2,18 +2,13 @@
   "compilerOptions": {
     "outDir": "./build",
     "module": "commonjs",
-    "lib": [
-      "es6"
-    ],
+    "sourceMap": true,
+    "target": "es6",
     "declaration": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": false,
-    "strictFunctionTypes": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": ["node"]
+    "resolveJsonModule": true,
+    "strict": true,
+    "lib": ["es2018", "es2019", "es2020"]
   },
-  "include": [
-    "lib"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "minecraft-data"]
 }

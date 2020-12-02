@@ -1,4 +1,4 @@
 node_modules/
-data.js
+src/data.ts
 package-lock.json
-build
+dist

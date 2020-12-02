@@ -1,8 +1,7 @@
 export function buildIndexFromObject (
-  object: { [x: string]: any },
+  object: { [x: string]: any } | undefined,
   fieldToIndex: string | number
-) {
-  console.log(object)
+): { [key: string]: string } | undefined {
   if (object === undefined) {
     return undefined
   }
@@ -16,44 +15,56 @@ export function buildIndexFromObject (
   {})
 }
 export function buildIndexFromArray (
-  array: any[],
+  array: any[] | undefined,
   fieldToIndex: string | number
-) {
+): any {
   if (array === undefined) {
     return undefined
   }
-  return array.reduce(function (index, element) {
+  return array.reduce(function (
+    index: { [x: string]: any },
+    element: { [x: string]: string | number }
+  ) {
     index[element[fieldToIndex]] = element
     return index
-  }, {})
+  },
+  {})
 }
 export function buildIndexFromArrayNonUnique (
-  array: any[],
+  array: any[] | undefined,
   fieldToIndex: string | number
-) {
+): any {
   if (array === undefined) {
     return undefined
   }
-  return array.reduce(function (index, element) {
-    if (!index[element[fieldToIndex]]) {
+  return array.reduce(function (
+    index: { [x: string]: any[] },
+    element: { [x: string]: string | number }
+  ) {
+    if (index[element[fieldToIndex]] == null) {
       index[element[fieldToIndex]] = []
     }
     index[element[fieldToIndex]].push(element)
     return index
-  }, {})
+  },
+  {})
 }
 export function buildIndexFromArrayWithRanges (
-  array: any[],
+  array: any[] | undefined,
   fieldToIndexMin: string | number,
   fieldToIndexMax: string | number
-) {
+): any {
   if (array === undefined) {
     return undefined
   }
-  return array.reduce(function (index, element) {
+  return array.reduce(function (
+    index: { [x: string]: any },
+    element: { [x: string]: number }
+  ) {
     for (let i = element[fieldToIndexMin]; i <= element[fieldToIndexMax]; i++) {
       index[i] = element
     }
     return index
-  }, {})
+  },
+  {})
 }

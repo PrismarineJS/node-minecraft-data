@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "outDir": "./build",
     "module": "commonjs",
-    "sourceMap": true,
+    "outDir": "./dist",
     "target": "es6",
+    "sourceMap": true,
     "declaration": true,
     "resolveJsonModule": true,
     "strict": true,
-    "lib": ["es2018", "es2019", "es2020"]
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "minecraft-data"]
+  "exclude": ["**/node_modules", "**/minecraft_data"]
 }

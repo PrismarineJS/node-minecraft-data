@@ -1,84 +1,197 @@
-import { indexes as _indexes } from './indexes'
+import { buildIndexFromArray, buildIndexFromArrayWithRanges } from './indexer'
+import {
+  Biomes,
+  BlockCollisionShapes,
+  BlockLoot,
+  Blocks,
+  CommandsSchema,
+  Effects,
+  Enchantments,
+  Entities,
+  EntityLoot,
+  Foods,
+  Instruments,
+  Items,
+  Materials,
+  Particles,
+  Recipes,
+  Version,
+  Windows
+} from './interfaces'
 
-export function mcDataToNode (mcData: type_mcData) {
-  const indexes = _indexes(mcData)
-  return {
-    blocks: indexes.blocksById,
-    blocksByName: indexes.blocksByName,
-    blocksArray: mcData.blocks,
-    blocksByStateId: indexes.blocksByStateId,
+export interface Rawmcdata {
+  blocks: Blocks[]
+  blockCollisionShapes: BlockCollisionShapes[]
+  blockLoot: BlockLoot[]
+  biomes: Biomes[]
+  enchantments: Enchantments[]
+  effects: Effects[]
+  items: Items[]
+  recipes: Recipes[]
+  instruments: Instruments[]
+  materials: Materials
+  entities: Entities[]
+  protocol: any
+  windows: Windows[]
+  version: Version
+  language: any
+  foods: Foods[]
+  commands: CommandsSchema
+  entityLoot: EntityLoot[]
+  particles: Particles[]
+  protocolComments: any
+  loginPacket: any
+}
 
-    blockCollisionShapes: mcData.blockCollisionShapes,
+export interface Mcdata {
+  blocks: { [key: string]: Blocks }
+  blocksByName: { [key: string]: Blocks }
+  blocksArray: Blocks[]
+  blocksByStateId: { [key: string]: Blocks }
+  blockCollisionShapes: BlockCollisionShapes[]
+  biomes: { [key: string]: Biomes }
+  biomesArray: Biomes[]
+  items: { [key: string]: Items }
+  itemsByName: { [key: string]: Items }
+  itemsArray: Items[]
+  foods: { [key: string]: Foods }
+  foodsByName: { [key: string]: Foods }
+  foodsByFoodPoints: { [key: string]: Foods }
+  foodsBySaturation: { [key: string]: Foods }
+  foodsArray: Foods[]
+  recipes: Recipes[]
+  instruments: { [key: string]: Instruments }
+  instrumentsArray: Instruments[]
+  materials: Materials
+  enchantments: { [key: string]: Enchantments }
+  enchantmentsByName: { [key: string]: Enchantments }
+  enchantmentsArray: Enchantments[]
+  mobs: { [key: string]: Entities }
+  objects: { [key: string]: Entities }
+  entitiesByName: { [key: string]: Blocks }
+  entitiesArray: Entities[]
+  windows: { [key: string]: Windows }
+  windowsByName: { [key: string]: Windows }
+  windowsArray: Windows[]
+  protocol: any
+  protocolComments: any
+  version: Version
+  effects: { [key: string]: Effects }
+  effectsByName: { [key: string]: Effects }
+  effectsArray: Effects[]
+  particles: { [key: string]: Particles }
+  particlesByName: { [key: string]: Particles }
+  particlesArray: Particles[]
+  language: any
+  blockLoot: { [key: string]: BlockLoot }
+  blockLootArray: BlockLoot[]
+  entityLoot: { [key: string]: EntityLoot }
+  entityLootArray: EntityLoot[]
+  commands: CommandsSchema
+  loginPacket: any
+  type: string
+}
 
-    biomes: indexes.biomesById,
-    biomesArray: mcData.biomes,
+export function LoadData (_mcData: Rawmcdata, type: string): Mcdata {
+  const biomes = _mcData.biomes
+  const blockCollisionShapes = _mcData.blockCollisionShapes
+  const blockLoot = _mcData.blockLoot
+  const blocks = _mcData.blocks
+  const commands = _mcData.commands
+  const effects = _mcData.effects
+  const enchantments = _mcData.enchantments
+  const entities = _mcData.entities
+  const entityLoot = _mcData.entityLoot
+  const foods = _mcData.foods
+  const instruments = _mcData.instruments
+  const items = _mcData.items
+  const materials = _mcData.materials
+  const particles = _mcData.particles
+  const recipes = _mcData.recipes
+  const version = _mcData.version
+  const windows = _mcData.windows
+  const mcData = {
+    blocks: buildIndexFromArray(_mcData.blocks, 'id'),
+    blocksByName: buildIndexFromArray(_mcData.blocks, 'name'),
+    blocksArray: blocks,
+    blocksByStateId: buildIndexFromArrayWithRanges(
+      _mcData.blocks,
+      'minStateId',
+      'maxStateId'
+    ),
 
-    items: indexes.itemsById,
-    itemsByName: indexes.itemsByName,
-    itemsArray: mcData.items,
+    blockCollisionShapes: blockCollisionShapes,
 
-    foods: indexes.foodsById,
-    foodsByName: indexes.foodsByName,
-    foodsByFoodPoints: indexes.foodsByFoodPoints,
-    foodsBySaturation: indexes.foodsBySaturation,
-    foodsArray: mcData.foods,
+    biomes: buildIndexFromArray(_mcData.biomes, 'id'),
+    biomesArray: biomes,
 
-    recipes: mcData.recipes,
+    items: buildIndexFromArray(_mcData.items, 'id'),
+    itemsByName: buildIndexFromArray(_mcData.items, 'name'),
+    itemsArray: items,
 
-    instruments: indexes.instrumentsById,
-    instrumentsArray: mcData.instruments,
+    foods: buildIndexFromArray(_mcData.foods, 'id'),
+    foodsByName: buildIndexFromArray(_mcData.foods, 'name'),
+    foodsByFoodPoints: buildIndexFromArray(_mcData.foods, 'foodPoints'),
+    foodsBySaturation: buildIndexFromArray(_mcData.foods, 'saturation'),
+    foodsArray: foods,
 
-    materials: mcData.materials,
+    recipes: recipes,
 
-    enchantments: indexes.enchantmentsById,
-    enchantmentsByName: indexes.enchantmentsByName,
-    enchantmentsArray: mcData.enchantments,
+    instruments: buildIndexFromArray(_mcData.instruments, 'id'),
+    instrumentsArray: instruments,
 
-    mobs: indexes.mobsById,
-    objects: indexes.objectsById,
-    entitiesByName: indexes.entitiesByName,
-    entitiesArray: mcData.entities,
+    materials: materials,
 
-    windows: indexes.windowsById,
-    windowsByName: indexes.windowsByName,
-    windowsArray: mcData.windows,
+    enchantments: buildIndexFromArray(_mcData.enchantments, 'id'),
+    enchantmentsByName: buildIndexFromArray(_mcData.enchantments, 'name'),
+    enchantmentsArray: enchantments,
 
-    protocol: mcData.protocol,
-    protocolComments: mcData.protocolComments,
+    mobs:
+      _mcData.entities === undefined
+        ? undefined
+        : buildIndexFromArray(
+          _mcData.entities.filter((e: Entities) => e.type === 'mob'),
+          'id'
+        ),
+    objects:
+      _mcData.entities === undefined
+        ? undefined
+        : buildIndexFromArray(
+          _mcData.entities.filter((e: Entities) => e.type === 'object'),
+          'id'
+        ),
+    entitiesByName: buildIndexFromArray(_mcData.entities, 'name'),
+    entitiesArray: entities,
 
-    version: mcData.version,
+    windows: buildIndexFromArray(_mcData.windows, 'id'),
+    windowsByName: buildIndexFromArray(_mcData.windows, 'name'),
+    windowsArray: windows,
 
-    effects: indexes.effectsById,
-    effectsByName: indexes.effectsByName,
-    effectsArray: mcData.effects,
+    protocol: _mcData.protocol,
+    protocolComments: _mcData.protocolComments,
 
-    particles: indexes.particlesById,
-    particlesByName: indexes.particlesByName,
-    particlesArray: mcData.particles,
+    version: version,
 
-    language: mcData.language,
+    effects: buildIndexFromArray(_mcData.effects, 'id'),
+    effectsByName: buildIndexFromArray(_mcData.effects, 'name'),
+    effectsArray: effects,
 
-    blockLoot: indexes.blockLootByName,
-    blockLootArray: mcData.blockLoot,
+    particles: buildIndexFromArray(_mcData.particles, 'id'),
+    particlesByName: buildIndexFromArray(_mcData.particles, 'name'),
+    particlesArray: particles,
 
-    entityLoot: indexes.entityLootByName,
-    entityLootArray: mcData.entityLoot,
+    language: _mcData.language,
 
-    commands: mcData.commands,
+    blockLoot: buildIndexFromArray(_mcData.blockLoot, 'block'),
+    blockLootArray: blockLoot,
 
-    loginPacket: mcData.loginPacket,
+    entityLoot: buildIndexFromArray(_mcData.entityLoot, 'entity'),
+    entityLootArray: entityLoot,
 
-    type: '',
+    commands: commands,
 
-    findItemOrBlockById: function (id: string | number) {
-      const item = indexes.itemsById[id]
-      if (item !== undefined) return item
-      return indexes.blocksById[id]
-    },
-    findItemOrBlockByName: function (name: string | number) {
-      const item = indexes.itemsByName[name]
-      if (item !== undefined) return item
-      return indexes.blocksByName[name]
-    }
+    loginPacket: _mcData.loginPacket,
+    type: type
   }
+  return mcData
 }

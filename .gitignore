@@ -2,3 +2,4 @@ node_modules/
 src/data.ts
 package-lock.json
 dist
+src/interfaces.ts

@@ -6,13 +6,15 @@
   "types": "dist/index.d.ts",
   "tonicExampleFilename": "example.js",
   "scripts": {
+    "generate": "npm run generate:data && npm run generate:types",
     "generate:data": "./bin/generate_data.js",
-    "test": "npm run generate:data && npm run lint && mocha",
+    "generate:types": "./bin/generate_types.js",
+    "test": "npm run generate && npm run lint && mocha",
     "lint": "ts-standard",
     "format": "ts-standard --fix",
     "build": "tsc",
     "prepublishOnly": "npm test && npm run lint",
-    "prepare": "npm run build && npm run generate:data",
+    "prepare": "npm run generate && npm run build && require-self",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
@@ -40,8 +42,17 @@
     "@types/node": "^14.14.10",
     "mocha": "^8.0.1",
     "quicktype": "^15.0.258",
+    "quicktype-core": "^6.0.69",
+    "require-self": "^0.2.3",
     "ts-standard": "^9.0.0",
     "typescript": "^4.0.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "ts-standard": {
+    "project": "./tsconfig.json",
+    "ignore": [
+      "dist",
+      "minecraft-data"
+    ]
+  }
 }

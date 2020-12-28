@@ -1,3 +1,6 @@
+## 2.71.0
+* add map icons
+
 ## 2.70.2
 * fix release
 

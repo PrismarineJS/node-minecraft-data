@@ -224,6 +224,20 @@ block loot indexed by name
 
 unindexed block loot
 
+## Map icons
+
+### minecraft-data.mapIcons
+
+mapIcons indexed by id
+
+### minecraft-data.mapIconsByName
+
+mapIcons indexed by name
+
+### minecraft-data.mapIconsArray
+
+unindexed mapIcons
+
 ## type
 
 pe or pc

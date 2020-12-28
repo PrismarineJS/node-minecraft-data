@@ -43,3 +43,5 @@ console.log(require('minecraft-data')('1.13.2').particles[2])
 console.log(require('minecraft-data')('1.16.1').blockLoot.stone)
 
 console.log(require('minecraft-data')('1.16.1').loginPacket)
+
+console.log(require('minecraft-data')('1.16.4').mapIconsByName.player)

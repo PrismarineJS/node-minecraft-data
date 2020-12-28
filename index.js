@@ -69,7 +69,8 @@ const schemas = {
   version: require('./minecraft-data/schemas/version_schema.json'),
   windows: require('./minecraft-data/schemas/windows_schema.json'),
   foods: require('./minecraft-data/schemas/foods_schema.json'),
-  particles: require('./minecraft-data/schemas/particles_schema.json')
+  particles: require('./minecraft-data/schemas/particles_schema.json'),
+  mapIcons: require('./minecraft-data/schemas/mapIcons_schema.json')
 }
 module.exports.schemas = schemas
 

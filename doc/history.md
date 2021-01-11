@@ -1,3 +1,6 @@
+## 2.72.0
+* update mcdata, fixed recipes
+
 ## 2.71.0
 * add map icons
 

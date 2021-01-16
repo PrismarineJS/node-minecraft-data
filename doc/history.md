@@ -1,3 +1,6 @@
+## 2.73.0
+* update mcdata, new enchantment data
+
 ## 2.72.0
 * update mcdata, fixed recipes
 

@@ -1,3 +1,6 @@
+## 2.73.1
+* update mcdata, add 1.16.5 to datapaths
+
 ## 2.73.0
 * update mcdata, new enchantment data
 

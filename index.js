@@ -13,7 +13,7 @@ const types = ['pc', 'pe']
 types.forEach(function (type) {
   for (let i = 0; i < protocolVersions[type].length; i++) {
     if (!protocolVersions[type][i].dataVersion) {
-      protocolVersions[type][i].dataVersion = protocolVersions[type].length - 1 - i
+      protocolVersions[type][i].dataVersion = -i
     }
   }
   versionsByMinecraftVersion[type] = indexer.buildIndexFromArray(protocolVersions[type], 'minecraftVersion')

@@ -15,5 +15,6 @@ describe('load', () => {
     assert.strictEqual(mcData.isOlderThan('1.14'), true)
     assert.strictEqual(mcData.isOlderThan('1.13'), false)
     assert.strictEqual(mcData.isNewerOrEqualTo('1.14'), false)
+    assert.strictEqual(mcData.isNewerOrEqualTo('1.1'), true)
   })
 })

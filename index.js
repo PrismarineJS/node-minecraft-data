@@ -11,6 +11,11 @@ const postNettyVersionsByProtocolVersion = {}
 
 const types = ['pc', 'pe']
 types.forEach(function (type) {
+  for (let i = 0; i < protocolVersions[type].length; i++) {
+    if (!protocolVersions[type][i].dataVersion) {
+      protocolVersions[type][i].dataVersion = protocolVersions[type].length - 1 - i
+    }
+  }
   versionsByMinecraftVersion[type] = indexer.buildIndexFromArray(protocolVersions[type], 'minecraftVersion')
   versionsByMajorVersion[type] = indexer.buildIndexFromArray(protocolVersions[type].slice().reverse(), 'majorVersion')
   preNettyVersionsByProtocolVersion[type] = indexer.buildIndexFromArrayNonUnique(protocolVersions[type].filter(function (e) { return !e.usesNetty }), 'version')

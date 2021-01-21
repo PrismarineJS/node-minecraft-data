@@ -11,6 +11,11 @@ const postNettyVersionsByProtocolVersion = {}
 
 const types = ['pc', 'pe']
 types.forEach(function (type) {
+  for (let i = 0; i < protocolVersions[type].length; i++) {
+    if (!protocolVersions[type][i].dataVersion) {
+      protocolVersions[type][i].dataVersion = -i
+    }
+  }
   versionsByMinecraftVersion[type] = indexer.buildIndexFromArray(protocolVersions[type], 'minecraftVersion')
   versionsByMajorVersion[type] = indexer.buildIndexFromArray(protocolVersions[type].slice().reverse(), 'majorVersion')
   preNettyVersionsByProtocolVersion[type] = indexer.buildIndexFromArrayNonUnique(protocolVersions[type].filter(function (e) { return !e.usesNetty }), 'version')
@@ -28,6 +33,16 @@ module.exports = function (mcVersion, preNetty) {
   if (mcData == null) { return null }
   const nmcData = mcDataToNode(mcData)
   nmcData.type = majorVersion.type
+  nmcData.isNewerOrEqualTo = function (version) {
+    const v1 = versionsByMinecraftVersion[this.type][this.version.minecraftVersion].dataVersion
+    const v2 = versionsByMinecraftVersion[this.type][version].dataVersion
+    return v1 >= v2
+  }
+  nmcData.isOlderThan = function (version) {
+    const v1 = versionsByMinecraftVersion[this.type][this.version.minecraftVersion].dataVersion
+    const v2 = versionsByMinecraftVersion[this.type][version].dataVersion
+    return v1 < v2
+  }
   cache[majorVersion.type + '_' + majorVersion.majorVersion] = nmcData
   return nmcData
 }
@@ -38,7 +53,17 @@ function toMajor (mcVersion, preNetty, typeArg) {
   const type = typeArg || (parts.length === 2 ? parts[0] : 'pc')
   const version = parts.length === 2 ? parts[1] : mcVersion
   let majorVersion
-  if (data[type][version]) { majorVersion = version } else if (versionsByMinecraftVersion[type][version]) { majorVersion = versionsByMinecraftVersion[type][version].majorVersion } else if (preNetty && preNettyVersionsByProtocolVersion[type][version]) { return toMajor(preNettyVersionsByProtocolVersion[type][version][0].minecraftVersion, preNetty, type) } else if (!preNetty && postNettyVersionsByProtocolVersion[type][version]) { return toMajor(postNettyVersionsByProtocolVersion[type][version][0].minecraftVersion, preNetty, type) } else if (versionsByMajorVersion[type][version]) { majorVersion = versionsByMajorVersion[type][version].minecraftVersion }
+  if (data[type][version]) {
+    majorVersion = version
+  } else if (versionsByMinecraftVersion[type][version]) {
+    majorVersion = versionsByMinecraftVersion[type][version].majorVersion
+  } else if (preNetty && preNettyVersionsByProtocolVersion[type][version]) {
+    return toMajor(preNettyVersionsByProtocolVersion[type][version][0].minecraftVersion, preNetty, type)
+  } else if (!preNetty && postNettyVersionsByProtocolVersion[type][version]) {
+    return toMajor(postNettyVersionsByProtocolVersion[type][version][0].minecraftVersion, preNetty, type)
+  } else if (versionsByMajorVersion[type][version]) {
+    majorVersion = versionsByMajorVersion[type][version].minecraftVersion
+  }
   return {
     majorVersion: majorVersion,
     type: type

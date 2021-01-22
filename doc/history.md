@@ -1,3 +1,6 @@
+## 2.74.0
+* update mcdata, add biomesByName
+
 ## 2.73.1
 * update mcdata, add 1.16.5 to datapaths
 

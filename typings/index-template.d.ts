@@ -28,6 +28,8 @@ export interface Schemas {
 }
 
 export interface IndexedData {
+    isNewerOrEqualTo(version: string): boolean;
+    isOlderThan(version: string): boolean;
     blocks: { [id: number]: Block; };
     blocksByName: { [name: string]: Block; };
     blocksArray: Block[];

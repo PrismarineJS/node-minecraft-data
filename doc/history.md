@@ -1,3 +1,6 @@
+## 2.75.0
+* update mcdata
+
 ## 2.74.0
 * update mcdata, add biomesByName
 

@@ -3,7 +3,7 @@ on:
   repository_dispatch:
     types: [mcData-release]
 jobs:
-  myEvent:
+  update-mcdata:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

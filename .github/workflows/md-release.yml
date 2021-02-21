@@ -1,0 +1,10 @@
+name: Minecraft Data release
+on:
+  repository_dispatch:
+    types: [mcData-release]
+jobs:
+  myEvent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo ${{ github.event.client_payload.tag }}

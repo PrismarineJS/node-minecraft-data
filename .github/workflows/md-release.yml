@@ -1,7 +1,7 @@
 name: Minecraft Data release
 on:
   push:
-    branches: [ master ]
+    branches: [ test ]
   repository_dispatch:
     types: [mcData-release]
 jobs:

@@ -12,12 +12,12 @@ jobs:
         with:
           submodules: true
       - name: Update minecraft data
-        run: 'cd minecraft-data/ && git fetch --all --tags && git checkout ${{ github.event.client_payload.tag }}'
+        run: 'cd minecraft-data/ && git fetch --all --tags && git checkout 2.74.0'
       - name: Update package.json
         run: >
-          sed -i -E 's/^  "version": "[0-9]+\.[0-9]+\.[0-9]+"/  "version": "${{ github.event.client_payload.tag }}"/g' package.json
+          sed -i -E 's/^  "version": "[0-9]+\.[0-9]+\.[0-9]+"/  "version": "2.74.0"/g' package.json
       - name: Update doc/history.md
-        run: echo -e "## ${{ github.event.client_payload.tag }}\n * update mcdata\n\n$(cat doc/history.md)" > doc/history.md
+        run: echo -e "## 2.74.0\n * update mcdata\n\n$(cat doc/history.md)" > doc/history.md
       - name: Create commits
         run: |
           git config user.name 'rom1504bot'
@@ -25,7 +25,7 @@ jobs:
           git add minecraft-data
           git commit -m "Update Minecraft Data"
           git add package.json doc/history.md
-          git commit -m "Release ${{ github.event.client_payload.tag }}"
+          git commit -m "Release 2.74.0"
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
@@ -33,8 +33,8 @@ jobs:
           committer: rom1504bot <rom1504bot@users.noreply.github.com>
           author: rom1504bot <rom1504bot@users.noreply.github.com>
           signoff: false
-          branch: release-${{ github.event.client_payload.tag }}
+          branch: release-2.74.0
           delete-branch: true
-          title: 'Release ${{ github.event.client_payload.tag }}'
+          title: 'Release 2.74.0'
           body: |
             A new version of minecraft-data was released.

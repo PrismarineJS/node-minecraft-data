@@ -1,7 +1,5 @@
 name: Minecraft Data release
 on:
-  push:
-    branches: [ test ]
   repository_dispatch:
     types: [mcData-release]
 jobs:
@@ -17,7 +15,7 @@ jobs:
         run: >
           sed -i -E 's/^  "version": "[0-9]+\.[0-9]+\.[0-9]+"/  "version": "${{ github.event.client_payload.tag }}"/g' package.json
       - name: Update doc/history.md
-        run: echo -e "## ${{ github.event.client_payload.tag }}\n * update mcdata\n\n$(cat doc/history.md)" > doc/history.md
+        run: echo -e "## ${{ github.event.client_payload.tag }}\n* update mcdata\n\n$(cat doc/history.md)" > doc/history.md
       - name: Create commits
         run: |
           git config user.name 'rom1504bot'

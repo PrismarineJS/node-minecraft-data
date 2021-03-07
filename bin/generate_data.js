@@ -7,7 +7,7 @@ const path = require('path')
 function generate () {
   let str = 'module.exports =\n{\n'
   let str2 = ''
-  for (let platform in dataSource) {
+  for (const platform in dataSource) {
     str += `  ${platform}: {\n`
     const versions = dataSource[platform]
     for (const version in versions) {

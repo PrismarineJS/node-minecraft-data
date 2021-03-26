@@ -90,7 +90,9 @@ export interface IndexedData {
     entityLootByName: { [name: string]: EntityLoot; };
 }
 
-const versions: Version[];
+const versions: {
+    [key in keyof SupportedVersions]: Version[];
+  };
 const versionsByMinecraftVersion: VersionSet;
 const preNettyVersionsByProtocolVersion: VersionSet;
 const postNettyVersionsByProtocolVersion: VersionSet;

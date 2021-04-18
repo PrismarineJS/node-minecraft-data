@@ -45,3 +45,5 @@ console.log(require('minecraft-data')('1.16.1').blockLoot.stone)
 console.log(require('minecraft-data')('1.16.1').loginPacket)
 
 console.log(require('minecraft-data')('1.16.4').mapIconsByName.player)
+
+console.log(require('minecraft-data').legacy.pc.blocks['0:0'])

@@ -1,3 +1,7 @@
+## 2.84.0
+* update mcdata
+* add legacy to API
+
 ## 2.83.1
 * update mcdata
 

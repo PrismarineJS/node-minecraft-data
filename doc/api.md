@@ -279,6 +279,12 @@ Array of pc supported versions
 
 Array of pe supported versions
 
+### minecraft-data.legacy.pc.blocks
+
+Mapping from 1.12 block:metadata to 1.13 block names
+
+examples 0:0 -> minecraft:air
+
 ## Schemas
 
 ### minecraft-data.schemas.biomes

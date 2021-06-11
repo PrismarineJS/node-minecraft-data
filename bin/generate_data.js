@@ -4,27 +4,34 @@ const dataSource = require('../minecraft-data/data/dataPaths')
 const fs = require('fs')
 const path = require('path')
 
-function generate () {
-  let str = 'module.exports =\n{\n'
-  let str2 = ''
-  for (const platform in dataSource) {
-    str += `  ${platform}: {\n`
-    const versions = dataSource[platform]
-    for (const version in versions) {
-      str += `    "${version}": {\n`
-      const data = versions[version]
-      for (const name in data) {
-        const relPath = data[name]
-        const path = `'./minecraft-data/data/${relPath}/${name}.json'`
-        str += `      ${name}: require(${path}),\n`
-        str2 += `delete require.cache[require.resolve(${path})]\n`
-      }
-      str += '\n    },\n'
-    }
-    str += '\n  },\n'
-  }
-  str += '\n}\n'
-  return str + str2
-}
+const data = 'module.exports =\n{\n' + Object
+  .keys(dataSource)
+  .map(k1 =>
+    "  '" + k1 + "': {\n" + Object
+      .keys(dataSource[k1])
+      .map(k2 =>
+        "    '" + k2 + "': {" + '\n' + Object
+          .keys(dataSource[k1][k2])
+          .map(k3 => "      '" + k3 + "': require('./minecraft-data/data/" + dataSource[k1][k2][k3] + '/' + k3 + ".json')")
+          .join(',\n') +
+      '\n    }'
+      )
+      .join(',\n') +
+    '\n  }'
+  )
+  .join(',\n') + '\n}\n'
 
-fs.writeFileSync(path.join(__dirname, '/../data.js'), generate())
+const suffix = '\n' + Object
+  .keys(dataSource)
+  .map(k1 => Object
+    .keys(dataSource[k1])
+    .map(k2 => Object
+        .keys(dataSource[k1][k2])
+        .map(k3 => "delete require.cache[require.resolve('./minecraft-data/data/" + dataSource[k1][k2][k3] + '/' + k3 + ".json')];")
+        .join('\n')
+    )
+    .join('')
+  )
+  .join('') + '\n'
+
+fs.writeFileSync(path.join(__dirname, '/../data.js'), data + suffix)

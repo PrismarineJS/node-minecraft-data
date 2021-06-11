@@ -27,8 +27,8 @@ const suffix = '\n' + Object
     .keys(dataSource[k1])
     .map(k2 => Object
         .keys(dataSource[k1][k2])
-        .map(k3 => "delete require.cache[require.resolve('./minecraft-data/data/" + dataSource[k1][k2][k3] + '/' + k3 + ".json')];")
-        .join('\n')
+        .map(k3 => "delete require.cache[require.resolve('./minecraft-data/data/" + dataSource[k1][k2][k3] + '/' + k3 + ".json')];\n")
+        .join('')
     )
     .join('')
   )

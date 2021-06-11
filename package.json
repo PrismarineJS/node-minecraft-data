@@ -1,6 +1,6 @@
 {
   "name": "minecraft-data",
-  "version": "2.79.0",
+  "version": "2.84.0",
   "description": "Provide easy access to minecraft data in node.js",
   "main": "index.js",
   "tonicExampleFilename": "example.js",
@@ -33,7 +33,7 @@
     "url": "https://github.com/PrismarineJS/node-minecraft-data/issues"
   },
   "devDependencies": {
-    "@types/node": "^14.0.14",
+    "@types/node": "^15.0.1",
     "json-schema-to-typescript": "^10.0.3",
     "mocha": "^8.0.1",
     "require-self": "^0.2.3",

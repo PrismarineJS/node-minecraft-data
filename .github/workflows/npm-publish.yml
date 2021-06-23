@@ -20,6 +20,7 @@ jobs:
         node-version: 10.0.0
     - run: npm install
     - name: Publish if version has been updated
+      if: github.event_name != 'workflow_dispatch'
       uses: pascalgn/npm-publish-action@4f4bf159e299f65d21cd1cbd96fc5d53228036df
       with: # All of theses inputs are optional
         tag_name: "%s"

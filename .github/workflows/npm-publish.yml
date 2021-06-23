@@ -30,6 +30,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # You need to set this in your repo settings
     - name: Check if version has been updated
+      if: github.event_name != 'workflow_dispatch'
       id: check
       uses: EndBug/version-check@v1
     - name: "Trigger new GH Page creation in mcData repo"

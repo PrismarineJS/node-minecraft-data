@@ -1,12 +1,12 @@
 
 export interface VersionSet {
     pc: { [version: string]: Version };
-    pe: { [version: string]: Version };
+    bedrock: { [version: string]: Version };
 }
 
 export interface SupportedVersions {
     pc: string[];
-    pe: string[];
+    bedrock: string[];
 }
 
 export interface Schemas {

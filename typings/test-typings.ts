@@ -30,11 +30,11 @@ console.log(getMcData('15w40b').version);
 
 console.log(getMcData('0.30c').version);
 
-console.log(getMcData('pe_0.14').version);
+console.log(getMcData('bedrock_0.14').version);
 
 console.log(getMcData('pc_1.9').blocksByName['dirt']);
-console.log(getMcData('pe_0.14').blocksByName['podzol']);
-console.log(getMcData('pe_0.14').type);
+console.log(getMcData('bedrock_0.14').blocksByName['podzol']);
+console.log(getMcData('bedrock_0.14').type);
 
 console.log(getMcData('1.8').enchantments[5]);
 

@@ -2,14 +2,14 @@ const mcDataToNode = require('./lib/loader')
 const indexer = require('./lib/indexer.js')
 const protocolVersions = {
   pc: require('./minecraft-data/data/pc/common/protocolVersions.json'),
-  pe: require('./minecraft-data/data/pe/common/protocolVersions.json')
+  bedrock: require('./minecraft-data/data/bedrock/common/protocolVersions.json')
 }
 const versionsByMinecraftVersion = {}
 const versionsByMajorVersion = {}
 const preNettyVersionsByProtocolVersion = {}
 const postNettyVersionsByProtocolVersion = {}
 
-const types = ['pc', 'pe']
+const types = ['pc', 'bedrock']
 types.forEach(function (type) {
   for (let i = 0; i < protocolVersions[type].length; i++) {
     if (!protocolVersions[type][i].dataVersion) {
@@ -72,7 +72,7 @@ function toMajor (mcVersion, preNetty, typeArg) {
 
 module.exports.supportedVersions = {
   pc: require('./minecraft-data/data/pc/common/versions.json'),
-  pe: require('./minecraft-data/data/pe/common/versions.json')
+  bedrock: require('./minecraft-data/data/bedrock/common/versions.json')
 }
 module.exports.versions = protocolVersions
 module.exports.versionsByMinecraftVersion = versionsByMinecraftVersion

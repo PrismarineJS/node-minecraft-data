@@ -1,3 +1,6 @@
+## 2.89.2
+* update mcdata and bedrock support
+
 ## 2.88.0
 * update mcdata
 

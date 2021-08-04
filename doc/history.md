@@ -1,3 +1,6 @@
+## 2.89.3
+* Do not use snapshots when determining version
+
 ## 2.89.2
 * update mcdata and bedrock support
 

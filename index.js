@@ -60,7 +60,10 @@ function toMajor (mcVersion, preNetty, typeArg) {
   } else if (preNetty && preNettyVersionsByProtocolVersion[type][version]) {
     return toMajor(preNettyVersionsByProtocolVersion[type][version][0].minecraftVersion, preNetty, type)
   } else if (!preNetty && postNettyVersionsByProtocolVersion[type][version]) {
-    return toMajor(postNettyVersionsByProtocolVersion[type][version][0].minecraftVersion, preNetty, type)
+    const latest = postNettyVersionsByProtocolVersion[type][version].filter((el) => {
+      return !/[a-zA-Z]/g.test(el.minecraftVersion)
+    })[0]
+    return toMajor(latest.minecraftVersion, preNetty, type)
   } else if (versionsByMajorVersion[type][version]) {
     majorVersion = versionsByMajorVersion[type][version].minecraftVersion
   }

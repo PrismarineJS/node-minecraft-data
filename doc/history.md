@@ -1,3 +1,6 @@
+## 2.89.4
+* Non-exclusively prefer release versions over snapshots
+
 ## 2.89.3
 * Do not use snapshots when determining version
 

@@ -3,3 +3,4 @@ data.js
 package-lock.json
 index.d.ts
 typings/test-typings.js
+.vscode

@@ -1,3 +1,6 @@
+## 2.90.0
+* update mcdata
+
 ## 2.89.4
 * Non-exclusively prefer release versions over snapshots
 

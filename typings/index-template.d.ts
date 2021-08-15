@@ -1,3 +1,17 @@
+// This will interface will merge with the generated one
+export interface Version {
+    // Returns true of the current version is greater than or equal to the `other` version's dataVersion
+    ['>='](other)
+    // Returns true of the current version is greater than the `other` version's dataVersion
+    ['>'](other)
+    // Returns true of the current version is less than the `other` version's dataVersion
+    ['<'](other)
+    // Returns true of the current version is less than than or equal to the `other` version's dataVersion
+    ['<='](other)
+    // Returns true of the current version is equal to the `other` version's dataVersion
+    ['=='](other)
+    type: 'pc' | 'bedrock'
+}
 
 export interface VersionSet {
     pc: { [version: string]: Version };

@@ -177,7 +177,7 @@ the version type, currently 'pc' or 'bedrock'
 the major version (example : 1.8), also the name of the minecraft-data version
 
 ### minecraft-data.version.< (other)
-Returns true if the current version is less than than or equal to the `other` version's dataVersion
+Returns true if the current version is less than than the `other` version's dataVersion
 
 ### minecraft-data.version.> (other)
 Returns true if the current version is greater than the `other` version's dataVersion
@@ -192,10 +192,10 @@ Same as above but also allows equal dataVersion. The other version must be of th
 Example Usage: 
 ```js
 const mcd = require('minecraft-data')('1.16.4')
-console.log('> 1.17 ?', mcd.version['>=']('1.17')) // False
+console.log('1.16.4 >= 1.17 ?', mcd.version['>=']('1.17')) // False
 
 const mcd = require('minecraft-data')('bedrock_1.17.0')
-console.log('> 1.16.220 ?', mcd.version['>']('1.16.220')) // True
+console.log('1.17.0 > 1.16.220 ?', mcd.version['>']('1.16.220')) // True
 ```
 
 ## Effects

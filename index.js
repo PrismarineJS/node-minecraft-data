@@ -25,6 +25,11 @@ types.forEach(function (type) {
 
 function Version (type, version, majorVersion) {
   const versions = versionsByMinecraftVersion[type]
+  // Allows comparisons against majorVersion even if `other` is not present in the versions.json (e.g. 1.17.0 exists but not 1.17)
+  for (const version in versions) {
+    const ver = versions[version]
+    versions[ver.majorVersion] = versions[ver.majorVersion] || ver
+  }
   // TODO: Data for Minecraft classic is missing in protocolVersions.json, move this to its own type ?
   const v1 = versions[version]?.dataVersion ?? 0
   const raise = other => { throw new RangeError(`Version '${other}' not found in [${Object.keys(versions).join(' ; ')}] for ${type}`) }

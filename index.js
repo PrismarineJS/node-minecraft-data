@@ -13,7 +13,7 @@ const types = ['pc', 'bedrock']
 types.forEach(function (type) {
   for (let i = 0; i < protocolVersions[type].length; i++) {
     if (!protocolVersions[type][i].dataVersion) {
-      // We start top to bottom, so the ones at the botom should be greater
+      // We start top to bottom, so the ones at the bottom should be greater
       protocolVersions[type][i].dataVersion = -protocolVersions[type].length + i
     }
   }

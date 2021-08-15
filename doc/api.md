@@ -177,13 +177,13 @@ the version type, currently 'pc' or 'bedrock'
 the major version (example : 1.8), also the name of the minecraft-data version
 
 ### minecraft-data.version.< (other)
-Returns true of the current version is less than than or equal to the `other` version's dataVersion
+Returns true if the current version is less than than or equal to the `other` version's dataVersion
 
 ### minecraft-data.version.> (other)
-Returns true of the current version is greater than the `other` version's dataVersion
+Returns true if the current version is greater than the `other` version's dataVersion
 
 ### minecraft-data.version.== (other)
-Returns true of the current version is equal to the `other` version's dataVersion
+Returns true if the current version is equal to the `other` version's dataVersion
 
 ### minecraft-data.version.>=, minecraft-data.version.<=
 

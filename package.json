@@ -10,7 +10,7 @@
     "test:types": "tsc typings/test-typings && node typings/test-typings.js",
     "test": "require-self && npm run generate:data && npm run lint && npm run test:types && mocha",
     "lint": "standard",
-    "prepublish": "require-self && npm run generate:data && npm run generate:types",
+    "prepare": "require-self && npm run generate:data && npm run generate:types",
     "fix": "standard --fix"
   },
   "standard": {

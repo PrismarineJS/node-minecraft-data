@@ -1,3 +1,6 @@
+## 2.91.1
+* add back node 12 support (@u9g)
+
 ## 2.91.0
 * update mcdata
 

@@ -96,7 +96,7 @@ function toMajor (mcVersion, preNetty, typeArg) {
     const noSnaps = versions.filter((el) => {
       return !/[a-zA-Z]/g.test(el.minecraftVersion)
     })
-    return toMajor(noSnaps[0]?.minecraftVersion ?? versions[0].minecraftVersion, preNetty, type)
+    return toMajor(noSnaps[0] ? noSnaps[0].minecraftVersion : versions[0].minecraftVersion, preNetty, type)
   } else if (versionsByMajorVersion[type][version]) {
     majorVersion = versionsByMajorVersion[type][version].minecraftVersion
   }

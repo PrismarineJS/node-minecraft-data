@@ -16,7 +16,7 @@ const data = 'const { pathToFileURL } = require(\'url\')\nmodule.exports =\n{\n'
             const loc = `minecraft-data/data/${dataSource[k1][k2][k3]}/`
             try {
               // Check if the file can be loaded as JSON
-              require('../' + loc + k3 + '.json')
+              require(path.join(__dirname, '../' + loc + k3 + '.json'))
               return `      get ${k3} () { return require("./${loc}${k3}.json") }`
             } catch {
               // No ? Return it as a URL path so other code can decide how to handle it

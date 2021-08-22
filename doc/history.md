@@ -1,3 +1,7 @@
+## 2.92.0
+* update mcdata
+* try dynamic require one more time
+
 ## 2.91.1
 * add back node 12 support (@u9g)
 

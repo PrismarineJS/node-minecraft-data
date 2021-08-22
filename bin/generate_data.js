@@ -4,7 +4,7 @@ const dataSource = require('../minecraft-data/data/dataPaths')
 const fs = require('fs')
 const path = require('path')
 
-const data = 'const { pathToFileURL } = require(\'url\')\nmodule.exports =\n{\n' + Object
+const data = 'module.exports =\n{\n' + Object
   .keys(dataSource)
   .map(k1 =>
     "  '" + k1 + "': {\n" + Object
@@ -21,7 +21,7 @@ const data = 'const { pathToFileURL } = require(\'url\')\nmodule.exports =\n{\n'
             } catch {
               // No ? Return it as a URL path so other code can decide how to handle it
               const file = fs.readdirSync(path.join(__dirname, '../', loc)).find(f => f.startsWith(k3 + '.'))
-              if (file) { return `      ${k3}: pathToFileURL(__dirname + '/${loc}${file}')` } else { throw Error('file not found: ' + loc + k3) }
+              if (file) { return `      ${k3}: __dirname + '/${loc}${file}'` } else { throw Error('file not found: ' + loc + k3) }
             }
           })
           .join(',\n') +

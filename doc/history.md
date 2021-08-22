@@ -1,3 +1,6 @@
+## 2.93.0
+* update mcdata
+
 ## 2.92.1
 * fix generate by not using pathToFileURL
 

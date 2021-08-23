@@ -35,7 +35,7 @@
   "devDependencies": {
     "@types/node": "^16.0.0",
     "json-schema-to-typescript": "^10.0.3",
-    "minecraft-packets": "github:PrismarineJS/node-minecraft-packets",
+    "minecraft-packets": "^1.4.0",
     "mocha": "^9.0.0",
     "require-self": "^0.2.3",
     "standard": "^16.0.1",

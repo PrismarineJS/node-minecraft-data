@@ -1,3 +1,13 @@
+## 2.93.0
+* update mcdata
+
+## 2.92.1
+* fix generate by not using pathToFileURL
+
+## 2.92.0
+* update mcdata
+* try dynamic require one more time
+
 ## 2.91.1
 * add back node 12 support (@u9g)
 

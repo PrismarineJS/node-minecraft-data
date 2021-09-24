@@ -61,11 +61,6 @@ module.exports = function (mcVersion, preNetty) {
   nmcData.version = Object.assign(majorVersion, nmcData.version)
   cache[majorVersion.type + '_' + majorVersion.majorVersion] = nmcData
 
-  if (majorVersion.type === 'bedrock') {
-    const dp = require('./lib/bedrock')(nmcData)
-    return Object.assign(dp, nmcData)
-  }
-
   return nmcData
 }
 

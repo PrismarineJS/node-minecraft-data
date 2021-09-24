@@ -13,7 +13,8 @@ const types = ['pc', 'bedrock']
 types.forEach(function (type) {
   for (let i = 0; i < protocolVersions[type].length; i++) {
     if (!protocolVersions[type][i].dataVersion) {
-      protocolVersions[type][i].dataVersion = -i
+      // We start top to bottom, so the ones at the bottom should be greater
+      protocolVersions[type][i].dataVersion = -protocolVersions[type].length + i
     }
   }
   versionsByMinecraftVersion[type] = indexer.buildIndexFromArray(protocolVersions[type], 'minecraftVersion')
@@ -22,10 +23,32 @@ types.forEach(function (type) {
   postNettyVersionsByProtocolVersion[type] = indexer.buildIndexFromArrayNonUnique(protocolVersions[type].filter(function (e) { return e.usesNetty }), 'version')
 })
 
+function Version (type, version, majorVersion) {
+  const versions = versionsByMinecraftVersion[type]
+  // Allows comparisons against majorVersion even if `other` is not present in the versions.json (e.g. 1.17.0 exists but not 1.17)
+  for (const version in versions) {
+    const ver = versions[version]
+    versions[ver.majorVersion] = versions[ver.majorVersion] || ver
+  }
+  // TODO: Data for Minecraft classic is missing in protocolVersions.json, move this to its own type ?
+  const v1 = versions[version]?.dataVersion ?? 0
+  const raise = other => { throw new RangeError(`Version '${other}' not found in [${Object.keys(versions).join(' ; ')}] for ${type}`) }
+  this['>='] = other => versions[other] ? v1 >= versions[other].dataVersion : raise(other)
+  this['>'] = other => versions[other] ? v1 > versions[other].dataVersion : raise(other)
+  this['<'] = other => versions[other] ? v1 < versions[other].dataVersion : raise(other)
+  this['<='] = other => versions[other] ? v1 <= versions[other].dataVersion : raise(other)
+  this['=='] = other => versions[other] ? v1 === versions[other].dataVersion : raise(other)
+  this.type = type
+  this.majorVersion = majorVersion
+  return this
+}
+
 const cache = {} // prevent reindexing when requiring multiple time the same version
 
 module.exports = function (mcVersion, preNetty) {
   preNetty = preNetty || false
+  mcVersion = String(mcVersion).replace('pe_', 'bedrock_')
+
   const majorVersion = toMajor(mcVersion, preNetty)
   if (majorVersion == null) { return null }
   if (cache[majorVersion.type + '_' + majorVersion.majorVersion]) { return cache[majorVersion.type + '_' + majorVersion.majorVersion] }
@@ -33,19 +56,15 @@ module.exports = function (mcVersion, preNetty) {
   if (mcData == null) { return null }
   const nmcData = mcDataToNode(mcData)
   nmcData.type = majorVersion.type
-  nmcData.isNewerOrEqualTo = function (version) {
-    const v1 = versionsByMinecraftVersion[this.type][this.version.minecraftVersion].dataVersion
-    const v2 = versionsByMinecraftVersion[this.type][version].dataVersion
-    return v1 >= v2
-  }
-  nmcData.isOlderThan = function (version) {
-    const v1 = versionsByMinecraftVersion[this.type][this.version.minecraftVersion].dataVersion
-    const v2 = versionsByMinecraftVersion[this.type][version].dataVersion
-    return v1 < v2
-  }
+  nmcData.isNewerOrEqualTo = version => nmcData.version['>='](version)
+  nmcData.isOlderThan = version => nmcData.version['<'](version)
+  nmcData.version = Object.assign(majorVersion, nmcData.version)
   cache[majorVersion.type + '_' + majorVersion.majorVersion] = nmcData
+
   return nmcData
 }
+
+module.exports.Version = Version
 
 // adapt the version, most often doesn't convert to major version, can even convert to minor version when possible
 function toMajor (mcVersion, preNetty, typeArg) {
@@ -68,10 +87,7 @@ function toMajor (mcVersion, preNetty, typeArg) {
   } else if (versionsByMajorVersion[type][version]) {
     majorVersion = versionsByMajorVersion[type][version].minecraftVersion
   }
-  return {
-    majorVersion: majorVersion,
-    type: type
-  }
+  return new Version(type, version, majorVersion)
 }
 
 module.exports.supportedVersions = {

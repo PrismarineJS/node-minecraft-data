@@ -1,3 +1,6 @@
+## 2.94.0
+* update mcdata
+
 ## 2.93.1
 * Update bedrock item and version handling (@extremeheat)
 

@@ -122,6 +122,10 @@ enchantments indexed by name
 
 unindexed enchantments
 
+### minecraft-data.defaultSkin
+
+(bedrock edition) Skin geometry and texture data for default player skin
+
 ## Protocol
 
 ### minecraft-data.protocol

@@ -20,10 +20,4 @@ describe('load', () => {
     const firstDataVersion = require('minecraft-data')('15w32a') // dataVersion = 100
     assert.strictEqual(firstDataVersion.isNewerOrEqualTo('15w31c'), true) // no dataVersion
   })
-//   it('version lookup', () => {
-//     const mcData = require('minecraft-data')
-//     for (const ver of mcData.versions.pc) {
-//       assert.notStrictEqual(mcData(ver.version), null)
-//     }
-//   })
 })

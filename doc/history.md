@@ -1,3 +1,6 @@
+## 2.99.2
+* update mcdata
+
 ## 2.99.1
 * update mcdata
 

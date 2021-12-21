@@ -216,6 +216,20 @@ effects indexed by name
 
 unindexed effects
 
+## Attributes
+
+### minecraft-data.attributes
+
+attributes indexed by resource name (generic.movementSpeed || minecraft:generic.movement_speed)
+
+### minecraft-data.attributesByName
+
+attributes indexed by minecraft-data name (movementSpeed)
+
+### minecraft-data.attributesArray
+
+unindexed attributes
+
 ## Particles
 
 ### minecraft-data.particles

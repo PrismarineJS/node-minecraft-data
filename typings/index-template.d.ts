@@ -91,6 +91,10 @@ export interface IndexedData {
     effectsByName: { [name: string]: Effect; };
     effectsArray: Effect[];
 
+    attributes: { [resource: string]: string; };
+    attributesByName: { [name: string]: string; };
+    attributesArray: [];
+
     version: Version;
 
     type: string;

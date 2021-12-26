@@ -1,3 +1,6 @@
+## 2.100.1
+* add attribute support (@U5B)
+* 
 ## 2.100.0
 * update mcdata
 

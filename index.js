@@ -39,6 +39,7 @@ function Version (type, version, majorVersion) {
   this['<='] = other => versions[other] ? v1 <= versions[other].dataVersion : raise(other)
   this['=='] = other => versions[other] ? v1 === versions[other].dataVersion : raise(other)
   this.type = type
+  this.version = version
   this.majorVersion = majorVersion
   return this
 }

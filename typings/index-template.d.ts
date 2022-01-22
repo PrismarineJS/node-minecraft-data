@@ -1,15 +1,15 @@
 // This will interface will merge with the generated one
 export interface Version {
     // Returns true if the current version is greater than or equal to the `other` version's dataVersion
-    ['>='](other)
+    ['>='](other: string): boolean
     // Returns true if the current version is greater than the `other` version's dataVersion
-    ['>'](other)
+    ['>'](other: string): boolean
     // Returns true if the current version is less than the `other` version's dataVersion
-    ['<'](other)
+    ['<'](other: string): boolean
     // Returns true if the current version is less than than or equal to the `other` version's dataVersion
-    ['<='](other)
+    ['<='](other: string): boolean
     // Returns true if the current version is equal to the `other` version's dataVersion
-    ['=='](other)
+    ['=='](other: string): boolean
     type: 'pc' | 'bedrock'
 }
 

@@ -180,6 +180,10 @@ the version type, currently 'pc' or 'bedrock'
 
 the major version (example : 1.8), also the name of the minecraft-data version
 
+### minecraft-data.version.dataVersion
+
+"Data version" for this Minecraft version, used for example when writing chunks to disk
+
 ### minecraft-data.version.< (other)
 Returns true if the current version is less than than the `other` version's dataVersion
 

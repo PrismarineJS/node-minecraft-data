@@ -30,9 +30,8 @@ function Version (type, version, majorVersion) {
     const ver = versions[version]
     versions[ver.majorVersion] = versions[ver.majorVersion] || ver
   }
-
-  // merge in data from protocolVersions.json if it exists
-  Object.assign(this, versions[version])
+  
+  this.dataVersion = versions[version].dataVersion
 
   // TODO: Data for Minecraft classic is missing in protocolVersions.json, move this to its own type ?
   const v1 = versions[version]?.dataVersion ?? 0

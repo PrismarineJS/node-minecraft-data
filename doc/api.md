@@ -68,6 +68,10 @@ biomes indexed by id
 
 unindexed biomes
 
+### minecraft-data.biomesByName
+
+biomes object indexed by name
+
 ## Recipes
 
 ### minecraft-data.recipes

@@ -60,6 +60,7 @@ export interface IndexedData {
 
     biomes: { [id: number]: Biome; };
     biomesArray: Biome[];
+    biomesByName: { [name: string]: Biome; };
 
     recipes: { [id: number]: Recipe[]; };
 

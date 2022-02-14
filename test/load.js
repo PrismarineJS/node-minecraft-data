@@ -41,6 +41,6 @@ describe('versions with block data have block state IDs', () => {
   }
   after(() => {
     console.log(oks, 'OKs')
-    assert(oks > 0)    
+    assert(oks > 0)
   })
 })

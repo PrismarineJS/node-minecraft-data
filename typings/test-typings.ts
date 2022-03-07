@@ -43,3 +43,5 @@ console.log(getMcData.supportedVersions.pc);
 console.log(getMcData.schemas.blocks);
 
 console.log(getMcData('1.12').language['options.sensitivity.max']);
+
+console.log(getMcData.supportedVersions.bedrock)

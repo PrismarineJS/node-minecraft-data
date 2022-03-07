@@ -337,6 +337,10 @@ Mapping from 1.12 block:metadata to 1.13 block names
 
 examples 0:0 -> minecraft:air
 
+### minecraft-data.supportFeature(featureName) : Boolean
+
+This can be used to check is a specific feature is available in the current Minecraft version. This is usually only required for handling version-specific functionality.
+
 ## Schemas
 
 ### minecraft-data.schemas.biomes

@@ -1,4 +1,5 @@
 const mcDataToNode = require('./lib/loader')
+const supportFeature = require('./lib/supportsFeature')
 const indexer = require('./lib/indexer.js')
 const protocolVersions = {
   pc: require('./minecraft-data/data/pc/common/protocolVersions.json'),
@@ -63,7 +64,7 @@ module.exports = function (mcVersion, preNetty) {
   nmcData.isOlderThan = version => nmcData.version['<'](version)
   nmcData.version = Object.assign(majorVersion, nmcData.version)
   cache[majorVersion.type + '_' + majorVersion.majorVersion] = nmcData
-
+  nmcData.supportFeature = feature => supportFeature(feature, nmcData.version.minecraftVersion)
   return nmcData
 }
 

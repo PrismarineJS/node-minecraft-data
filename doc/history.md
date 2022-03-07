@@ -1,3 +1,6 @@
+## 2.115.2
+* Add supportFeature support
+
 ## 2.115.1
 * update mcdata
 

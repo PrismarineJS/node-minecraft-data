@@ -55,15 +55,21 @@ describe('supportFeature', () => {
 
   it('metadataIxOfItem works right', () => {
     const assertions = {
+      1.18: 8,
       1.17: 8,
+      '1.16.1': 7,
+      1.16: 7,
       1.15: 7,
+      '1.13.2': 6,
       '1.10': 6,
+      '1.9.1': 5,
       1.9: 5,
       1.8: 8
     }
     for (const [k, v] of Object.entries(assertions)) {
       const mcData = require('minecraft-data')(k)
-      assert.equal(mcData.supportFeature('metadataIxOfItem'), v, `Failed on mc version ${k}`)
+      const newVal = mcData.supportFeature('metadataIxOfItem')
+      assert.equal(newVal, v, `Failed on mc version ${k} | Expected: ${v}, Got: ${newVal}`)
     }
   })
 })

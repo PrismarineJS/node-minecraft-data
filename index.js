@@ -55,7 +55,8 @@ module.exports = function (mcVersion, preNetty) {
 
   const majorVersion = toMajor(mcVersion, preNetty)
   if (majorVersion == null) { return null }
-  if (cache[majorVersion.type + '_' + majorVersion.majorVersion]) { return cache[majorVersion.type + '_' + majorVersion.majorVersion] }
+  const cachedName = `${majorVersion.type}_${majorVersion.majorVersion}_${majorVersion.dataVersion}`
+  if (cache[cachedName]) { return cache[cachedName] }
   const mcData = data[majorVersion.type][majorVersion.majorVersion]
   if (mcData == null) { return null }
   const nmcData = mcDataToNode(mcData)
@@ -63,8 +64,8 @@ module.exports = function (mcVersion, preNetty) {
   nmcData.isNewerOrEqualTo = version => nmcData.version['>='](version)
   nmcData.isOlderThan = version => nmcData.version['<'](version)
   nmcData.version = Object.assign(majorVersion, nmcData.version)
-  cache[majorVersion.type + '_' + majorVersion.majorVersion] = nmcData
-  nmcData.supportFeature = feature => supportFeature(feature, nmcData.version.minecraftVersion)
+  cache[cachedName] = nmcData
+  nmcData.supportFeature = feature => supportFeature(feature, nmcData.version)
   return nmcData
 }
 

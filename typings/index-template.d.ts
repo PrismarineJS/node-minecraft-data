@@ -43,21 +43,54 @@ export interface Schemas {
 
 export interface LoginPacket {
     entityId: number;
-    isHardcore: boolean;
+
+    /**
+     * introduced in Minecraft 1.16.2
+     */
+    isHardcore?: boolean;
+
     gameMode: number;
-    previousGameMode: number;
-    worldNames: string[];
-    dimensionCodec: any;
+
+    /**
+     * Introduced in Minecraft 1.17
+     */
+    previousGameMode?: number;
+    /**
+     * Introduced in Minecraft 1.17
+     */
+    worldNames?: string[];
+    /**
+     * Introduced in Minecraft 1.17
+     */
+    dimensionCodec?: any;
+
     dimension: any;
-    worldName: string;
+
+    /**
+     * Introduced in Minecraft 1.17
+     */
+    worldName?: string;
+
     hashedSeed: number;
     maxPlayers: number;
     viewDistance: number;
-    simulationDistance: number;
+
+    /**
+     * Introduced in Minecraft 1.18
+     */
+    simulationDistance?: number;
+
     reducedDebugInfo: boolean;
     enableRespawnScreen: boolean;
-    isDebug: boolean;
-    isFlat: boolean;
+
+    /**
+     * Introduced in Minecraft 1.17
+     */
+    isDebug?: boolean;    
+    /**
+     * Introduced in Minecraft 1.17
+     */
+    isFlat?: boolean;
 }
 
 export interface IndexedData {

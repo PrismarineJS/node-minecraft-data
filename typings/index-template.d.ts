@@ -41,12 +41,33 @@ export interface Schemas {
     entityLoot: any;
 }
 
+export interface LoginPacket {
+    entityId: number;
+    isHardcore: boolean;
+    gameMode: number;
+    previousGameMode: number;
+    worldNames: string[];
+    dimensionCodec: any;
+    dimension: any;
+    worldName: string;
+    hashedSeed: number;
+    maxPlayers: number;
+    viewDistance: number;
+    simulationDistance: number;
+    reducedDebugInfo: boolean;
+    enableRespawnScreen: boolean;
+    isDebug: boolean;
+    isFlat: boolean;
+}
+
 export interface IndexedData {
     isNewerOrEqualTo(version: string): boolean;
     isOlderThan(version: string): boolean;
     blocks: { [id: number]: Block; };
     blocksByName: { [name: string]: Block; };
     blocksArray: Block[];
+
+    loginPacket: LoginPacket;
 
     items: { [id: number]: Item; };
     itemsByName: { [name: string]: Item; };

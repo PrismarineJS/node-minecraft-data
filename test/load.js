@@ -44,3 +44,26 @@ describe('versions with block data have block state IDs', () => {
     assert(oks > 0)
   })
 })
+
+describe('supportFeature', () => {
+  it('dimensionIsAnInt is only accessible in 1.8 - 1.15.2', () => {
+    const mcData1Dot9 = require('minecraft-data')('1.9')
+    const mcData1Dot17 = require('minecraft-data')('1.17')
+    assert.equal(mcData1Dot9.supportFeature('dimensionIsAnInt'), true)
+    assert.equal(mcData1Dot17.supportFeature('dimensionIsAnInt'), false)
+  })
+
+  it('metadataIxOfItem works right', () => {
+    const assertions = {
+      1.17: 8,
+      1.15: 7,
+      '1.10': 6,
+      1.9: 5,
+      1.8: 8
+    }
+    for (const [k, v] of Object.entries(assertions)) {
+      const mcData = require('minecraft-data')(k)
+      assert.equal(mcData.supportFeature('metadataIxOfItem'), v, `Failed on mc version ${k}`)
+    }
+  })
+})

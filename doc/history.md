@@ -1,3 +1,6 @@
+## 2.117.1
+* Add support for custom supportFeature return type
+
 ## 2.117.0
 * update mcdata
 

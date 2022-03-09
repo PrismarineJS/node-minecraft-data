@@ -19,6 +19,9 @@ describe('load', () => {
 
     const firstDataVersion = require('minecraft-data')('15w32a') // dataVersion = 100
     assert.strictEqual(firstDataVersion.isNewerOrEqualTo('15w31c'), true) // no dataVersion
+
+    const mcData188 = require('minecraft-data')('1.8.8')
+    assert.strictEqual(mcData188.isNewerOrEqualTo('1.8'), true, '1.8.8>1.8')
   })
 })
 

@@ -35,13 +35,13 @@ function Version (type, version, majorVersion) {
   this.dataVersion = versions[version]?.dataVersion
 
   // TODO: Data for Minecraft classic is missing in protocolVersions.json, move this to its own type ?
-  const v1 = this.dataVersion ?? 0
+  const v1 = Math.abs(this.dataVersion) ?? 0
   const raise = other => { throw new RangeError(`Version '${other}' not found in [${Object.keys(versions).join(' ; ')}] for ${type}`) }
-  this['>='] = other => versions[other] ? v1 >= versions[other].dataVersion : raise(other)
-  this['>'] = other => versions[other] ? v1 > versions[other].dataVersion : raise(other)
-  this['<'] = other => versions[other] ? v1 < versions[other].dataVersion : raise(other)
-  this['<='] = other => versions[other] ? v1 <= versions[other].dataVersion : raise(other)
-  this['=='] = other => versions[other] ? v1 === versions[other].dataVersion : raise(other)
+  this['>='] = other => versions[other] ? v1 >= Math.abs(versions[other].dataVersion) : raise(other)
+  this['>'] = other => versions[other] ? v1 > Math.abs(versions[other].dataVersion) : raise(other)
+  this['<'] = other => versions[other] ? v1 < Math.abs(versions[other].dataVersion) : raise(other)
+  this['<='] = other => versions[other] ? v1 <= Math.abs(versions[other].dataVersion) : raise(other)
+  this['=='] = other => versions[other] ? v1 === Math.abs(versions[other].dataVersion) : raise(other)
   this.type = type
   this.majorVersion = majorVersion
   return this

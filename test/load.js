@@ -24,7 +24,7 @@ describe('load', () => {
     assert.strictEqual(mcData188.isNewerOrEqualTo('1.8'), true, '1.8.8>1.8')
 
     const bedrock16220 = require('minecraft-data')('bedrock_1.16.220')
-    assert.strictEqual(bedrock16220.isNewerOrEqualTo('bedrock_1.16.210'), true, 'bedrock_1.16.220>bedrock_1.16.210')
+    assert.strictEqual(bedrock16220.isNewerOrEqualTo('1.16.210'), true, 'bedrock_1.16.220>bedrock_1.16.210')
   })
 })
 

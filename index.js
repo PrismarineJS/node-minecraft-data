@@ -14,8 +14,8 @@ const types = ['pc', 'bedrock']
 types.forEach(function (type) {
   for (let i = 0; i < protocolVersions[type].length; i++) {
     if (!protocolVersions[type][i].dataVersion) {
-      // We start top to bottom, so the ones at the bottom should be greater
-      protocolVersions[type][i].dataVersion = -protocolVersions[type].length + i
+      // We start top to bottom, so the ones at the bottom should be lower
+      protocolVersions[type][i].dataVersion = -i
     }
   }
   versionsByMinecraftVersion[type] = indexer.buildIndexFromArray(protocolVersions[type], 'minecraftVersion')

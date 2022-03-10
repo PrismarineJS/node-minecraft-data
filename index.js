@@ -29,7 +29,7 @@ function Version (type, version, majorVersion) {
   // Allows comparisons against majorVersion even if `other` is not present in the versions.json (e.g. 1.17.0 exists but not 1.17)
   for (const majorMinorPatchVersion in versions) {
     const versionObj = versions[majorMinorPatchVersion]
-    // 1.17.0 === 1.17, so let's add explicit logic for that 
+    // 1.17.0 === 1.17, so let's add explicit logic for that
     if (versionObj.minecraftVersion.endsWith('.0')) {
       versions[versionObj.majorVersion] = versionObj
     }

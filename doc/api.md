@@ -141,16 +141,6 @@ the minecraft protocol
 
 the minecraft protocol comments
 
-## Functions
-
-### minecraft-data.findItemOrBlockById
-
-find a block or an item by its id
-
-### minecraft-data.findItemOrBlockByName
-
-find a block or an item by its name
-
 ## Windows
 
 ### minecraft-data.windows

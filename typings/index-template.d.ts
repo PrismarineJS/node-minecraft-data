@@ -135,9 +135,6 @@ export interface IndexedData {
     protocol: any;
     protocolComments: any;
 
-    findItemOrBlockById(id: number): Block | Item;
-    findItemOrBlockByName(name: string): Block | Item;
-
     windows: { [id: number]: Window; };
     windowsByName: { [name: string]: Window; };
     windowsArray: Window[];

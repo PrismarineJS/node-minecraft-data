@@ -1,3 +1,6 @@
+## 2.222.0
+* remove findItemOrBlockById and findItemOrBlockByName entirely
+
 ## 2.221.0
 * update mcdata
 

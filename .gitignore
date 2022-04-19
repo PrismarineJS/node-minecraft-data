@@ -1,6 +1,12 @@
-node_modules/
+# Files and directories created by pub.
+.dart_tool/
+.packages
+
+# Conventional directory for build output.
+build/
+
+# For libraries it is recommended to exclude pubspec.lock
+pubspec.lock
+
 data.js
-package-lock.json
-index.d.ts
-typings/test-typings.js
 .vscode

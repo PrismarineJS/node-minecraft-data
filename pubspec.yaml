@@ -1,4 +1,4 @@
-name: minecraft-data
+name: minecraft_data
 description: Provide easy access to minecraft data in node.js.
 version: 3.0.0
 homepage: https://github.com/Dart-Craft/dart-minecraft-data

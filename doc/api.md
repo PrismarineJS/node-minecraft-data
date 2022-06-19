@@ -136,7 +136,6 @@ unindexed enchantments
 
 the minecraft protocol
 
-
 ### minecraft-data.protocolComments
 
 the minecraft protocol comments
@@ -154,7 +153,6 @@ windows indexed by name
 ### minecraft-data.windowsArray
 
 unindexed windows
-
 
 ## Version
 
@@ -179,25 +177,29 @@ the major version (example : 1.8), also the name of the minecraft-data version
 "Data version" for this Minecraft version, used for example when writing chunks to disk
 
 ### minecraft-data.version.< (other)
+
 Returns true if the current version is less than than the `other` version's dataVersion
 
 ### minecraft-data.version.> (other)
+
 Returns true if the current version is greater than the `other` version's dataVersion
 
 ### minecraft-data.version.== (other)
+
 Returns true if the current version is equal to the `other` version's dataVersion
 
 ### minecraft-data.version.>=, minecraft-data.version.<=
 
 Same as above but also allows equal dataVersion. The other version must be of the same type, the prefix is always implied.
 
-Example Usage: 
-```js
-const mcd = require('minecraft-data')('1.16.4')
-console.log('1.16.4 >= 1.17 ?', mcd.version['>=']('1.17')) // False
+Example Usage:
 
-const mcd = require('minecraft-data')('bedrock_1.17.0')
-console.log('1.17.0 > 1.16.220 ?', mcd.version['>']('1.16.220')) // True
+```js
+const mcd = require('minecraft-data')('1.16.4');
+console.log('1.16.4 >= 1.17 ?', mcd.version['>=']('1.17')); // False
+
+const mcd = require('minecraft-data')('bedrock_1.17.0');
+console.log('1.17.0 > 1.16.220 ?', mcd.version['>']('1.16.220')); // True
 ```
 
 ## Effects
@@ -244,7 +246,7 @@ unindexed particles
 
 ## Commands
 
-### minecraft-data.commands 
+### minecraft-data.commands
 
 Command tree
 

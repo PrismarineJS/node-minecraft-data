@@ -1,4 +1,5 @@
 # node-minecraft-data
+
 [![NPM version](https://badge.fury.io/js/minecraft-data.svg)](http://badge.fury.io/js/minecraft-data)
 [![Tonic](https://img.shields.io/badge/tonic-try%20it-blue.svg)](https://tonicdev.com/npm/minecraft-data)
 [![Build Status](https://github.com/PrismarineJS/node-minecraft-data/workflows/CI/badge.svg)](https://github.com/PrismarineJS/node-minecraft-data/actions?query=workflow%3A%22CI%22)
@@ -12,23 +13,23 @@ The objective of this module is to make easier to look for information in minecr
 
 For example it's often useful to :
 
-* find blocks by id
-* find items by name
-* find block or item by name
-* find block or item by id
+-   find blocks by id
+-   find items by name
+-   find block or item by name
+-   find block or item by id
 
 ## Example
 
 ```js
-const mcData=require("minecraft-data")("1.8.8")
+const mcData = require('minecraft-data')('1.8.8');
 
-console.log(mcData.blocksByName["stone"])
-console.log(mcData.windows["minecraft:brewing_stand"])
-console.log(mcData.version)
-console.log(mcData.effectsByName["Haste"])
+console.log(mcData.blocksByName['stone']);
+console.log(mcData.windows['minecraft:brewing_stand']);
+console.log(mcData.version);
+console.log(mcData.effectsByName['Haste']);
 ```
 
 ## Documentation
 
- * See [doc/api.md](doc/api.md)
- * See [doc/history.md](doc/history.md)
+-   See [doc/api.md](doc/api.md)
+-   See [doc/history.md](doc/history.md)

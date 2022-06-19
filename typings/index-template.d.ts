@@ -1,16 +1,16 @@
 // This will interface will merge with the generated one
 export interface Version {
     // Returns true if the current version is greater than or equal to the `other` version's dataVersion
-    ['>='](other: string): boolean
+    ['>='](other: string): boolean;
     // Returns true if the current version is greater than the `other` version's dataVersion
-    ['>'](other: string): boolean
+    ['>'](other: string): boolean;
     // Returns true if the current version is less than the `other` version's dataVersion
-    ['<'](other: string): boolean
+    ['<'](other: string): boolean;
     // Returns true if the current version is less than than or equal to the `other` version's dataVersion
-    ['<='](other: string): boolean
+    ['<='](other: string): boolean;
     // Returns true if the current version is equal to the `other` version's dataVersion
-    ['=='](other: string): boolean
-    type: 'pc' | 'bedrock'
+    ['=='](other: string): boolean;
+    type: 'pc' | 'bedrock';
 }
 
 export interface VersionSet {
@@ -86,7 +86,7 @@ export interface LoginPacket {
     /**
      * Introduced in Minecraft 1.17
      */
-    isDebug?: boolean;    
+    isDebug?: boolean;
     /**
      * Introduced in Minecraft 1.17
      */
@@ -96,55 +96,55 @@ export interface LoginPacket {
 export interface IndexedData {
     isNewerOrEqualTo(version: string): boolean;
     isOlderThan(version: string): boolean;
-    blocks: { [id: number]: Block; };
-    blocksByName: { [name: string]: Block; };
+    blocks: { [id: number]: Block };
+    blocksByName: { [name: string]: Block };
     blocksArray: Block[];
 
     loginPacket: LoginPacket;
 
-    items: { [id: number]: Item; };
-    itemsByName: { [name: string]: Item; };
+    items: { [id: number]: Item };
+    itemsByName: { [name: string]: Item };
     itemsArray: Item[];
 
-    foods: { [id: number]: Food; };
-    foodsByName: { [name: string]: Food; };
+    foods: { [id: number]: Food };
+    foodsByName: { [name: string]: Food };
     foodsArray: Food[];
-    foodsByFoodPoints: { [foodPoints: number]: Food; };
-    foodsBySaturation: { [saturation: number]: Food; };
+    foodsByFoodPoints: { [foodPoints: number]: Food };
+    foodsBySaturation: { [saturation: number]: Food };
 
-    biomes: { [id: number]: Biome; };
+    biomes: { [id: number]: Biome };
     biomesArray: Biome[];
-    biomesByName: { [name: string]: Biome; };
+    biomesByName: { [name: string]: Biome };
 
-    recipes: { [id: number]: Recipe[]; };
+    recipes: { [id: number]: Recipe[] };
 
-    instruments: { [id: number]: Instrument; };
+    instruments: { [id: number]: Instrument };
     instrumentsArray: Instrument[];
 
     materials: { [name: string]: Material };
 
-    mobs: { [id: number]: Entity; };
-    objects: { [id: number]: Entity; };
-    entitiesByName: { [name: string]: Entity; };
+    mobs: { [id: number]: Entity };
+    objects: { [id: number]: Entity };
+    entitiesByName: { [name: string]: Entity };
     entitiesArray: Entity[];
 
-    enchantments: { [id: number]: Enchantment; };
-    enchantmentsByName: { [name: string]: Enchantment; };
+    enchantments: { [id: number]: Enchantment };
+    enchantmentsByName: { [name: string]: Enchantment };
     enchantmentsArray: Enchantment[];
 
     protocol: any;
     protocolComments: any;
 
-    windows: { [id: number]: Window; };
-    windowsByName: { [name: string]: Window; };
+    windows: { [id: number]: Window };
+    windowsByName: { [name: string]: Window };
     windowsArray: Window[];
 
-    effects: { [id: number]: Effect; };
-    effectsByName: { [name: string]: Effect; };
+    effects: { [id: number]: Effect };
+    effectsByName: { [name: string]: Effect };
     effectsArray: Effect[];
 
-    attributes: { [resource: string]: string; };
-    attributesByName: { [name: string]: string; };
+    attributes: { [resource: string]: string };
+    attributesByName: { [name: string]: string };
     attributesArray: [];
 
     version: Version;
@@ -153,16 +153,16 @@ export interface IndexedData {
 
     language: { [key: string]: string };
 
-    blockLoot: { [id: number]: BlockLoot; };
-    blockLootByName: { [name: string]: BlockLoot; };
+    blockLoot: { [id: number]: BlockLoot };
+    blockLootByName: { [name: string]: BlockLoot };
 
-    entityLoot: { [id: number]: EntityLoot; };
-    entityLootByName: { [name: string]: EntityLoot; };
+    entityLoot: { [id: number]: EntityLoot };
+    entityLootByName: { [name: string]: EntityLoot };
 }
 
 const versions: {
     [key in keyof SupportedVersions]: Version[];
-  };
+};
 const versionsByMinecraftVersion: VersionSet;
 const preNettyVersionsByProtocolVersion: VersionSet;
 const postNettyVersionsByProtocolVersion: VersionSet;

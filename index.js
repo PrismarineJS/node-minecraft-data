@@ -47,7 +47,7 @@ function Version(type, version, majorVersion) {
 
     this.dataVersion = versions[version]?.dataVersion;
 
-    // TODO: Data for Minecraft classic is missing in protocolVersions.json, move this to its own type ?
+    // TODO: Data for Minecraft classic is missing in protocolVersions.json, move this to its own type?
     const v1 = this.dataVersion ?? 0;
     const raise = (other) => {
         throw new RangeError(`Version '${other}' not found in [${Object.keys(versions).join(' ; ')}] for ${type}`);
@@ -69,17 +69,14 @@ module.exports = function (mcVersion, preNetty) {
     mcVersion = String(mcVersion).replace('pe_', 'bedrock_');
 
     const majorVersion = toMajor(mcVersion, preNetty);
-    if (majorVersion === null) {
-        return null;
-    }
+    if (majorVersion === null) return null;
+
     const cachedName = `${majorVersion.type}_${majorVersion.majorVersion}_${majorVersion.dataVersion}`;
-    if (cache[cachedName]) {
-        return cache[cachedName];
-    }
+    if (cache[cachedName]) return cache[cachedName];
+
     const mcData = data[majorVersion.type][majorVersion.majorVersion];
-    if (mcData == null) {
-        return null;
-    }
+    if (mcData === null) return null;
+
     const nmcData = mcDataToNode(mcData);
     nmcData.type = majorVersion.type;
     nmcData.isNewerOrEqualTo = (version) => nmcData.version['>='](version);

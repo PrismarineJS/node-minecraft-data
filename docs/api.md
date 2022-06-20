@@ -38,7 +38,7 @@ Blocks indexed by state id
 
 ### `minecraftData.blockStates`
 
-**_Bedrock only_**
+**_Bedrock edition only_**
 
 Block states
 
@@ -166,6 +166,12 @@ The Minecraft protocol
 
 The Minecraft protocol comments
 
+### `minecraftData.protocolYaml`
+
+**_Bedrock edition only_**
+
+The url to the file of the protocol yaml
+
 ## Windows (GUIs)
 
 ### `minecraftData.windows`
@@ -181,6 +187,8 @@ Windows indexed by name
 Array of windows
 
 ## Version
+
+For version comparison, the other version must be of the same type, and the prefix is always implied
 
 ### `minecraftData.version.version`
 
@@ -202,21 +210,25 @@ The major Minecraft version
 
 The "data version" for this Minecraft version, used for example when writing chunks to disk
 
-### `minecraftData.version.[<](<version>)`
+### `minecraftData.version.[<](<version>)`, `minecraftData.isOlderThan(<version>)`
 
-Returns true if the current version is less than than the other version's `dataVersion`
+Returns `true` if the current version is less than than the other version's `dataVersion`, or else `false`
 
-### `minecraftData.version.[>](<version>)`
+### `minecraftData.version.[<=](<version>)`, `minecraftVersion.isOlderOrEqualTo(<version>)`
 
-Returns true if the current version is greater than the other version's `dataVersion`
+Same as above but also checks for an equivalent `dataVersion`
 
-### `minecraftData.version.[==](<version>)`
+### `minecraftData.version.[==](<version>)`, `minecraftVersion.isEqualTo(<version>)`
 
-Returns true if the current version is equal to the other version's `dataVersion`
+Returns `true` if the current version is equal to the other version's `dataVersion`, or else `false`
 
-### `minecraftData.version.[>=](<version>)`, `minecraftData.version.[<=](<version>)`
+### `minecraftData.version.[>](<version>)`, `minecraftVersion.isNewerThan(<version>)`
 
-Same as above but also allows equal `dataVersion`. The other version must be of the same type, the prefix is always implied.
+Returns `true` if the current version is greater than the other version's `dataVersion`, or else `false`
+
+### `minecraftData.version.[>=](<version>)`, `minecraftVersion.isNewerOrEqualTo(<version>)`
+
+Same as above but also checks for an equivalent `dataVersion`
 
 Example Usage:
 
@@ -323,6 +335,12 @@ Login packet example
 ### `minecraftData.supportFeature(<feature>)`
 
 This can be used to check if a specific feature is available in the current Minecraft version. This is usually only used for handling version-specific functionality.
+
+## Tints
+
+### `minecraftData.tints`
+
+Tints indexed by the tint type (`grass`, `foliage`, `water`, `redstone`, `constant`)
 
 ## Protocol versions
 

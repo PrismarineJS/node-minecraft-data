@@ -79,8 +79,11 @@ module.exports = function (mcVersion, preNetty) {
 
     const nmcData = mcDataToNode(mcData);
     nmcData.type = majorVersion.type;
-    nmcData.isNewerOrEqualTo = (version) => nmcData.version['>='](version);
     nmcData.isOlderThan = (version) => nmcData.version['<'](version);
+    nmcData.isOlderOrEqualTo = (version) => nmcData.version['<='](version);
+    nmcData.isEqualTo = (version) => nmcData.version['=='](version);
+    nmcData.isNewerThan = (version) => nmcData.version['>'](version);
+    nmcData.isNewerOrEqualTo = (version) => nmcData.version['>='](version);
     nmcData.version = Object.assign(majorVersion, nmcData.version);
     cache[cachedName] = nmcData;
     nmcData.supportFeature = (feature) => supportFeature(feature, nmcData.version);

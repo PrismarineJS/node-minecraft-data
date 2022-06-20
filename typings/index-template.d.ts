@@ -94,11 +94,18 @@ export interface LoginPacket {
 }
 
 export interface IndexedData {
-    isNewerOrEqualTo(version: string): boolean;
     isOlderThan(version: string): boolean;
+    isOlderOrEqualTo(version: string): boolean;
+    isEqualTo(version: string): boolean;
+    isNewerThan(version: string): boolean;
+    isNewerOrEqualTo(version: string): boolean;
     blocks: { [id: number]: Block };
     blocksByName: { [name: string]: Block };
     blocksArray: Block[];
+    /**
+     * Bedrock edition only
+     */
+    blockStates?: { name: string; states: object; version: number }[];
 
     loginPacket: LoginPacket;
 
@@ -132,8 +139,17 @@ export interface IndexedData {
     enchantmentsByName: { [name: string]: Enchantment };
     enchantmentsArray: Enchantment[];
 
-    protocol: any;
-    protocolComments: any;
+    /**
+     * Bedrock edition only
+     */
+    defaultSkin?: object;
+
+    protocol: object;
+    protocolComments: object;
+    /**
+     * Bedrock edition only
+     */
+    protocolYaml?: Array;
 
     windows: { [id: number]: Window };
     windowsByName: { [name: string]: Window };
@@ -149,7 +165,7 @@ export interface IndexedData {
 
     version: Version;
 
-    type: string;
+    type: 'pc' | 'bedrock';
 
     language: { [key: string]: string };
 

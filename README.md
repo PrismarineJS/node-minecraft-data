@@ -13,17 +13,6 @@ The objective of this module is to make easier to look for information in minecr
 
 This package allows the lookup of blocks, items, entities, etc. by name or id.
 
-## Example
-
-```js
-const mcData = require('minecraft-data')('1.8.8');
-
-console.log(mcData.blocksByName['stone']);
-console.log(mcData.windows['minecraft:brewing_stand']);
-console.log(mcData.version);
-console.log(mcData.effectsByName['Haste']);
-```
-
 ## Documentation
 
 - See [docs/api.md](docs/api.md)

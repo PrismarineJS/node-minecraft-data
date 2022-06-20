@@ -1,4 +1,3 @@
-// This will interface will merge with the generated one
 export interface Version {
     // Returns true if the current version is greater than or equal to the `other` version's dataVersion
     ['>='](other: string): boolean;
@@ -24,21 +23,21 @@ export interface SupportedVersions {
 }
 
 export interface Schemas {
-    biomes: any;
-    blocks: any;
-    effects: any;
-    entities: any;
-    instruments: any;
-    items: any;
-    materials: any;
-    protocol: any;
-    protocolVersions: any;
-    recipes: any;
-    version: any;
-    windows: any;
-    foods: any;
-    blockLoot: any;
-    entityLoot: any;
+    biomes: object;
+    blocks: object;
+    effects: object;
+    entities: object;
+    instruments: object;
+    items: object;
+    materials: object;
+    protocol: object;
+    protocolVersions: object;
+    recipes: object;
+    version: object;
+    windows: object;
+    foods: object;
+    blockLoot: object;
+    entityLoot: object;
 }
 
 export interface LoginPacket {
@@ -62,9 +61,9 @@ export interface LoginPacket {
     /**
      * Introduced in Minecraft 1.17
      */
-    dimensionCodec?: any;
+    dimensionCodec?: object;
 
-    dimension: any;
+    dimension: object;
 
     /**
      * Introduced in Minecraft 1.17
@@ -101,11 +100,13 @@ export interface IndexedData {
     isNewerOrEqualTo(version: string): boolean;
     blocks: { [id: number]: Block };
     blocksByName: { [name: string]: Block };
+    blocksByStateId: { [id: number]: Block };
     blocksArray: Block[];
     /**
      * Bedrock edition only
      */
     blockStates?: { name: string; states: object; version: number }[];
+    blockCollisionShapes: { blocks: { [name: string]: number[] }; shapes: { [id: number]: [number[]] } };
 
     loginPacket: LoginPacket;
 
@@ -116,8 +117,8 @@ export interface IndexedData {
     foods: { [id: number]: Food };
     foodsByName: { [name: string]: Food };
     foodsArray: Food[];
-    foodsByFoodPoints: { [foodPoints: number]: Food };
-    foodsBySaturation: { [saturation: number]: Food };
+    foodsByFoodPoints: { [foodPoints: number]: Food[] };
+    foodsBySaturation: { [saturation: number]: Food[] };
 
     biomes: { [id: number]: Biome };
     biomesArray: Biome[];

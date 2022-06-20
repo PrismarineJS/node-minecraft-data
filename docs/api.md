@@ -24,9 +24,21 @@ All examples reference `MinecraftData` as the module, and `minecraftData` as the
 
 Blocks indexed by id
 
+Example:
+
+```js
+console.log(minecraftData.blocks[1]); // Object containing information for "Stone"
+```
+
 ### `minecraftData.blocksByName`
 
 Blocks indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.blocksByName['stone']); // Object containing information for "Stone"
+```
 
 ### `minecraftData.blocksArray`
 
@@ -36,15 +48,37 @@ Array of blocks
 
 Blocks indexed by state id
 
+Example:
+
+```js
+console.log(minecraftData.blocksByStateId[100]); // Object containing information for "Lava" (as Lava has a state range from 91 to 106)
+```
+
 ### `minecraftData.blockStates`
 
 **_Bedrock edition only_**
 
-Block states
+Array of block states
+
+Example:
+
+```js
+console.log(minecraftData.blockStates[50]); // Object containing block state information for "Warped Door"
+```
 
 ### `minecraftData.blockCollisionShapes`
 
-Block collision shapes
+Block collision shapes. Contains `blocks`, with each block (indexed by name) containing an array of collision shape ids. Also contains `shapes`, providing all collision shapes information (indexed by id).
+
+Example:
+
+```js
+console.log(minecraftData.blockCollisionShapes.blocks['oak_stairs']); // Array of collision shape ids for "Oak Stairs"
+// Returns: [ 42, 32, 43, 33, 37, 27, 38, 28 ]
+
+console.log(minecraftData.blockCollisionShapes.shapes[42]); // Collision information for collision shape id 42
+// Returns: [ [ 0, 0, 0, 1, 0.5, 1 ], [ 0.5, 0.5, 0.5, 1, 1, 1 ] ]
+```
 
 ## Items
 
@@ -52,9 +86,21 @@ Block collision shapes
 
 Items indexed by id
 
+Example:
+
+```js
+console.log(minecraftData.items[772]); // Object containing information for "Wheat"
+```
+
 ### `minecraftData.itemsByName`
 
 Items indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.itemsByName['wheat']); // Object containing information for "Wheat"
+```
 
 ### `minecraftData.itemsArray`
 
@@ -66,9 +112,21 @@ Array of items
 
 Foods indexed by id
 
+Example:
+
+```js
+console.log(minecraftData.foods[1003]); // Object containing information for "Pumpkin Pie"
+```
+
 ### `minecraftData.foodsByName`
 
 Foods indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.foodsByName['pumpkin_pie']); // Object containing information for "Pumpkin Pie"
+```
 
 ### `minecraftData.foodsByFoodPoints`
 
@@ -88,9 +146,21 @@ Array of foods
 
 Biomes indexed by id
 
+Example:
+
+```js
+console.log(minecraftData.biomes[20]); // Object containing information for "Windswept Gravelly Hills"
+```
+
 ### `minecraftData.biomesByName`
 
 Biomes indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.biomesByName['windswept_gravelly_hills']); // Object containing information for "Windswept Gravelly Hills"
+```
 
 ### `minecraftData.biomesArray`
 
@@ -102,11 +172,32 @@ Array of biomes
 
 Recipes indexed by the resulting item id
 
+Example:
+
+```js
+console.log(minecraftData.recipes[31]); // Recipe information for crafting "Dripstone Block"
+
+// Returns:
+// {
+//   inShape: [ [ 1100, 1100 ], [ 1100, 1100 ] ],
+//   result: { count: 1, id: 13 }
+// }
+
+// Note: 1100 is the block ID of "Pointed Dripstone"
+```
+
 ## Instruments
 
 ### `minecraftData.instruments`
 
 Instruments indexed by id
+
+Example:
+
+```js
+console.log(minecraftData.instruments[5]);
+// Returns: { id: 5, name: 'flute' }
+```
 
 ### `minecraftData.instrumentsArray`
 
@@ -116,7 +207,14 @@ Array of instruments
 
 ### `minecraftData.materials`
 
-materials indexed by name
+Material types indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.materials['mineable/axe']);
+// Returns: { '702': 2, '707': 4, '712': 12, '717': 6, '722': 8, '727': 9 }
+```
 
 ## Entities
 

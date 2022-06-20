@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 const mcData = require('minecraft-data')('1.8.8');
 
 console.log(mcData.blocksByName.stone);

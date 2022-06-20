@@ -14,15 +14,15 @@ jobs:
       - name: Update package.json
         run: >
           sed -i -E 's/^  "version": "[0-9]+\.[0-9]+\.[0-9]+"/  "version": "${{ github.event.client_payload.tag }}"/g' package.json
-      - name: Update doc/history.md
-        run: echo -e "## ${{ github.event.client_payload.tag }}\n* update mcdata\n\n$(cat doc/history.md)" > doc/history.md
+      - name: Update docs/history.md
+        run: echo -e "## ${{ github.event.client_payload.tag }}\n\n- update `minecraft-data`\n\n$(cat docs/history.md)" > docs/history.md
       - name: Create commits
         run: |
           git config user.name 'rom1504bot'
           git config user.email 'rom1504bot@users.noreply.github.com'
           git add minecraft-data
-          git commit -m "Update Minecraft Data"
-          git add package.json doc/history.md
+          git commit -m "Update `minecraft-data`"
+          git add package.json docs/history.md
           git commit -m "Release ${{ github.event.client_payload.tag }}"
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3

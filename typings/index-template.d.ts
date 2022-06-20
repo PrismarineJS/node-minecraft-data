@@ -1,187 +1,187 @@
 export interface Version {
-    // Returns true if the current version is greater than or equal to the `other` version's dataVersion
-    ['>='](other: string): boolean;
-    // Returns true if the current version is greater than the `other` version's dataVersion
-    ['>'](other: string): boolean;
-    // Returns true if the current version is less than the `other` version's dataVersion
-    ['<'](other: string): boolean;
-    // Returns true if the current version is less than than or equal to the `other` version's dataVersion
-    ['<='](other: string): boolean;
-    // Returns true if the current version is equal to the `other` version's dataVersion
-    ['=='](other: string): boolean;
-    type: 'pc' | 'bedrock';
+  // Returns true if the current version is greater than or equal to the `other` version's dataVersion
+  ['>='](other: string): boolean
+  // Returns true if the current version is greater than the `other` version's dataVersion
+  ['>'](other: string): boolean
+  // Returns true if the current version is less than the `other` version's dataVersion
+  ['<'](other: string): boolean
+  // Returns true if the current version is less than than or equal to the `other` version's dataVersion
+  ['<='](other: string): boolean
+  // Returns true if the current version is equal to the `other` version's dataVersion
+  ['=='](other: string): boolean
+  type: 'pc' | 'bedrock'
 }
 
 export interface VersionSet {
-    pc: { [version: string]: Version };
-    bedrock: { [version: string]: Version };
+  pc: { [version: string]: Version }
+  bedrock: { [version: string]: Version }
 }
 
 export interface SupportedVersions {
-    pc: string[];
-    bedrock: string[];
+  pc: string[]
+  bedrock: string[]
 }
 
 export interface Schemas {
-    biomes: object;
-    blocks: object;
-    effects: object;
-    entities: object;
-    instruments: object;
-    items: object;
-    materials: object;
-    protocol: object;
-    protocolVersions: object;
-    recipes: object;
-    version: object;
-    windows: object;
-    foods: object;
-    blockLoot: object;
-    entityLoot: object;
+  biomes: object
+  blocks: object
+  effects: object
+  entities: object
+  instruments: object
+  items: object
+  materials: object
+  protocol: object
+  protocolVersions: object
+  recipes: object
+  version: object
+  windows: object
+  foods: object
+  blockLoot: object
+  entityLoot: object
 }
 
 export interface LoginPacket {
-    entityId: number;
+  entityId: number
 
-    /**
-     * introduced in Minecraft 1.16.2
-     */
-    isHardcore?: boolean;
+  /**
+   * introduced in Minecraft 1.16.2
+   */
+  isHardcore?: boolean
 
-    gameMode: number;
+  gameMode: number
 
-    /**
-     * Introduced in Minecraft 1.17
-     */
-    previousGameMode?: number;
-    /**
-     * Introduced in Minecraft 1.17
-     */
-    worldNames?: string[];
-    /**
-     * Introduced in Minecraft 1.17
-     */
-    dimensionCodec?: object;
+  /**
+   * Introduced in Minecraft 1.17
+   */
+  previousGameMode?: number
+  /**
+   * Introduced in Minecraft 1.17
+   */
+  worldNames?: string[]
+  /**
+   * Introduced in Minecraft 1.17
+   */
+  dimensionCodec?: object
 
-    dimension: object;
+  dimension: object
 
-    /**
-     * Introduced in Minecraft 1.17
-     */
-    worldName?: string;
+  /**
+   * Introduced in Minecraft 1.17
+   */
+  worldName?: string
 
-    hashedSeed: number;
-    maxPlayers: number;
-    viewDistance: number;
+  hashedSeed: number
+  maxPlayers: number
+  viewDistance: number
 
-    /**
-     * Introduced in Minecraft 1.18
-     */
-    simulationDistance?: number;
+  /**
+   * Introduced in Minecraft 1.18
+   */
+  simulationDistance?: number
 
-    reducedDebugInfo: boolean;
-    enableRespawnScreen: boolean;
+  reducedDebugInfo: boolean
+  enableRespawnScreen: boolean
 
-    /**
-     * Introduced in Minecraft 1.17
-     */
-    isDebug?: boolean;
-    /**
-     * Introduced in Minecraft 1.17
-     */
-    isFlat?: boolean;
+  /**
+   * Introduced in Minecraft 1.17
+   */
+  isDebug?: boolean
+  /**
+   * Introduced in Minecraft 1.17
+   */
+  isFlat?: boolean
 }
 
 export interface IndexedData {
-    isOlderThan(version: string): boolean;
-    isOlderOrEqualTo(version: string): boolean;
-    isEqualTo(version: string): boolean;
-    isNewerThan(version: string): boolean;
-    isNewerOrEqualTo(version: string): boolean;
-    blocks: { [id: number]: Block };
-    blocksByName: { [name: string]: Block };
-    blocksByStateId: { [id: number]: Block };
-    blocksArray: Block[];
-    /**
-     * Bedrock edition only
-     */
-    blockStates?: { name: string; states: object; version: number }[];
-    blockCollisionShapes: { blocks: { [name: string]: number[] }; shapes: { [id: number]: [number[]] } };
+  isOlderThan(version: string): boolean
+  isOlderOrEqualTo(version: string): boolean
+  isEqualTo(version: string): boolean
+  isNewerThan(version: string): boolean
+  isNewerOrEqualTo(version: string): boolean
+  blocks: { [id: number]: Block }
+  blocksByName: { [name: string]: Block }
+  blocksByStateId: { [id: number]: Block }
+  blocksArray: Block[]
+  /**
+   * Bedrock edition only
+   */
+  blockStates?: { name: string; states: object; version: number }[]
+  blockCollisionShapes: { blocks: { [name: string]: number[] }; shapes: { [id: number]: [number[]] } }
 
-    loginPacket: LoginPacket;
+  loginPacket: LoginPacket
 
-    items: { [id: number]: Item };
-    itemsByName: { [name: string]: Item };
-    itemsArray: Item[];
+  items: { [id: number]: Item }
+  itemsByName: { [name: string]: Item }
+  itemsArray: Item[]
 
-    foods: { [id: number]: Food };
-    foodsByName: { [name: string]: Food };
-    foodsArray: Food[];
-    foodsByFoodPoints: { [foodPoints: number]: Food[] };
-    foodsBySaturation: { [saturation: number]: Food[] };
+  foods: { [id: number]: Food }
+  foodsByName: { [name: string]: Food }
+  foodsArray: Food[]
+  foodsByFoodPoints: { [foodPoints: number]: Food[] }
+  foodsBySaturation: { [saturation: number]: Food[] }
 
-    biomes: { [id: number]: Biome };
-    biomesArray: Biome[];
-    biomesByName: { [name: string]: Biome };
+  biomes: { [id: number]: Biome }
+  biomesArray: Biome[]
+  biomesByName: { [name: string]: Biome }
 
-    recipes: { [id: number]: Recipe[] };
+  recipes: { [id: number]: Recipe[] }
 
-    instruments: { [id: number]: Instrument };
-    instrumentsArray: Instrument[];
+  instruments: { [id: number]: Instrument }
+  instrumentsArray: Instrument[]
 
-    materials: { [name: string]: Material };
+  materials: { [name: string]: Material }
 
-    mobs: { [id: number]: Entity };
-    objects: { [id: number]: Entity };
-    entitiesByName: { [name: string]: Entity };
-    entitiesArray: Entity[];
+  mobs: { [id: number]: Entity }
+  objects: { [id: number]: Entity }
+  entitiesByName: { [name: string]: Entity }
+  entitiesArray: Entity[]
 
-    enchantments: { [id: number]: Enchantment };
-    enchantmentsByName: { [name: string]: Enchantment };
-    enchantmentsArray: Enchantment[];
+  enchantments: { [id: number]: Enchantment }
+  enchantmentsByName: { [name: string]: Enchantment }
+  enchantmentsArray: Enchantment[]
 
-    /**
-     * Bedrock edition only
-     */
-    defaultSkin?: object;
+  /**
+   * Bedrock edition only
+   */
+  defaultSkin?: object
 
-    protocol: object;
-    protocolComments: object;
-    /**
-     * Bedrock edition only
-     */
-    protocolYaml?: Array;
+  protocol: object
+  protocolComments: object
+  /**
+   * Bedrock edition only
+   */
+  protocolYaml?: Array
 
-    windows: { [id: number]: Window };
-    windowsByName: { [name: string]: Window };
-    windowsArray: Window[];
+  windows: { [id: number]: Window }
+  windowsByName: { [name: string]: Window }
+  windowsArray: Window[]
 
-    effects: { [id: number]: Effect };
-    effectsByName: { [name: string]: Effect };
-    effectsArray: Effect[];
+  effects: { [id: number]: Effect }
+  effectsByName: { [name: string]: Effect }
+  effectsArray: Effect[]
 
-    attributes: { [resource: string]: string };
-    attributesByName: { [name: string]: string };
-    attributesArray: [];
+  attributes: { [resource: string]: string }
+  attributesByName: { [name: string]: string }
+  attributesArray: []
 
-    version: Version;
+  version: Version
 
-    type: 'pc' | 'bedrock';
+  type: 'pc' | 'bedrock'
 
-    language: { [key: string]: string };
+  language: { [key: string]: string }
 
-    blockLoot: { [id: number]: BlockLoot };
-    blockLootByName: { [name: string]: BlockLoot };
+  blockLoot: { [id: number]: BlockLoot }
+  blockLootByName: { [name: string]: BlockLoot }
 
-    entityLoot: { [id: number]: EntityLoot };
-    entityLootByName: { [name: string]: EntityLoot };
+  entityLoot: { [id: number]: EntityLoot }
+  entityLootByName: { [name: string]: EntityLoot }
 }
 
 const versions: {
-    [key in keyof SupportedVersions]: Version[];
-};
-const versionsByMinecraftVersion: VersionSet;
-const preNettyVersionsByProtocolVersion: VersionSet;
-const postNettyVersionsByProtocolVersion: VersionSet;
-const supportedVersions: SupportedVersions;
-const schemas: Schemas;
+  [key in keyof SupportedVersions]: Version[]
+}
+const versionsByMinecraftVersion: VersionSet
+const preNettyVersionsByProtocolVersion: VersionSet
+const postNettyVersionsByProtocolVersion: VersionSet
+const supportedVersions: SupportedVersions
+const schemas: Schemas

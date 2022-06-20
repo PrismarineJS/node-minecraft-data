@@ -10,8 +10,8 @@ jobs:
   tag:
     runs-on: ubuntu-latest
     steps:
-    - uses: peter-evans/repository-dispatch@v1
-      with:
-        token: ${{ secrets.PAT_PASSWORD }}
-        event-type: mcData-release
-        client-payload: '{"tag": "${{ github.event.inputs.tag }}"}'
+      - uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.PAT_PASSWORD }}
+          event-type: mcData-release
+          client-payload: '{"tag": "${{ github.event.inputs.tag }}"}'

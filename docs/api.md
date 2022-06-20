@@ -234,13 +234,42 @@ console.log(minecraftData.materials['mineable/axe'])
 
 Mobs (passive, neutral, and hostile) indexed by id
 
+Example:
+
+```js
+console.log(minecraftData.mobs[30]) // Object containing information for "Ghast"
+```
+
 ### `minecraftData.objects`
 
 Objects (non-mob entities such as vehicles and projectiles) indexed by id
 
+Example:
+
+```js
+const minecraftData = MinecraftData('1.8.9')
+console.log(minecraftData.objects[10]) // Object containing information for "Minecart"
+```
+
+### `minecraftData.entities`
+
+Entities indexed by id
+
+Example:
+
+```js
+console.log(minecraftData.entities[25]) // Object containing information for "Evoker"
+```
+
 ### `minecraftData.entitiesByName`
 
 Entities indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.entitiesByName['evoker']) // Object containing information for "Evoker"
+```
 
 ### `minecraftData.entitiesArray`
 
@@ -252,9 +281,21 @@ Array of entities
 
 Enchantments indexed by id
 
+Example:
+
+```js
+console.log(minecraftData.enchantments[37]) // Object containing information for "Mending"
+```
+
 ### `minecraftData.enchantmentsByName`
 
 Enchantments indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.enchantmentsByName['mending']) // Object containing information for "Mending"
+```
 
 ### `minecraftData.enchantmentsArray`
 
@@ -280,7 +321,7 @@ The Minecraft protocol comments
 
 **_Bedrock edition only_**
 
-The url to the file of the protocol yaml
+The url to the files of the protocol yaml
 
 ## Windows (GUIs)
 
@@ -288,9 +329,21 @@ The url to the file of the protocol yaml
 
 Windows indexed by id
 
+Example:
+
+```js
+console.log(minecraftData.windows['minecraft:villager']) // Object containing window information for the villager GUI
+```
+
 ### `minecraftData.windowsByName`
 
 Windows indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.windowsByName['NPC Trade']) // Object containing window information for the villager GUI
+```
 
 ### `minecraftData.windowsArray`
 
@@ -304,21 +357,53 @@ For version comparison, the other version must be of the same type, and the pref
 
 The version number
 
+Example:
+
+```js
+console.log(minecraftData.version.version) // 759
+```
+
 ### `minecraftData.version.minecraftVersion`
 
 The full Minecraft version
+
+Example:
+
+```js
+console.log(minecraftData.version.minecraftVersion) // 1.19
+```
 
 ### `minecraftData.version.type`
 
 The version type, either `pc` or `bedrock`
 
+Example:
+
+```js
+console.log(minecraftData.version.type) // pc
+```
+
 ### `minecraftData.version.majorVersion`
 
 The major Minecraft version
 
+Example:
+
+```js
+const minecraftData = MinecraftData('1.16.5')
+
+console.log(minecraftData.version.majorVersion) // 1.16
+```
+
 ### `minecraftData.version.dataVersion`
 
 The "data version" for this Minecraft version, used for example when writing chunks to disk
+
+Example:
+
+```js
+console.log(minecraftData.version.dataVersion) // 3105
+```
 
 ### `minecraftData.version.[<](<version>)`, `minecraftData.isOlderThan(<version>)`
 

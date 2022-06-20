@@ -34,12 +34,12 @@ describe('load', () => {
 
 describe('versions with block data have block state IDs', () => {
   const mcData = require('minecraft-data')
-  const { versions } = require('minecraft-data')
+  const { supportedVersions } = require('minecraft-data')
   let oks = 0
-  for (const type in versions) {
-    for (const version of versions[type]) {
-      it(type + ' ' + version.minecraftVersion, () => {
-        const data = mcData(type + '_' + version.minecraftVersion)
+  for (const type in supportedVersions) {
+    for (const version of supportedVersions[type]) {
+      it(type + ' ' + version, () => {
+        const data = mcData(type + '_' + version)
         if (data?.blocks) {
           for (const block of data.blocksArray) {
             assert.ok(block.defaultState > -1)

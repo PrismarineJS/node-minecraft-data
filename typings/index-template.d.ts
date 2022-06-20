@@ -117,8 +117,8 @@ export interface IndexedData {
   foods: { [id: number]: Food }
   foodsByName: { [name: string]: Food }
   foodsArray: Food[]
-  foodsByFoodPoints: { [foodPoints: number]: Food }
-  foodsBySaturation: { [saturation: number]: Food }
+  foodsByFoodPoints: { [foodPoints: number]: Food[] }
+  foodsBySaturation: { [saturation: number]: Food[] }
 
   biomes: { [id: number]: Biome }
   biomesArray: Biome[]

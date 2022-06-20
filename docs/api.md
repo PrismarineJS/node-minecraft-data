@@ -441,9 +441,21 @@ console.log(minecraftData.version['>']('1.16.220')) // True, 1.17.0 is newer tha
 
 Effects indexed by id
 
+Example:
+
+```js
+console.log(minecraftData.effects[5]) // Object containing information for "Strength"
+```
+
 ### `minecraftData.effectsByName`
 
 Effects indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.effectsByName['strength']) // Object containing information for "Strength"
+```
 
 ### `minecraftData.effectsArray`
 
@@ -453,11 +465,23 @@ Array of effects
 
 ### `minecraftData.attributes`
 
-Attributes indexed by resource name (example: `minecraft:generic.movement_speed`)
+Attributes indexed by resource name
+
+Example:
+
+```js
+console.log(minecraftData.attributes['minecraft:generic.movement_speed']) // Object containing information for "minecraft:generic.movement_speed"
+```
 
 ### `minecraftData.attributesByName`
 
-Attributes indexed by name (in camelCase, example: `movementSpeed`)
+Attributes indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.attributesByName['movementSpeed']) // Object containing information for "minecraft:generic.movement_speed"
+```
 
 ### `minecraftData.attributesArray`
 
@@ -469,9 +493,21 @@ Array of attributes
 
 Particles indexed by id
 
+Example:
+
+```js
+console.log(minecraftData.particles[12]) // Object containing information for "dripping_water"
+```
+
 ### `minecraftData.particlesByName`
 
 Particles indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.particlesByName['dripping_water']) // Object containing information for "dripping_water"
+```
 
 ### `minecraftData.particlesArray`
 
@@ -479,15 +515,40 @@ Array of particles
 
 ## Commands
 
-### `minecraftData.commands.root`
+### `minecraftData.commands`
 
 Commands and parsers
+
+Example:
+
+```js
+const minecraftData = MinecraftData('1.13')
+
+console.log(minecraftData.commands)
+// Returns:
+// {
+//   root: {
+//     type: 'root',
+//     name: 'root',
+//     executable: false,
+//     redirects: [],
+//     children: [ ... ]
+//   },
+//   parsers: [ ... ]
+// }
+```
 
 ## Loot
 
 ### `minecraftData.entityLoot`
 
 Entity loot indexed by entity name
+
+Example:
+
+```js
+console.log(minecraftData.entityLoot['zombie']) // Object containing loot information for "Zombie"
+```
 
 ### `minecraftData.entityLootArray`
 
@@ -496,6 +557,12 @@ Array of entity loot
 ### `minecraftData.blockLoot`
 
 Block loot indexed by block name
+
+Example:
+
+```js
+console.log(minecraftData.blockLoot['diamond_ore']) // Object containing loot information for "Diamond Ore"
+```
 
 ### `minecraftData.blockLootArray`
 
@@ -507,9 +574,21 @@ Array of block loot
 
 Map icons indexed by id
 
+Example:
+
+```js
+console.log(minecraftData.mapIcons[20]) // Object containing map icon information for "banner_purple"
+```
+
 ### `minecraftData.mapIconsByName`
 
 Map icons indexed by name
+
+Example:
+
+```js
+console.log(minecraftData.mapIconsByName['banner_purple']) // Object containing map icon information for "banner_purple"
+```
 
 ### `minecraftData.mapIconsArray`
 
@@ -523,6 +602,13 @@ The type of the current version, either `pc` or `bedrock`
 
 Object containing `en_US` language conversions
 
+Example:
+
+```js
+console.log(minecraftData.language['argument.player.unknown'])
+// Returns: 'That player does not exist'
+```
+
 ### minecraftData.loginPacket
 
 Login packet example
@@ -530,6 +616,13 @@ Login packet example
 ### `minecraftData.supportFeature(<feature>)`
 
 This can be used to check if a specific feature is available in the current Minecraft version. This is usually only used for handling version-specific functionality.
+
+Example:
+
+```js
+const minecraftData = MinecraftData('1.18.2')
+console.log(minecraftData.supportFeature('blockStateId')) // Returns: true
+```
 
 ## Tints
 
@@ -565,6 +658,12 @@ Array of supported versions (separated into `pc` (java) and `bedrock`)
 ### `MinecraftData.legacy.pc.blocks`
 
 Mapping from 1.12 block:metadata to 1.13 block names
+
+Example:
+
+```js
+console.log(minecraftData.legacy.pc.blocks['171:15']) // Returns: 'minecraft:black_carpet'
+```
 
 ## Schemas
 

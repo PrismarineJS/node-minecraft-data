@@ -151,7 +151,7 @@ export interface IndexedData {
   /**
    * Bedrock edition only
    */
-  protocolYaml?: Array
+  protocolYaml?: string[]
 
   windows: { [id: number]: Window }
   windowsByName: { [name: string]: Window }
@@ -161,9 +161,15 @@ export interface IndexedData {
   effectsByName: { [name: string]: Effect }
   effectsArray: Effect[]
 
+  particles: { [id: number]: Particle }
+  particlesByName: { [name: string]: Particle }
+  particlesArray: Particle[]
+
   attributes: { [resource: string]: string }
   attributesByName: { [name: string]: string }
   attributesArray: []
+
+  commands: {}
 
   version: Version
 
@@ -176,6 +182,12 @@ export interface IndexedData {
 
   entityLoot: { [id: number]: EntityLoot }
   entityLootByName: { [name: string]: EntityLoot }
+
+  mapIcons: { [id: number]: MapIcon }
+  mapIconsByName: { [name: string]: MapIcon }
+  mapIconsArray: MapIcon[]
+
+  tints: Tints
 }
 
 const versions: {
@@ -185,4 +197,5 @@ const versionsByMinecraftVersion: VersionSet
 const preNettyVersionsByProtocolVersion: VersionSet
 const postNettyVersionsByProtocolVersion: VersionSet
 const supportedVersions: SupportedVersions
+const legacy: { pc: { blocks: { [id: string]: string } } }
 const schemas: Schemas

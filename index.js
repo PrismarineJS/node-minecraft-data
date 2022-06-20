@@ -3,7 +3,7 @@ const supportFeature = require('./lib/supportsFeature')
 const indexer = require('./lib/indexer.js')
 const protocolVersions = {
   pc: require('./minecraft-data/data/pc/common/protocolVersions.json'),
-  bedrock: require('./minecraft-data/data/bedrock/common/protocolVersions.json'),
+  bedrock: require('./minecraft-data/data/bedrock/common/protocolVersions.json')
 }
 const versionsByMinecraftVersion = {}
 const versionsByMajorVersion = {}
@@ -34,7 +34,7 @@ types.forEach((type) => {
   )
 })
 
-function Version(type, version, majorVersion) {
+function Version (type, version, majorVersion) {
   const versions = versionsByMinecraftVersion[type]
   // Allows comparisons against majorVersion even if `other` is not present in the versions.json (e.g. 1.17.0 exists but not 1.17)
   for (const majorMinorPatchVersion in versions) {
@@ -93,7 +93,7 @@ module.exports = function (mcVersion, preNetty) {
 module.exports.Version = Version
 
 // adapt the version, most often doesn't convert to major version, can even convert to minor version when possible
-function toMajor(mcVersion, preNetty, typeArg) {
+function toMajor (mcVersion, preNetty, typeArg) {
   const parts = (mcVersion + '').split('_')
   const type = typeArg || (parts.length === 2 ? parts[0] : 'pc')
   const version = parts.length === 2 ? parts[1] : mcVersion
@@ -118,14 +118,14 @@ function toMajor(mcVersion, preNetty, typeArg) {
 
 module.exports.supportedVersions = {
   pc: require('./minecraft-data/data/pc/common/versions.json'),
-  bedrock: require('./minecraft-data/data/bedrock/common/versions.json'),
+  bedrock: require('./minecraft-data/data/bedrock/common/versions.json')
 }
 module.exports.versions = protocolVersions
 module.exports.versionsByMinecraftVersion = versionsByMinecraftVersion
 module.exports.preNettyVersionsByProtocolVersion = preNettyVersionsByProtocolVersion
 module.exports.postNettyVersionsByProtocolVersion = postNettyVersionsByProtocolVersion
 module.exports.legacy = {
-  pc: require('./minecraft-data/data/pc/common/legacy.json'),
+  pc: require('./minecraft-data/data/pc/common/legacy.json')
 }
 
 const schemas = {
@@ -144,7 +144,7 @@ const schemas = {
   windows: require('./minecraft-data/schemas/windows_schema.json'),
   foods: require('./minecraft-data/schemas/foods_schema.json'),
   particles: require('./minecraft-data/schemas/particles_schema.json'),
-  mapIcons: require('./minecraft-data/schemas/mapIcons_schema.json'),
+  mapIcons: require('./minecraft-data/schemas/mapIcons_schema.json')
 }
 module.exports.schemas = schemas
 

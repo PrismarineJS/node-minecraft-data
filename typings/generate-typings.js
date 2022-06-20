@@ -5,7 +5,7 @@ const fs = require('fs')
 const templateTypings = fs.readFileSync(path.resolve(__dirname, './index-template.d.ts'), 'utf8')
 
 // Recursively get path of all files in a directory
-function walkSync(dir, filelist = []) {
+function walkSync (dir, filelist = []) {
   const files = fs.readdirSync(dir)
   files.forEach((file) => {
     if (fs.statSync(path.join(dir, file)).isDirectory()) {
@@ -17,7 +17,7 @@ function walkSync(dir, filelist = []) {
   return filelist
 }
 
-async function generate() {
+async function generate () {
   let typingString = 'declare namespace MinecraftData {\n\n'
   typingString += (
     await Promise.all(
@@ -25,7 +25,7 @@ async function generate() {
         if (schemaPath.includes('protocol_types')) return
         return (
           await compileFromFile(schemaPath, {
-            bannerComment: '',
+            bannerComment: ''
             // declareExternallyReferenced: false
           })
         ).replace(/export /g, '')

@@ -153,7 +153,7 @@ export interface IndexedData {
    */
   protocolYaml?: string[]
 
-  windows: { [id: number]: Window }
+  windows: { [id: string]: Window }
   windowsByName: { [name: string]: Window }
   windowsArray: Window[]
 

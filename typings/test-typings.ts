@@ -1,10 +1,5 @@
 import getMcData = require('../')
 const mcData = getMcData('1.8.8')
-import { IndexedData } from '../'
-
-const test: Partial<IndexedData> = {
-  type: 'test',
-}
 
 console.log(mcData.blocksByName['stone'])
 console.log(mcData.windows['minecraft:brewing_stand'])

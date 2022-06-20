@@ -7,11 +7,11 @@
 
 `node-minecraft-data` provides easy access to [minecraft-data](https://github.com/PrismarineJS/minecraft-data) in node.js.
 
-The objective of this module is to make easier to look for information in minecraft-data in node.
+The objective of this module is to make easier to look for information in `minecraft-data` in node.
 
 ## Features
 
-This package allows the lookup of blocks, items, entities, etc. by name or id.
+This package allows the lookup of blocks, items, entities, etc. by name, id, etc., and for the easy lookup of other data.
 
 ## Documentation
 

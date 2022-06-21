@@ -94,8 +94,11 @@ export interface LoginPacket {
 }
 
 export interface IndexedData {
-    isNewerOrEqualTo(version: string): boolean;
-    isOlderThan(version: string): boolean;
+    isOlderThan(version: string): boolean
+    isOlderOrEqualTo(version: string): boolean
+    isEqualTo(version: string): boolean
+    isNewerThan(version: string): boolean
+    isNewerOrEqualTo(version: string): boolean
     blocks: { [id: number]: Block; };
     blocksByName: { [name: string]: Block; };
     blocksArray: Block[];

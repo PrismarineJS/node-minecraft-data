@@ -128,6 +128,7 @@ export interface IndexedData {
 
     mobs: { [id: number]: Entity; };
     objects: { [id: number]: Entity; };
+    entities: { [id: number]: Entity }
     entitiesByName: { [name: string]: Entity; };
     entitiesArray: Entity[];
 

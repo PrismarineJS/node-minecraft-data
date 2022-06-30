@@ -36,14 +36,9 @@ jobs:
         draft: false
         prerelease: false
 
-    - name: Check if version has been updated
-      if: github.event_name != 'workflow_dispatch'
-      id: check
-      uses: EndBug/version-check@v1
-
     - name: "Trigger new GH Page creation in mcData repo"
       uses: peter-evans/repository-dispatch@v1
-      if: steps.check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+      if: steps.publish.outputs.type != 'none' || github.event_name == 'workflow_dispatch'
       with:
         token: ${{ secrets.PAT_PASSWORD }}
         repository: PrismarineJS/minecraft-data

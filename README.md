@@ -29,5 +29,5 @@ console.log(minecraftData.effectsByName['Haste']) // Information for the "Haste"
 
 ## Documentation
 
-- See [docs/api.md](docs/api.md)
-- See [docs/history.md](docs/history.md)
+- See [doc/api.md](doc/api.md)
+- See [doc/history.md](doc/history.md)

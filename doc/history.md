@@ -1,3 +1,5 @@
+# History
+
 ## 3.6.0
 
 - update `minecraft-data`

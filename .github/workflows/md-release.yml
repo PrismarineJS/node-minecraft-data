@@ -1,4 +1,4 @@
-name: Minecraft Data release
+name: minecraft-data-release
 on:
   repository_dispatch:
     types: [mcData-release]

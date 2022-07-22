@@ -409,15 +409,15 @@ console.log(minecraftData.version.dataVersion) // 3105
 
 Returns `true` if the current version is less than than the other version's `dataVersion`, or else `false`
 
-### `minecraftData.version.[<=](<version>)`, `minecraftVersion.isOlderOrEqualTo(<version>)`
+### `minecraftData.version.[<=](<version>)`
 
 Same as above but also checks for an equivalent `dataVersion`
 
-### `minecraftData.version.[==](<version>)`, `minecraftVersion.isEqualTo(<version>)`
+### `minecraftData.version.[==](<version>)`
 
 Returns `true` if the current version is equal to the other version's `dataVersion`, or else `false`
 
-### `minecraftData.version.[>](<version>)`, `minecraftVersion.isNewerThan(<version>)`
+### `minecraftData.version.[>](<version>)`
 
 Returns `true` if the current version is greater than the other version's `dataVersion`, or else `false`
 

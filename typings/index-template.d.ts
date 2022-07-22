@@ -94,10 +94,8 @@ export interface LoginPacket {
 
 export interface IndexedData {
   isOlderThan(version: string): boolean
-  isOlderOrEqualTo(version: string): boolean
-  isEqualTo(version: string): boolean
-  isNewerThan(version: string): boolean
   isNewerOrEqualTo(version: string): boolean
+  
   blocks: { [id: number]: Block }
   blocksByName: { [name: string]: Block }
   blocksByStateId: { [id: number]: Block }

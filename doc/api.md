@@ -51,7 +51,7 @@ Blocks indexed by state id
 Example:
 
 ```js
-console.log(minecraftData.blocksByStateId[100]) // Object containing information for "Lava" (as Lava has a state range from 91 to 106)
+console.log(mcData.blocksByStateId[100]) // Object containing information for "Lava" (as Lava has a state range from 91 to 106)
 ```
 
 ### mcData.blockStates
@@ -63,7 +63,7 @@ Array of block states
 Example:
 
 ```js
-console.log(minecraftData.blockStates[50]) // Object containing block state information for "Warped Door"
+console.log(mcData.blockStates[50]) // Object containing block state information for "Warped Door"
 ```
 
 ### mcData.blockCollisionShapes
@@ -73,10 +73,10 @@ Block collision shapes. Contains `blocks`, with each block (indexed by name) con
 Example:
 
 ```js
-console.log(minecraftData.blockCollisionShapes.blocks['oak_stairs']) // Array of collision shape ids for "Oak Stairs"
+console.log(mcData.blockCollisionShapes.blocks['oak_stairs']) // Array of collision shape ids for "Oak Stairs"
 // Returns: [ 42, 32, 43, 33, 37, 27, 38, 28 ]
 
-console.log(minecraftData.blockCollisionShapes.shapes[42]) // Collision information for collision shape id 42
+console.log(mcData.blockCollisionShapes.shapes[42]) // Collision information for collision shape id 42
 // Returns: [ [ 0, 0, 0, 1, 0.5, 1 ], [ 0.5, 0.5, 0.5, 1, 1, 1 ] ]
 ```
 
@@ -89,7 +89,7 @@ Items indexed by id
 Example:
 
 ```js
-console.log(minecraftData.items[772]) // Object containing information for "Wheat"
+console.log(mcData.items[772]) // Object containing information for "Wheat"
 ```
 
 ### mcData.itemsByName
@@ -99,7 +99,7 @@ Items indexed by name
 Example:
 
 ```js
-console.log(minecraftData.itemsByName['wheat']) // Object containing information for "Wheat"
+console.log(mcData.itemsByName['wheat']) // Object containing information for "Wheat"
 ```
 
 ### mcData.itemsArray
@@ -115,7 +115,7 @@ Foods indexed by id
 Example:
 
 ```js
-console.log(minecraftData.foods[1003]) // Object containing information for "Pumpkin Pie"
+console.log(mcData.foods[1003]) // Object containing information for "Pumpkin Pie"
 ```
 
 ### mcData.foodsByName
@@ -125,7 +125,7 @@ Foods indexed by name
 Example:
 
 ```js
-console.log(minecraftData.foodsByName['pumpkin_pie']) // Object containing information for "Pumpkin Pie"
+console.log(mcData.foodsByName['pumpkin_pie']) // Object containing information for "Pumpkin Pie"
 ```
 
 ### mcData.foodsArray
@@ -141,7 +141,7 @@ Biomes indexed by id
 Example:
 
 ```js
-console.log(minecraftData.biomes[20]) // Object containing information for "Windswept Gravelly Hills"
+console.log(mcData.biomes[20]) // Object containing information for "Windswept Gravelly Hills"
 ```
 
 ### mcData.biomesByName
@@ -151,7 +151,7 @@ Biomes indexed by name
 Example:
 
 ```js
-console.log(minecraftData.biomesByName['windswept_gravelly_hills']) // Object containing information for "Windswept Gravelly Hills"
+console.log(mcData.biomesByName['windswept_gravelly_hills']) // Object containing information for "Windswept Gravelly Hills"
 ```
 
 ### mcData.biomesArray
@@ -167,7 +167,7 @@ Recipes indexed by the resulting item id
 Example:
 
 ```js
-console.log(minecraftData.recipes[31]) // Recipe information for crafting "Dripstone Block"
+console.log(mcData.recipes[31]) // Recipe information for crafting "Dripstone Block"
 
 // Returns:
 // {
@@ -187,7 +187,7 @@ Instruments indexed by id
 Example:
 
 ```js
-console.log(minecraftData.instruments[5])
+console.log(mcData.instruments[5])
 // Returns: { id: 5, name: 'flute' }
 ```
 
@@ -204,7 +204,7 @@ Material types indexed by name
 Example:
 
 ```js
-console.log(minecraftData.materials['mineable/axe'])
+console.log(mcData.materials['mineable/axe'])
 // Returns: { '702': 2, '707': 4, '712': 12, '717': 6, '722': 8, '727': 9 }
 ```
 
@@ -217,7 +217,7 @@ Mobs (passive, neutral, and hostile) indexed by id
 Example:
 
 ```js
-console.log(minecraftData.mobs[30]) // Object containing information for "Ghast"
+console.log(mcData.mobs[30]) // Object containing information for "Ghast"
 ```
 
 ### mcData.objects
@@ -227,8 +227,9 @@ Objects (non-mob entities such as vehicles and projectiles) indexed by id
 Example:
 
 ```js
-const minecraftData = MinecraftData('1.8.9')
-console.log(minecraftData.objects[10]) // Object containing information for "Minecart"
+const mcData = MinecraftData('1.8.9')
+
+console.log(mcData.objects[10]) // Object containing information for "Minecart"
 ```
 
 ### mcData.entities
@@ -238,7 +239,7 @@ Entities indexed by id
 Example:
 
 ```js
-console.log(minecraftData.entities[25]) // Object containing information for "Evoker"
+console.log(mcData.entities[25]) // Object containing information for "Evoker"
 ```
 
 ### mcData.entitiesByName
@@ -248,7 +249,7 @@ Entities indexed by name
 Example:
 
 ```js
-console.log(minecraftData.entitiesByName['evoker']) // Object containing information for "Evoker"
+console.log(mcData.entitiesByName['evoker']) // Object containing information for "Evoker"
 ```
 
 ### mcData.entitiesArray
@@ -264,7 +265,7 @@ Enchantments indexed by id
 Example:
 
 ```js
-console.log(minecraftData.enchantments[37]) // Object containing information for "Mending"
+console.log(mcData.enchantments[37]) // Object containing information for "Mending"
 ```
 
 ### mcData.enchantmentsByName
@@ -274,7 +275,7 @@ Enchantments indexed by name
 Example:
 
 ```js
-console.log(minecraftData.enchantmentsByName['mending']) // Object containing information for "Mending"
+console.log(mcData.enchantmentsByName['mending']) // Object containing information for "Mending"
 ```
 
 ### mcData.enchantmentsArray
@@ -312,7 +313,7 @@ Windows indexed by id
 Example:
 
 ```js
-console.log(minecraftData.windows['minecraft:villager']) // Object containing window information for the villager GUI
+console.log(mcData.windows['minecraft:villager']) // Object containing window information for the villager GUI
 ```
 
 ### mcData.windowsByName
@@ -322,7 +323,7 @@ Windows indexed by name
 Example:
 
 ```js
-console.log(minecraftData.windowsByName['NPC Trade']) // Object containing window information for the villager GUI
+console.log(mcData.windowsByName['NPC Trade']) // Object containing window information for the villager GUI
 ```
 
 ### mcData.windowsArray
@@ -340,7 +341,7 @@ The version number
 Example:
 
 ```js
-console.log(minecraftData.version.version) // 759
+console.log(mcData.version.version) // 759
 ```
 
 ### mcData.version.minecraftVersion
@@ -350,7 +351,7 @@ The full Minecraft version
 Example:
 
 ```js
-console.log(minecraftData.version.minecraftVersion) // 1.19
+console.log(mcData.version.minecraftVersion) // 1.19
 ```
 
 ### mcData.version.type
@@ -360,7 +361,7 @@ The version type, either `pc` or `bedrock`
 Example:
 
 ```js
-console.log(minecraftData.version.type) // pc
+console.log(mcData.version.type) // pc
 ```
 
 ### mcData.version.majorVersion
@@ -370,9 +371,9 @@ The major Minecraft version
 Example:
 
 ```js
-const minecraftData = MinecraftData('1.16.5')
+const mcData = MinecraftData('1.16.5')
 
-console.log(minecraftData.version.majorVersion) // 1.16
+console.log(mcData.version.majorVersion) // 1.16
 ```
 
 ### mcData.version.dataVersion
@@ -382,10 +383,10 @@ The "data version" for this Minecraft version, used for example when writing chu
 Example:
 
 ```js
-console.log(minecraftData.version.dataVersion) // 3105
+console.log(mcData.version.dataVersion) // 3105
 ```
 
-### mcData.version.[<](<version>), `minecraftData.isOlderThan(<version>)`
+### mcData.version.[<](<version>), mcData.isOlderThan(<version>)
 
 Returns `true` if the current version is less than than the other version's `dataVersion`, or else `false`
 
@@ -401,18 +402,18 @@ Returns `true` if the current version is equal to the other version's `dataVersi
 
 Returns `true` if the current version is greater than the other version's `dataVersion`, or else `false`
 
-### mcData.version.[>=](<version>), `minecraftVersion.isNewerOrEqualTo(<version>)`
+### mcData.version.[>=](<version>), mcData.isNewerOrEqualTo(<version>)
 
 Same as above but also checks for an equivalent `dataVersion`
 
 Example Usage:
 
 ```js
-const minecraftData = MinecraftData('1.16.4')
-console.log(minecraftData.version['>=']('1.17')) // False, 1.16.4 is older than 1.17
+const mcData = MinecraftData('1.16.4')
+console.log(mcData.version['>=']('1.17')) // Returns false, as 1.16.4 is older than 1.17
 
-const minecraftData = MinecraftData('bedrock_1.17.0')
-console.log(minecraftData.version['>']('1.16.220')) // True, 1.17.0 is newer than 1.16.220
+const mcData = MinecraftData('bedrock_1.17.0')
+console.log(mcData.version['>']('1.16.220')) // Returns true, as 1.17.0 is newer than 1.16.220
 ```
 
 ## Effects
@@ -424,7 +425,7 @@ Effects indexed by id
 Example:
 
 ```js
-console.log(minecraftData.effects[5]) // Object containing information for "Strength"
+console.log(mcData.effects[5]) // Object containing information for "Strength"
 ```
 
 ### mcData.effectsByName
@@ -434,7 +435,7 @@ Effects indexed by name
 Example:
 
 ```js
-console.log(minecraftData.effectsByName['strength']) // Object containing information for "Strength"
+console.log(mcData.effectsByName['strength']) // Object containing information for "Strength"
 ```
 
 ### mcData.effectsArray
@@ -450,7 +451,7 @@ Attributes indexed by resource name
 Example:
 
 ```js
-console.log(minecraftData.attributes['minecraft:generic.movement_speed']) // Object containing information for "minecraft:generic.movement_speed"
+console.log(mcData.attributes['minecraft:generic.movement_speed']) // Object containing information for "minecraft:generic.movement_speed"
 ```
 
 ### mcData.attributesByName
@@ -460,7 +461,7 @@ Attributes indexed by name
 Example:
 
 ```js
-console.log(minecraftData.attributesByName['movementSpeed']) // Object containing information for "minecraft:generic.movement_speed"
+console.log(mcData.attributesByName['movementSpeed']) // Object containing information for "minecraft:generic.movement_speed"
 ```
 
 ### mcData.attributesArray
@@ -476,7 +477,7 @@ Particles indexed by id
 Example:
 
 ```js
-console.log(minecraftData.particles[12]) // Object containing information for "dripping_water"
+console.log(mcData.particles[12]) // Object containing information for "dripping_water"
 ```
 
 ### mcData.particlesByName
@@ -486,7 +487,7 @@ Particles indexed by name
 Example:
 
 ```js
-console.log(minecraftData.particlesByName['dripping_water']) // Object containing information for "dripping_water"
+console.log(mcData.particlesByName['dripping_water']) // Object containing information for "dripping_water"
 ```
 
 ### mcData.particlesArray
@@ -502,9 +503,9 @@ Commands and parsers
 Example:
 
 ```js
-const minecraftData = MinecraftData('1.13')
+const mcData = MinecraftData('1.13')
 
-console.log(minecraftData.commands)
+console.log(mcData.commands)
 // Returns:
 // {
 //   root: {
@@ -527,7 +528,7 @@ Entity loot indexed by entity name
 Example:
 
 ```js
-console.log(minecraftData.entityLoot['zombie']) // Object containing loot information for "Zombie"
+console.log(mcData.entityLoot['zombie']) // Object containing loot information for "Zombie"
 ```
 
 ### mcData.entityLootArray
@@ -541,7 +542,7 @@ Block loot indexed by block name
 Example:
 
 ```js
-console.log(minecraftData.blockLoot['diamond_ore']) // Object containing loot information for "Diamond Ore"
+console.log(mcData.blockLoot['diamond_ore']) // Object containing loot information for "Diamond Ore"
 ```
 
 ### mcData.blockLootArray
@@ -601,6 +602,7 @@ Example:
 
 ```js
 const mcData = minecraftData('1.18.2')
+
 console.log(mcData.supportFeature('blockStateId')) // Returns: true
 ```
 

@@ -128,26 +128,6 @@ Example:
 console.log(minecraftData.foodsByName['pumpkin_pie']) // Object containing information for "Pumpkin Pie"
 ```
 
-### mcData.foodsByFoodPoints
-
-Foods indexed by food points
-
-Example:
-
-```js
-console.log(minecraftData.foodsByFoodPoints[8]) // Array of information for food with foodPoints of 8
-```
-
-### mcData.foodsBySaturation
-
-Foods indexed by saturation
-
-Example:
-
-```js
-console.log(minecraftData.foodsBySaturation[0.6]) // Array of information for food with saturation of 0.6
-```
-
 ### mcData.foodsArray
 
 Array of foods

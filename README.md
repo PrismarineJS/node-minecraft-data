@@ -16,18 +16,18 @@ This package allows the lookup of blocks, items, entities, etc. by name, id, etc
 ## Example
 
 ```js
-const MinecraftData = require('minecraft-data')
-// or for es6: import MinecraftData from 'minecraft-data';
+const minecraftData = require('minecraft-data')
+// or for es6: import minecraftData from 'minecraft-data';
 
-const minecraftData = MinecraftData('1.19')
+const mcData = minecraftData('1.19')
 
-console.log(minecraftData.blocksByName['stone']) // Information for "Stone"
-console.log(minecraftData.windows['minecraft:brewing_stand']) // Information for the "Brewing Stand" GUI
-console.log(minecraftData.version) // Information about the current version
-console.log(minecraftData.effectsByName['Haste']) // Information for the "Haste" effect
+console.log(mcData.blocksByName['stone']) // Information for "Stone"
+console.log(mcData.windows['minecraft:brewing_stand']) // Information for the "Brewing Stand" GUI
+console.log(mcData.version) // Information about the current version
+console.log(mcData.effectsByName['Haste']) // Information for the "Haste" effect
 ```
 
 ## Documentation
 
-- See [doc/api.md](doc/api.md)
-- See [doc/history.md](doc/history.md)
+* See [doc/api.md](doc/api.md)
+* See [doc/history.md](doc/history.md)

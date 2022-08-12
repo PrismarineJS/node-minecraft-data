@@ -36,4 +36,4 @@ jobs:
           delete-branch: true
           title: 'Release ${{ github.event.client_payload.tag }}'
           body: |
-            A new version of `minecraft-data` (`${{ github.event.client_payload.tag }`) was released.
+            A new version of `minecraft-data` (`${{ github.event.client_payload.tag }}`) was released.

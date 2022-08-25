@@ -1,6 +1,6 @@
 {
   "name": "minecraft-data",
-  "version": "3.10.2",
+  "version": "3.11.0",
   "description": "Provide easy access to minecraft data in node.js",
   "main": "index.js",
   "tonicExampleFilename": "example.js",

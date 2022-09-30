@@ -89,11 +89,9 @@ describe('supportFeature', () => {
     assert.equal(mcData1Dot17.supportFeature('itemSerializationUsesBlockId'), true)
   })
 
-  // requires mcdata update to add some bedrock features :
-  //
-  // it('works on bedrock', function () {
-  //   const mcData = require('minecraft-data')('bedrock_1.18.0')
-  //   assert.equal(mcData.supportFeature('newRecipeSchema'), true)
-  //   assert.equal(mcData.supportFeature('fakeRecipeSchema'), false)
-  // })
+  it('works on bedrock', function () {
+    const mcData = require('minecraft-data')('bedrock_1.18.0')
+    assert.equal(mcData.supportFeature('newRecipeSchema'), true)
+    assert.equal(mcData.supportFeature('fakeRecipeSchema'), false)
+  })
 })

@@ -1,5 +1,9 @@
 # History
 
+## 3.15.0
+
+* update `minecraft-data`
+
 ## 3.14.1
 
 * Support supportFeature on bedrock

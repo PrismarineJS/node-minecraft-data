@@ -1,5 +1,9 @@
 # History
 
+## 3.15.3
+
+* update `minecraft-data`
+
 ## 3.15.2
 
 * Fix entities by id

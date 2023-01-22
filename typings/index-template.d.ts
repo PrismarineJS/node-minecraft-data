@@ -95,11 +95,15 @@ export interface LoginPacket {
 export interface IndexedData {
   isOlderThan(version: string): boolean
   isNewerOrEqualTo(version: string): boolean
-  
+
   blocks: { [id: number]: Block }
   blocksByName: { [name: string]: Block }
   blocksByStateId: { [id: number]: Block }
   blocksArray: Block[]
+  blockMappings: {
+    pc: { name: string, states: Record<string, string | number> },
+    pe: { name: string, states: Record<string, string | number> }
+  }[]
   /**
    * Bedrock edition only
    */

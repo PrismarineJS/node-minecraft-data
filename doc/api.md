@@ -54,6 +54,10 @@ Example:
 console.log(mcData.blocksByStateId[100]) // Object containing information for "Lava" (as Lava has a state range from 91 to 106)
 ```
 
+### mcData.blockMappings
+
+Contains a list of block mappings between pc/bedrock edition for the current Minecraft version
+
 ### mcData.blockStates
 
 **_Bedrock edition only_**

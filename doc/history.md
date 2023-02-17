@@ -1,5 +1,9 @@
 # History
 
+## 3.28.0
+
+* update `minecraft-data`
+
 ## 3.27.0
 
 * update `minecraft-data`

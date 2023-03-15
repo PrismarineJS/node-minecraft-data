@@ -2,7 +2,7 @@ name: npm-publish
 on:
   push:
     branches:
-      - master
+      - revert-261-dependabot/npm_and_yarn/json-schema-to-typescript-12.0.0
   workflow_dispatch:
 jobs:
   npm-publish:

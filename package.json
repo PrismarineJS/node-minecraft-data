@@ -1,6 +1,6 @@
 {
   "name": "minecraft-data",
-  "version": "3.34.0",
+  "version": "3.35.0",
   "description": "Provide easy access to minecraft data in node.js",
   "main": "index.js",
   "tonicExampleFilename": "example.js",
@@ -8,9 +8,9 @@
     "generate:types": "node typings/generate-typings.js",
     "generate:data": "node ./bin/generate_data.js",
     "test:types": "tsc typings/test-typings && node typings/test-typings.js",
-    "test": "require-self && npm run generate:types && npm run generate:data && npm run lint && npm run test:types && mocha",
+    "test": "npm run generate:types && npm run generate:data && npm run lint && npm run test:types && mocha",
     "lint": "standard",
-    "prepare": "require-self && npm run generate:data && npm run generate:types",
+    "prepare": "npm run generate:data && npm run generate:types",
     "fix": "standard --fix"
   },
   "standard": {
@@ -33,13 +33,13 @@
     "url": "https://github.com/PrismarineJS/node-minecraft-data/issues"
   },
   "devDependencies": {
+    "minecraft-data": ".",
     "@types/node": "^20.2.1",
     "json-schema-to-typescript": "11.0.5",
     "minecraft-packets": "^1.4.0",
     "mocha": "^10.0.0",
-    "require-self": "^0.2.3",
     "standard": "^17.0.0",
-    "typescript": "^5.0.4"
+    "typescript": "~5.0.4"
   },
   "dependencies": {}
 }

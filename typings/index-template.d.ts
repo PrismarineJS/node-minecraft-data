@@ -167,7 +167,7 @@ export interface IndexedData {
 
   attributes: { [resource: string]: string }
   attributesByName: { [name: string]: string }
-  attributesArray: []
+  attributesArray: Attribute[]
 
   commands: {}
 
@@ -177,11 +177,9 @@ export interface IndexedData {
 
   language: { [key: string]: string }
 
-  blockLoot: { [id: number]: BlockLoot }
-  blockLootByName: { [name: string]: BlockLoot }
+  blockLoot: { [name: string]: BlockLoot }
 
-  entityLoot: { [id: number]: EntityLoot }
-  entityLootByName: { [name: string]: EntityLoot }
+  entityLoot: { [name: string]: EntityLoot }
 
   mapIcons: { [id: number]: MapIcon }
   mapIconsByName: { [name: string]: MapIcon }

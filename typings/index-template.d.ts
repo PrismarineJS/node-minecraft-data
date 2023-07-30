@@ -177,9 +177,9 @@ export interface IndexedData {
 
   language: { [key: string]: string }
 
-  blockLoot: { [name: string]: BlockLoot }
+  blockLoot: { [name: string]: BlockLootEntry }
 
-  entityLoot: { [name: string]: EntityLoot }
+  entityLoot: { [name: string]: EntityLootEntry }
 
   mapIcons: { [id: number]: MapIcon }
   mapIconsByName: { [name: string]: MapIcon }

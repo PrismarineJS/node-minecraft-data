@@ -3,6 +3,7 @@
 ## 3.43.0
 
 * update `minecraft-data`
+* Add legacy bedrock block mappings (thanks @Flonja)
 
 ## 3.42.1
 

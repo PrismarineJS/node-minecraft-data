@@ -653,7 +653,7 @@ console.log(mcData.legacy.pc.blocks['171:15']) // Returns: 'minecraft:black_carp
 
 ### minecraftData.legacy.bedrock.blocks
 
-Mapping from 1.2 block:metadata to 1.18 block names
+Mapping from 1.2 block:metadata to 1.18.10 block names
 
 Example:
 

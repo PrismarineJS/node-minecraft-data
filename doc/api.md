@@ -651,6 +651,16 @@ Example:
 console.log(mcData.legacy.pc.blocks['171:15']) // Returns: 'minecraft:black_carpet'
 ```
 
+### minecraftData.legacy.bedrock.blocks
+
+Mapping from 1.2 block:metadata to 1.18.10 block names
+
+Example:
+
+```js
+console.log(mcData.legacy.bedrock.blocks['242:0']) // Returns: 'minecraft:camera'
+```
+
 ## Schemas
 
 These are common data and directly available in the `minecraftData` object.

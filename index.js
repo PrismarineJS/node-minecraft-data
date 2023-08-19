@@ -107,7 +107,8 @@ module.exports.versionsByMinecraftVersion = versionsByMinecraftVersion
 module.exports.preNettyVersionsByProtocolVersion = preNettyVersionsByProtocolVersion
 module.exports.postNettyVersionsByProtocolVersion = postNettyVersionsByProtocolVersion
 module.exports.legacy = {
-  pc: require('./minecraft-data/data/pc/common/legacy.json')
+  pc: require('./minecraft-data/data/pc/common/legacy.json'),
+  bedrock: require('./minecraft-data/data/bedrock/common/legacy.json')
 }
 
 const schemas = {

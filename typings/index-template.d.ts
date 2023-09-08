@@ -108,7 +108,10 @@ export interface IndexedData {
    * Bedrock edition only
    */
   blockStates?: { name: string; states: object; version: number }[]
-  blockCollisionShapes: { blocks: { [name: string]: number[] }; shapes: { [id: number]: [number[]] } }
+  /**
+   * id is the shape id of the block converted to a string
+   */
+  blockCollisionShapes: { blocks: { [name: string]: number | number[] }; shapes: { [id: string]: [number[]] } }
 
   loginPacket: LoginPacket
 

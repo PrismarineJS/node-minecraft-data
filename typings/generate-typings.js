@@ -37,7 +37,7 @@ async function generate () {
   typingString += '\n\n  export interface SupportsFeature {\n'
   // prevent duplicates, use last feature with the same name
   const featureNames = features.map(feature => feature.name)
-  const featuresUnique = features.filter(({ name }, i) => featureNames.lastIndexOf(name) === i);
+  const featuresUnique = features.filter(({ name }, i) => featureNames.lastIndexOf(name) === i)
   for (const feature of featuresUnique) {
     const versionsRange = feature.values
       ? ''

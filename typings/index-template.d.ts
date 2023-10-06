@@ -189,6 +189,8 @@ export interface IndexedData {
   mapIconsArray: MapIcon[]
 
   tints: Tints
+
+  supportFeature: <T extends keyof SupportsFeature>(key: T) => SupportsFeature[T]
 }
 
 const versions: {

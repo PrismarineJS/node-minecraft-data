@@ -19,6 +19,11 @@ console.log(getMcData.postNettyVersionsByProtocolVersion['pc'][47][0])
 
 console.log(getMcData(47).version)
 
+const supportFeature: boolean = getMcData('1.8.8').supportFeature('mobSpawner')
+console.log(supportFeature)
+const supportFeature2: 'string' | 'short' = getMcData('1.8.8').supportFeature('typeOfValueForEnchantLevel')
+console.log(supportFeature2)
+
 console.log(getMcData('1.8').version)
 
 console.log(getMcData('15w40b').version)

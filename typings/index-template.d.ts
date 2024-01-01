@@ -11,7 +11,9 @@ export interface Version {
   ['=='](other: string): boolean
   type: 'pc' | 'bedrock'
   version?: number
-  majorVersion: string
+  dataVersion?: number
+  majorVersion?: string
+  minecraftVersion?: string
 }
 
 export interface VersionSet {

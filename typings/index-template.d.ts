@@ -194,7 +194,7 @@ export interface IndexedData {
 }
 
 const versions: {
-  [key in keyof SupportedVersions]: Version[]
+  [key in keyof SupportedVersions]: ProtocolVersions
 }
 const versionsByMinecraftVersion: VersionSet
 const preNettyVersionsByProtocolVersion: VersionSet

@@ -10,6 +10,10 @@ export interface Version {
   // Returns true if the current version is equal to the `other` version's dataVersion
   ['=='](other: string): boolean
   type: 'pc' | 'bedrock'
+  version?: number
+  dataVersion?: number
+  majorVersion?: string
+  minecraftVersion?: string
 }
 
 export interface VersionSet {
@@ -194,7 +198,7 @@ export interface IndexedData {
 }
 
 const versions: {
-  [key in keyof SupportedVersions]: Version[]
+  [key in keyof SupportedVersions]: ProtocolVersions
 }
 const versionsByMinecraftVersion: VersionSet
 const preNettyVersionsByProtocolVersion: VersionSet

@@ -110,6 +110,7 @@ module.exports.legacy = {
   pc: require('./minecraft-data/data/pc/common/legacy.json'),
   bedrock: require('./minecraft-data/data/bedrock/common/legacy.json')
 }
+module.exports.getRenamedData = require('./lib/dataRenames.js').getRenamedData
 
 const schemas = {
   biomes: require('./minecraft-data/schemas/biomes_schema.json'),

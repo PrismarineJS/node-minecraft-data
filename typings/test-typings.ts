@@ -43,3 +43,5 @@ console.log(getMcData.supportedVersions.pc)
 console.log(getMcData.schemas.blocks)
 
 console.log(getMcData('1.12').language['options.sensitivity.max'])
+console.log(getMcData.getRenamedData('blocks', 'short_grass', '1.20.3', '1.8.8') === 'tallgrass') // test string comparison
+console.log(getMcData.getRenamedData('blocks', ['standing_sign', 'grass'], '1.8.8', '1.16')) // test string comparison

@@ -55,4 +55,4 @@ console.log(require('minecraft-data')('1.15.2').attributesByName.movementSpeed)
 console.log(require('minecraft-data')('1.16').attributesByName.movementSpeed)
 
 console.log(require('minecraft-data')('1.16.5').soundsByID[21])
-console.log(require('minecraft-data')('1.16.5').soundsByName["ambient.underwater.loop.additions.ultra_rare"])
+console.log(require('minecraft-data')('1.16.5').soundsByName['ambient.underwater.loop.additions.ultra_rare'])

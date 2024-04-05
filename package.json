@@ -33,13 +33,15 @@
     "url": "https://github.com/PrismarineJS/node-minecraft-data/issues"
   },
   "devDependencies": {
-    "minecraft-data": ".",
     "@types/node": "^20.2.1",
     "json-schema-to-typescript": "11.0.5",
+    "minecraft-data": ".",
     "minecraft-packets": "^1.4.0",
     "mocha": "^10.0.0",
     "standard": "^17.0.0",
     "typescript": "~5.4.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "adm-zip": "^0.5.12"
+  }
 }

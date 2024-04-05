@@ -1,9 +1,10 @@
+const readData = require('./lib/readData')
 const mcDataToNode = require('./lib/loader')
 const supportFeature = require('./lib/supportsFeature')
 const indexer = require('./lib/indexer.js')
 const protocolVersions = {
-  pc: require('./minecraft-data/data/pc/common/protocolVersions.json'),
-  bedrock: require('./minecraft-data/data/bedrock/common/protocolVersions.json')
+  pc: readData('./minecraft-data/data/pc/common/protocolVersions.json'),
+  bedrock: readData('./minecraft-data/data/bedrock/common/protocolVersions.json')
 }
 const versionsByMinecraftVersion = {}
 const versionsByMajorVersion = {}
@@ -99,35 +100,35 @@ function toMajor (mcVersion, preNetty, typeArg) {
 }
 
 module.exports.supportedVersions = {
-  pc: require('./minecraft-data/data/pc/common/versions.json'),
-  bedrock: require('./minecraft-data/data/bedrock/common/versions.json')
+  pc: readData('./minecraft-data/data/pc/common/versions.json'),
+  bedrock: readData('./minecraft-data/data/bedrock/common/versions.json')
 }
 module.exports.versions = protocolVersions
 module.exports.versionsByMinecraftVersion = versionsByMinecraftVersion
 module.exports.preNettyVersionsByProtocolVersion = preNettyVersionsByProtocolVersion
 module.exports.postNettyVersionsByProtocolVersion = postNettyVersionsByProtocolVersion
 module.exports.legacy = {
-  pc: require('./minecraft-data/data/pc/common/legacy.json'),
-  bedrock: require('./minecraft-data/data/bedrock/common/legacy.json')
+  pc: readData('./minecraft-data/data/pc/common/legacy.json'),
+  bedrock: readData('./minecraft-data/data/bedrock/common/legacy.json')
 }
 
 const schemas = {
-  biomes: require('./minecraft-data/schemas/biomes_schema.json'),
-  blocks: require('./minecraft-data/schemas/blocks_schema.json'),
-  effects: require('./minecraft-data/schemas/effects_schema.json'),
-  commands: require('./minecraft-data/schemas/commands_schema.json'),
-  entities: require('./minecraft-data/schemas/entities_schema.json'),
-  enchantments: require('./minecraft-data/schemas/enchantments_schema.json'),
-  instruments: require('./minecraft-data/schemas/instruments_schema.json'),
-  items: require('./minecraft-data/schemas/items_schema.json'),
-  materials: require('./minecraft-data/schemas/materials_schema.json'),
-  protocolVersions: require('./minecraft-data/schemas/protocolVersions_schema.json'),
-  recipes: require('./minecraft-data/schemas/recipes_schema.json'),
-  version: require('./minecraft-data/schemas/version_schema.json'),
-  windows: require('./minecraft-data/schemas/windows_schema.json'),
-  foods: require('./minecraft-data/schemas/foods_schema.json'),
-  particles: require('./minecraft-data/schemas/particles_schema.json'),
-  mapIcons: require('./minecraft-data/schemas/mapIcons_schema.json')
+  biomes: readData('./minecraft-data/schemas/biomes_schema.json'),
+  blocks: readData('./minecraft-data/schemas/blocks_schema.json'),
+  effects: readData('./minecraft-data/schemas/effects_schema.json'),
+  commands: readData('./minecraft-data/schemas/commands_schema.json'),
+  entities: readData('./minecraft-data/schemas/entities_schema.json'),
+  enchantments: readData('./minecraft-data/schemas/enchantments_schema.json'),
+  instruments: readData('./minecraft-data/schemas/instruments_schema.json'),
+  items: readData('./minecraft-data/schemas/items_schema.json'),
+  materials: readData('./minecraft-data/schemas/materials_schema.json'),
+  protocolVersions: readData('./minecraft-data/schemas/protocolVersions_schema.json'),
+  recipes: readData('./minecraft-data/schemas/recipes_schema.json'),
+  version: readData('./minecraft-data/schemas/version_schema.json'),
+  windows: readData('./minecraft-data/schemas/windows_schema.json'),
+  foods: readData('./minecraft-data/schemas/foods_schema.json'),
+  particles: readData('./minecraft-data/schemas/particles_schema.json'),
+  mapIcons: readData('./minecraft-data/schemas/mapIcons_schema.json')
 }
 module.exports.schemas = schemas
 

@@ -1,9 +1,14 @@
 const { compileFromFile } = require('json-schema-to-typescript')
 const path = require('path')
 const fs = require('fs')
-const features = require('../minecraft-data/data/pc/common/features.json')
+const readData = require('../lib/readData')
+const features = readData('../minecraft-data/data/pc/common/features.json')
 
 const templateTypings = fs.readFileSync(path.resolve(__dirname, './index-template.d.ts'), 'utf8')
+
+const process = require('process')
+
+process.exit(0)
 
 // Recursively get path of all files in a directory
 function walkSync (dir, fileList = []) {

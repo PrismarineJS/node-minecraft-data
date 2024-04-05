@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const dataSource = require('../minecraft-data/data/dataPaths')
+const readData = require('../lib/readData')
+const dataSource = readData('../minecraft-data/data/dataPaths.json')
 const fs = require('fs')
 const path = require('path')
-const readData = require('../lib/readData')
 
 const data = 'const readData = require(\'./lib/readData\')\n\nmodule.exports =\n{\n' + Object
   .keys(dataSource)
@@ -21,8 +21,7 @@ const data = 'const readData = require(\'./lib/readData\')\n\nmodule.exports =\n
               return `      get ${k3} () { return readData("./${loc}${k3}.json") }`
             } catch {
               // No ? Return it as a URL path so other code can decide how to handle it
-              const file = fs.readdirSync(path.join(__dirname, '../', loc)).find(f => f.startsWith(k3 + '.'))
-              if (file) { return `      ${k3}: __dirname + '/${loc}${file}'` } else { throw Error('file not found: ' + loc + k3) }
+              return `      ${k3}: __dirname + '/${loc}${k3}'`
             }
           })
           .join(',\n') +

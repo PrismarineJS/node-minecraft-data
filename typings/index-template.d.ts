@@ -206,3 +206,4 @@ const postNettyVersionsByProtocolVersion: VersionSet
 const supportedVersions: SupportedVersions
 const legacy: { pc: { blocks: { [id: string]: string } } }
 const schemas: Schemas
+const getRenamedData: <T extends string | string[]>(type: 'blocks' | 'items', blockOrItem: T, versionFrom: string, versionTo: string) => T extends string ? string : string[]

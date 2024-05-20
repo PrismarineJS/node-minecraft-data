@@ -1,3 +1,5 @@
+type Object = { [key: string]: any }
+
 export interface Version {
   // Returns true if the current version is greater than or equal to the `other` version's dataVersion
   ['>='](other: string): boolean
@@ -23,21 +25,21 @@ export interface SupportedVersions {
 }
 
 export interface Schemas {
-  biomes: object
-  blocks: object
-  effects: object
-  entities: object
-  instruments: object
-  items: object
-  materials: object
-  protocol: object
-  protocolVersions: object
-  recipes: object
-  version: object
-  windows: object
-  foods: object
-  blockLoot: object
-  entityLoot: object
+  biomes: Object
+  blocks: Object
+  effects: Object
+  entities: Object
+  instruments: Object
+  items: Object
+  materials: Object
+  protocol: Object
+  protocolVersions: Object
+  recipes: Object
+  version: Object
+  windows: Object
+  foods: Object
+  blockLoot: Object
+  entityLoot: Object
 }
 
 export interface LoginPacket {
@@ -61,9 +63,9 @@ export interface LoginPacket {
   /**
    * Introduced in Minecraft 1.17
    */
-  dimensionCodec?: object
+  dimensionCodec?: Object
 
-  dimension: object
+  dimension: Object
 
   /**
    * Introduced in Minecraft 1.17
@@ -92,14 +94,18 @@ export interface LoginPacket {
   isFlat?: boolean
 }
 
+type RequireOnly<T, K extends keyof T> = Partial<T> & Required<Pick<T, K>>
+
+type IndexedBlock = RequireOnly<Block, 'minStateId' | 'maxStateId' | 'defaultState'>
+
 export interface IndexedData {
   isOlderThan(version: string): boolean
   isNewerOrEqualTo(version: string): boolean
 
-  blocks: { [id: number]: Block }
-  blocksByName: { [name: string]: Block }
-  blocksByStateId: { [id: number]: Block }
-  blocksArray: Block[]
+  blocks: { [id: number]: IndexedBlock }
+  blocksByName: { [name: string]: IndexedBlock }
+  blocksByStateId: { [id: number]: IndexedBlock }
+  blocksArray: IndexedBlock[]
   blockMappings: {
     pc: { name: string, states: Record<string, string | number> },
     pe: { name: string, states: Record<string, string | number> }
@@ -107,7 +113,7 @@ export interface IndexedData {
   /**
    * Bedrock edition only
    */
-  blockStates?: { name: string; states: object; version: number }[]
+  blockStates?: { name: string; states: Object; version: number }[]
   blockCollisionShapes: { blocks: { [name: string]: number[] }; shapes: { [id: number]: [number[]] } }
 
   loginPacket: LoginPacket
@@ -144,10 +150,10 @@ export interface IndexedData {
   /**
    * Bedrock edition only
    */
-  defaultSkin?: object
+  defaultSkin?: Object
 
-  protocol: object
-  protocolComments: object
+  protocol: Object
+  protocolComments: Object
   /**
    * Bedrock edition only
    */

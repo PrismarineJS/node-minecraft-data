@@ -12,6 +12,10 @@ export interface Version {
   // Returns true if the current version is equal to the `other` version's dataVersion
   ['=='](other: string): boolean
   type: 'pc' | 'bedrock'
+  version?: number
+  dataVersion?: number
+  majorVersion?: string
+  minecraftVersion?: string
 }
 
 export interface VersionSet {
@@ -113,8 +117,11 @@ export interface IndexedData {
   /**
    * Bedrock edition only
    */
-  blockStates?: { name: string; states: Object; version: number }[]
-  blockCollisionShapes: { blocks: { [name: string]: number[] }; shapes: { [id: number]: [number[]] } }
+  blockStates?: { name: string; states: object; version: number }[]
+  /**
+   * id is the shape id of the block converted to a string
+   */
+  blockCollisionShapes: { blocks: { [name: string]: number | number[] }; shapes: { [id: string]: [number[]] } }
 
   loginPacket: LoginPacket
 
@@ -192,10 +199,12 @@ export interface IndexedData {
   mapIconsArray: MapIcon[]
 
   tints: Tints
+
+  supportFeature: <T extends keyof SupportsFeature>(key: T) => SupportsFeature[T]
 }
 
 const versions: {
-  [key in keyof SupportedVersions]: Version[]
+  [key in keyof SupportedVersions]: ProtocolVersions
 }
 const versionsByMinecraftVersion: VersionSet
 const preNettyVersionsByProtocolVersion: VersionSet

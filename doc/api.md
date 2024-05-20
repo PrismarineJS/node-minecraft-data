@@ -162,6 +162,20 @@ console.log(mcData.biomesByName['windswept_gravelly_hills']) // Object containin
 
 Array of biomes
 
+## Sounds
+
+### mcData.sounds
+
+Sounds indexed by id
+
+### mcData.soundsByName
+
+Sounds indexed by name
+
+### mcData.soundsArray
+
+Array of sounds
+
 ## Recipes
 
 ### mcData.recipes

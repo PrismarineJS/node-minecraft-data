@@ -1,5 +1,125 @@
 # History
 
+## 3.65.0
+
+* update `minecraft-data`
+
+## 3.64.1
+
+* update `minecraft-data`
+
+## 3.64.0
+
+* update `minecraft-data`
+
+## 3.63.0
+
+* update `minecraft-data`
+
+## 3.62.0
+
+* update `minecraft-data`
+
+## 3.61.2
+
+* update `minecraft-data`
+
+## 3.61.1
+
+* update `minecraft-data`
+
+## 3.61.0
+
+* update `minecraft-data`
+
+## 3.60.0
+
+* update `minecraft-data`
+
+## 3.59.3
+
+* update `minecraft-data`
+
+## 3.59.2
+
+* update `minecraft-data`
+
+## 3.59.1
+
+* update `minecraft-data`
+
+## 3.59.0
+
+* update `minecraft-data`
+
+## 3.58.0
+
+* update `minecraft-data`
+
+## 3.57.0
+
+* update `minecraft-data`
+
+## 3.56.0
+
+* update `minecraft-data`
+
+## 3.55.0
+
+* update `minecraft-data`
+
+## 3.54.0
+
+* update `minecraft-data`
+
+## 3.53.0
+
+* update `minecraft-data`
+
+## 3.52.0
+
+* update `minecraft-data`
+
+## 3.51.0
+
+* update `minecraft-data`
+
+## 3.50.0
+
+* update `minecraft-data`
+
+## 3.49.1
+
+* update `minecraft-data`
+
+## 3.49.0
+
+* update `minecraft-data`
+
+## 3.48.0
+
+* update `minecraft-data`
+
+## 3.47.0
+
+* update `minecraft-data`
+
+## 3.46.2
+
+* update `minecraft-data`
+
+## 3.46.1
+
+* update `minecraft-data`
+
+## 3.46.0
+
+* update `minecraft-data`
+
+## 3.45.0
+
+* update `minecraft-data`
+
 ## 3.44.0
 
 * update `minecraft-data`

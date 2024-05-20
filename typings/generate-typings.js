@@ -1,6 +1,7 @@
 const { compileFromFile } = require('json-schema-to-typescript')
 const path = require('path')
 const fs = require('fs')
+const features = require('../minecraft-data/data/pc/common/features.json')
 
 const templateTypings = fs.readFileSync(path.resolve(__dirname, './index-template.d.ts'), 'utf8')
 
@@ -31,6 +32,26 @@ async function generate () {
     .split('\n')
     .map((line) => '  ' + line)
     .join('\n')
+
+  // #region supports features
+  typingString += '\n\n  export interface SupportsFeature {\n'
+  // prevent duplicates, use last feature with the same name
+  const featureNames = features.map(feature => feature.name)
+  const featuresUnique = features.filter(({ name }, i) => featureNames.lastIndexOf(name) === i)
+  for (const feature of featuresUnique) {
+    const versionsRange = feature.values
+      ? ''
+      : feature.version
+        ? feature.version
+        : feature.versions.join(' - ')
+
+    const valueType = feature.values ? feature.values.map(({ value }) => JSON.stringify(value)).join(' | ') : 'boolean'
+
+    typingString += '    /**' + (versionsRange && ` \`${versionsRange}\``) + '\n' + '     * ' + feature.description + ' */\n'
+    typingString += '    "' + feature.name.replaceAll('"', '\\"') + `": ${valueType};\n`
+  }
+  typingString += '  }\n\n'
+  // #endregion
 
   typingString += templateTypings
     .split('\n')

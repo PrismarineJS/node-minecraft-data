@@ -34,6 +34,7 @@ console.log(getMcData('bedrock_0.14').version)
 
 console.log(getMcData('pc_1.9').blocksByName['dirt'])
 console.log(getMcData('pc_1.9').blocksByName['dirt'].minStateId.toExponential)
+console.log(getMcData('pc_1.9').blocksByName['dirt'].name.includes)
 
 console.log(getMcData('pc_1.9').protocol.toClient)
 

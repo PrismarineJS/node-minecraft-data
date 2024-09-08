@@ -98,9 +98,9 @@ export interface LoginPacket {
   isFlat?: boolean
 }
 
-type RequireOnly<T, K extends keyof T> = Partial<T> & Required<Pick<T, K>>
+type MakeRequired<T, K extends keyof T> = T & Required<Pick<T, K>>
 
-type IndexedBlock = RequireOnly<Block, 'minStateId' | 'maxStateId' | 'defaultState'>
+type IndexedBlock = MakeRequired<Block, 'minStateId' | 'maxStateId' | 'defaultState'>
 
 export interface IndexedData {
   isOlderThan(version: string): boolean

@@ -101,4 +101,12 @@ describe('supportFeature', () => {
     assert.equal(mcData.supportFeature('fakeRecipeSchema'), false)
     assert(mcData.blockMappings.length > 0)
   })
+
+  it('compares pc 1.7.10 correctly', function () {
+    const mcData = require('minecraft-data')('1.7.10')
+    assert.strictEqual(mcData.isNewerOrEqualTo('1.7.9'), true)
+    assert.strictEqual(mcData.isOlderThan('1.8'), true)
+    assert.strictEqual(mcData.isOlderThan('1.7.10'), false)
+    assert.strictEqual(mcData.isNewerOrEqualTo('1.7.10'), true)
+  })
 })

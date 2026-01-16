@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "minecraft-data": ".",
-    "@types/node": "^24.0.4",
+    "@types/node": "^25.0.9",
     "json-schema-to-typescript": "11.0.5",
     "minecraft-packets": "^1.4.0",
     "mocha": "^11.0.1",

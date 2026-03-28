@@ -22,6 +22,7 @@ jobs:
         node-version: 22.0.0
         registry-url: 'https://registry.npmjs.org'
     - run: npm install
+    - run: npm install -g npm@latest
     - id: publish
       uses: JS-DevTools/npm-publish@v4
     - name: Create Release

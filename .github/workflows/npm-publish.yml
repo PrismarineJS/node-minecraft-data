@@ -25,7 +25,7 @@ jobs:
     - id: publish
       uses: JS-DevTools/npm-publish@v4
     - name: Create Release
-      if: steps.publish.outputs.type != 'none'
+      if: ${{ steps.publish.outputs.type }}
       id: create_release
       uses: actions/create-release@v1
       env:
@@ -39,7 +39,7 @@ jobs:
 
     - name: "Trigger new GH Page creation in mcData repo"
       uses: peter-evans/repository-dispatch@v1
-      if: steps.publish.outputs.type != 'none' || github.event_name == 'workflow_dispatch'
+      if: ${{ steps.publish.outputs.type }} || github.event_name == 'workflow_dispatch'
       with:
         token: ${{ secrets.PAT_PASSWORD }}
         repository: PrismarineJS/minecraft-data

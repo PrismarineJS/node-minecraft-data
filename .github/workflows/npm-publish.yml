@@ -20,6 +20,7 @@ jobs:
       uses: actions/setup-node@master
       with:
         node-version: 22.0.0
+        registry-url: 'https://registry.npmjs.org'
     - run: npm install
     - id: publish
       uses: JS-DevTools/npm-publish@v4

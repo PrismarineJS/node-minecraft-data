@@ -1,5 +1,12 @@
 # History
 
+## 3.106.0
+* [Use Node 24 for trusted publishing support (#442)](https://github.com/PrismarineJS/node-minecraft-data/commit/f451f6a634f0f7e93344cfe23608fcfacf6d4c8a) (thanks @rom1504)
+* [Upgrade npm for trusted publishing support (#440)](https://github.com/PrismarineJS/node-minecraft-data/commit/d6271bfcd4d1834795ee1f7ab928265839780f53) (thanks @rom1504)
+* [Add registry-url to setup-node for trusted publishing (#439)](https://github.com/PrismarineJS/node-minecraft-data/commit/47551b2c18dfd9c2fc79f24217a596ff56a5777b) (thanks @rom1504)
+* [Create commands.yml](https://github.com/PrismarineJS/node-minecraft-data/commit/278f7bd1cc41d7359c620e817c12fff29a431890) (thanks @extremeheat)
+* [Switch to trusted publishing via OIDC (#438)](https://github.com/PrismarineJS/node-minecraft-data/commit/43950d173e947f110178c56c3f3bfdcff426183a) (thanks @rom1504)
+
 ## 3.105.1
 
 * update `minecraft-data`

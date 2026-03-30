@@ -1,5 +1,9 @@
 # History
 
+## 3.108.0
+
+* update `minecraft-data`
+
 ## 3.107.0
 * [Update CI to Node 24 (#445)](https://github.com/PrismarineJS/node-minecraft-data/commit/cd37593e8ede05f266ef3e3d519f344b16f20ef7) (thanks @rom1504)
 * [Fix publish condition for npm-publish v4 (#444)](https://github.com/PrismarineJS/node-minecraft-data/commit/f63f8f9760f5717bfb530b2e87d6f670b97f7b4d) (thanks @rom1504)

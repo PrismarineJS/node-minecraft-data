@@ -1,5 +1,9 @@
 # History
 
+## 3.107.0
+
+* update `minecraft-data`
+
 ## 3.106.0
 * [Use Node 24 for trusted publishing support (#442)](https://github.com/PrismarineJS/node-minecraft-data/commit/f451f6a634f0f7e93344cfe23608fcfacf6d4c8a) (thanks @rom1504)
 * [Upgrade npm for trusted publishing support (#440)](https://github.com/PrismarineJS/node-minecraft-data/commit/d6271bfcd4d1834795ee1f7ab928265839780f53) (thanks @rom1504)

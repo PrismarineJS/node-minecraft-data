@@ -1,5 +1,9 @@
 # History
 
+## 3.107.0
+* [Update CI to Node 24 (#445)](https://github.com/PrismarineJS/node-minecraft-data/commit/cd37593e8ede05f266ef3e3d519f344b16f20ef7) (thanks @rom1504)
+* [Fix publish condition for npm-publish v4 (#444)](https://github.com/PrismarineJS/node-minecraft-data/commit/f63f8f9760f5717bfb530b2e87d6f670b97f7b4d) (thanks @rom1504)
+
 ## 3.106.0
 * [Use Node 24 for trusted publishing support (#442)](https://github.com/PrismarineJS/node-minecraft-data/commit/f451f6a634f0f7e93344cfe23608fcfacf6d4c8a) (thanks @rom1504)
 * [Upgrade npm for trusted publishing support (#440)](https://github.com/PrismarineJS/node-minecraft-data/commit/d6271bfcd4d1834795ee1f7ab928265839780f53) (thanks @rom1504)

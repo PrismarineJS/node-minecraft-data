@@ -11,8 +11,7 @@ if (fs.existsSync(dataPaths)) process.exit(0)
 
 if (fs.existsSync('.git')) {
   const result = spawnSync('git', ['submodule', 'update', '--init', '--recursive'], { stdio: 'inherit' })
-  if (result.status !== 0) process.exit(result.status || 1)
-  if (fs.existsSync(dataPaths)) process.exit(0)
+  if (result.status === 0 && fs.existsSync(dataPaths)) process.exit(0)
 }
 
 fs.rmSync('minecraft-data', { recursive: true, force: true })

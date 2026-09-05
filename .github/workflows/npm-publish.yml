@@ -44,3 +44,15 @@ jobs:
         token: ${{ secrets.PAT_PASSWORD }}
         repository: PrismarineJS/minecraft-data
         event-type: node-mcData-release
+
+    - name: Trigger bedrock-protocol version update handler
+      if: ${{ steps.publish.outputs.type }}
+      uses: peter-evans/repository-dispatch@v2
+      with:
+        token: ${{ secrets.PAT_PASSWORD }}
+        repository: PrismarineJS/bedrock-protocol
+        event-type: minecraft-data-release
+        client-payload: >-
+          {
+            "minecraftDataVersion": "${{ steps.publish.outputs.version }}"
+          }

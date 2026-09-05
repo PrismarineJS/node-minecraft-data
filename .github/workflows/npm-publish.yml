@@ -50,6 +50,6 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.PAT_PASSWORD }}
       run: |
-        gh workflow run update-minecraft-data.yml \
+        gh workflow run handle-mcdata-release.yml \
           --repo PrismarineJS/bedrock-protocol \
           --ref master

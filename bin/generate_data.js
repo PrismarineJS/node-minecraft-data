@@ -1,13 +1,8 @@
 #!/usr/bin/env node
 
+const dataSource = require('../minecraft-data/data/dataPaths')
 const fs = require('fs')
 const path = require('path')
-
-// npm Git installs do not populate submodules before running prepare.
-if (!fs.existsSync(path.join(__dirname, '../minecraft-data/data/dataPaths.json'))) {
-  require('child_process').execFileSync('git', ['submodule', 'update', '--init', '--depth', '1'], { cwd: path.join(__dirname, '..'), stdio: 'inherit' })
-}
-const dataSource = require('../minecraft-data/data/dataPaths')
 
 const data = 'module.exports =\n{\n' + Object
   .keys(dataSource)

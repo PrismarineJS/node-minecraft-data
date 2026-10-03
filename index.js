@@ -112,6 +112,7 @@ module.exports.legacy = {
 }
 
 const schemas = {
+  advancements: require('./minecraft-data/schemas/advancements_schema.json'),
   biomes: require('./minecraft-data/schemas/biomes_schema.json'),
   blocks: require('./minecraft-data/schemas/blocks_schema.json'),
   effects: require('./minecraft-data/schemas/effects_schema.json'),

@@ -226,6 +226,19 @@ console.log(mcData.materials['mineable/axe'])
 // Returns: { '702': 2, '707': 4, '712': 12, '717': 6, '722': 8, '727': 9 }
 ```
 
+## Tags
+
+### mcData.tags
+
+Registry tags indexed by registry kind (`block`, `item`, `fluid`, `entity_type`), then by namespaced tag name. Tag members are entry names with nested `#tag` references already flattened. `undefined` for versions without tags data.
+
+Example:
+
+```js
+console.log(mcData.tags.block['minecraft:mineable/pickaxe'])
+// Returns: [ 'minecraft:stone', 'minecraft:granite', ... ]
+```
+
 ## Entities
 
 ### mcData.mobs

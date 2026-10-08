@@ -54,6 +54,29 @@ describe('versions with block data have block state IDs', () => {
   })
 })
 
+describe('versions with tags data expose them as registry->tag->members', () => {
+  const mcData = require('minecraft-data')
+  const versions = require('minecraft-data').versions
+  let withTags = 0
+  for (const type in versions) {
+    for (const version of versions[type]) {
+      it(type + ' ' + version.minecraftVersion, () => {
+        const data = mcData(type + '_' + version.minecraftVersion)
+        if (!data || data.tags === undefined) return
+        withTags++
+        for (const registry in data.tags) {
+          for (const tag in data.tags[registry]) {
+            assert.ok(Array.isArray(data.tags[registry][tag]), `${registry} ${tag} should map to an array`)
+          }
+        }
+      })
+    }
+  }
+  after(() => {
+    console.log(withTags, 'versions with tags data')
+  })
+})
+
 describe('supportFeature', () => {
   it('dimensionIsAnInt is only accessible in 1.8 - 1.15.2', () => {
     const mcData1Dot9 = require('minecraft-data')('1.9')

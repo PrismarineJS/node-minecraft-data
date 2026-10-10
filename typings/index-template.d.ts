@@ -123,6 +123,9 @@ export interface IndexedData {
    */
   blockCollisionShapes: { blocks: { [name: string]: number | number[] }; shapes: { [id: string]: [number[]] } }
 
+  /** Java selection geometry, when available for this version. */
+  blockSelectionShapes?: BlockSelectionShapes
+
   loginPacket: LoginPacket
 
   items: { [id: number]: Item }

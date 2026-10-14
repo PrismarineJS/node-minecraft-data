@@ -144,6 +144,11 @@ export interface IndexedData {
 
   materials: { [name: string]: Material }
 
+  /**
+   * Registry tags keyed by namespaced registry key (for example, minecraft:block), then by namespaced tag name. undefined for versions without tags data
+   */
+  tags?: { [registry: string]: { [tagName: string]: string[] } }
+
   mobs: { [id: number]: Entity }
   objects: { [id: number]: Entity }
   entities: { [id: number]: Entity }

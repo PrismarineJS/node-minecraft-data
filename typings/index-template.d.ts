@@ -145,7 +145,7 @@ export interface IndexedData {
   materials: { [name: string]: Material }
 
   /**
-   * Registry tags keyed by registry kind (block, item, fluid, entity_type), then by namespaced tag name. undefined for versions without tags data
+   * Registry tags keyed by namespaced registry key (for example, minecraft:block), then by namespaced tag name. undefined for versions without tags data
    */
   tags?: { [registry: string]: { [tagName: string]: string[] } }
 

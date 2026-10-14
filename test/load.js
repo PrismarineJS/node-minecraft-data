@@ -54,6 +54,24 @@ describe('versions with block data have block state IDs', () => {
   })
 })
 
+describe('tags loader', () => {
+  const load = require('../lib/loader')
+
+  it('preserves namespaced registry tags', () => {
+    const tags = {
+      'minecraft:block': {
+        'minecraft:mineable/pickaxe': ['minecraft:stone'],
+        'minecraft:empty': []
+      }
+    }
+    assert.deepStrictEqual(load({ tags }).tags, tags)
+  })
+
+  it('leaves tags undefined when the source has none', () => {
+    assert.strictEqual(load({}).tags, undefined)
+  })
+})
+
 describe('versions with tags data expose them as registry->tag->members', () => {
   const mcData = require('minecraft-data')
   const versions = require('minecraft-data').versions

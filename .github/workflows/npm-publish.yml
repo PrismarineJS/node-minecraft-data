@@ -44,3 +44,12 @@ jobs:
         token: ${{ secrets.PAT_PASSWORD }}
         repository: PrismarineJS/minecraft-data
         event-type: node-mcData-release
+
+    - name: Trigger bedrock-protocol version update handler
+      if: ${{ steps.publish.outputs.type }}
+      env:
+        GH_TOKEN: ${{ secrets.PAT_PASSWORD }}
+      run: |
+        gh workflow run handle-mcdata-release.yml \
+          --repo PrismarineJS/bedrock-protocol \
+          --ref master

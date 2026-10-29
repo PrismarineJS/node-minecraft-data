@@ -49,7 +49,8 @@ jobs:
       if: ${{ steps.publish.outputs.type }}
       env:
         GH_TOKEN: ${{ secrets.PAT_PASSWORD }}
+        MINECRAFT_DATA_VERSION: ${{ steps.publish.outputs.version }}
       run: |
-        gh workflow run handle-mcdata-release.yml \
-          --repo PrismarineJS/bedrock-protocol \
-          --ref master
+        jq -n --arg version "$MINECRAFT_DATA_VERSION" \
+          '{event_type: "minecraft-data-release", client_payload: {minecraftDataVersion: $version}}' \
+          | gh api --method POST repos/PrismarineJS/bedrock-protocol/dispatches --input -
